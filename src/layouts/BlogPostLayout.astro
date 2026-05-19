@@ -1,0 +1,207 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AffiliateNotice from '../components/AffiliateNotice.astro';
+import NewsletterBox from '../components/NewsletterBox.astro';
+import { formatDate } from '../utils/posts';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    date: string;
+    updated?: string;
+    category: string;
+    author?: string;
+    tags?: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const { title, description, date, updated, category, author = 'Dinheiro na Net', tags = [] } = frontmatter;
+---
+
+<BaseLayout title={title} description={description} type="article">
+  <div class="post-page">
+    <div class="container">
+      <div class="post-layout">
+        <!-- Main Article -->
+        <article class="post-article" aria-labelledby="post-title">
+          <header class="post-header">
+            <div class="post-meta">
+              <a href={`/categorias/${category.toLowerCase().replace(/\s+/g, '-').replace(/ã/g,'a').replace(/ê/g,'e').replace(/í/g,'i').replace(/ó/g,'o').replace(/ú/g,'u')}`} class="badge badge--category">{category}</a>
+              <time datetime={date}>{formatDate(date)}</time>
+              {updated && <span class="post-updated">· Atualizado em {formatDate(updated)}</span>}
+            </div>
+            <h1 id="post-title">{title}</h1>
+            <p class="post-desc">{description}</p>
+            <div class="post-author">
+              <span>Por <strong>{author}</strong></span>
+            </div>
+          </header>
+
+          <AffiliateNotice />
+
+          <div class="prose post-content">
+            <slot />
+          </div>
+
+          <footer class="post-footer">
+            {tags.length > 0 && (
+              <div class="post-tags" aria-label="Etiquetas">
+                <span class="tags-label">Etiquetas:</span>
+                {tags.map((tag: string) => (
+                  <span class="tag">#{tag}</span>
+                ))}
+              </div>
+            )}
+            <div class="post-nav">
+              <a href="/categorias" class="btn btn-outline">&larr; Ver todas as categorias</a>
+              <a href="/" class="btn btn-outline">Início</a>
+            </div>
+          </footer>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="post-sidebar" aria-label="Sidebar">
+          <div class="sidebar-card">
+            <h3>Sobre o Projeto</h3>
+            <p>Guias práticos e honestos sobre criação de renda digital para lusófonos — sem promessas de dinheiro fácil.</p>
+            <a href="/sobre" class="btn btn-outline" style="width:100%;text-align:center;margin-top:0.5rem">Saber mais</a>
+          </div>
+          <div class="sidebar-card">
+            <h3>Calculadora de Ganhos</h3>
+            <p>Simula quanto um blog pode ganhar com anúncios e afiliados.</p>
+            <a href="/ferramentas" class="btn btn-primary" style="width:100%;text-align:center;margin-top:0.5rem">Experimentar</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:3rem">
+      <NewsletterBox />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .post-page { padding: 2rem 0 4rem; }
+
+  .post-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media (max-width: 960px) {
+    .post-layout { grid-template-columns: 1fr; }
+    .post-sidebar { display: none; }
+  }
+
+  /* ----- Header ----- */
+  .post-header {
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .badge--category {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.65rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .badge--category:hover { background: var(--color-primary-light); color: white; text-decoration: none; }
+
+  .post-updated { color: var(--color-text-muted); }
+
+  #post-title {
+    font-size: clamp(1.65rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    margin-bottom: 0.85rem;
+    color: var(--color-primary);
+  }
+
+  .post-desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  .post-author { font-size: 0.9rem; color: var(--color-text-muted); }
+
+  /* ----- Content ----- */
+  .post-content { margin-top: 0; }
+
+  /* ----- Footer ----- */
+  .post-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .post-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .tags-label { color: var(--color-text-muted); font-weight: 600; }
+
+  .tag {
+    background: var(--color-surface-2);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+
+  .post-nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ----- Sidebar ----- */
+  .post-sidebar { position: sticky; top: 80px; }
+
+  .sidebar-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .sidebar-card h3 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+
+  .sidebar-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+</style>

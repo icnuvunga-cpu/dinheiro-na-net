@@ -1,0 +1,13 @@
+---
+// This file is intentionally empty.
+// Blog posts are served from /posts/[slug] instead.
+// This file exists to prevent 404 errors on the root slug route.
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  // Return empty - we handle all posts under /posts/[slug]
+  return [];
+}
+
+const { slug } = Astro.params;
+---

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogEarningsCalculator from '../../components/BlogEarningsCalculator.astro';
+---
+
+<BaseLayout 
+  title="Ferramentas Gratuitas | Dinheiro na Net" 
+  description="Ferramentas educativas e gratuitas para simular e planear a tua estratégia de criação de renda online."
+>
+  <div class="container">
+    <div class="page-header">
+      <span class="badge badge--success">Gratuito</span>
+      <h1>Ferramentas</h1>
+      <p>Recursos gratuitos para planear, simular e tomar decisões mais informadas sobre criação de renda digital.</p>
+    </div>
+    
+    <div class="tool-section">
+      <BlogEarningsCalculator />
+    </div>
+
+    <div class="more-tools">
+      <h2>Mais ferramentas em breve</h2>
+      <p>Estamos a preparar recursos adicionais, incluindo simuladores de estratégia de nicho e comparadores de plataformas de afiliados.</p>
+      <p><a href="/categorias/ferramentas-gratuitas">Ver artigos sobre ferramentas gratuitas &rarr;</a></p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 2.5rem auto 3rem;
+  }
+  .page-header .badge { margin-bottom: 1rem; }
+  .page-header h1 { margin: 0.5rem 0 0.75rem; }
+  .page-header p { font-size: 1.15rem; color: var(--color-text-muted); margin: 0; }
+
+  .tool-section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 640px) {
+    .tool-section { padding: 1.5rem 1.25rem; }
+  }
+
+  .more-tools {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    border: 1px dashed var(--color-border);
+  }
+
+  .more-tools h2 { margin-top: 0; font-size: 1.3rem; }
+  .more-tools p { color: var(--color-text-muted); margin-bottom: 0.5rem; }
+</style>

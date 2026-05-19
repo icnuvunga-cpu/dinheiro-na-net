@@ -1,0 +1,196 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryCard from '../components/CategoryCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import NewsletterBox from '../components/NewsletterBox.astro';
+import { categories } from '../data/siteConfig';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const sortedPosts = allPosts.sort(
+  (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) =>
+    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+const recentPosts = sortedPosts.slice(0, 3);
+const recommendedPosts = sortedPosts.slice(3, 6);
+---
+
+<BaseLayout>
+  <section class="hero-section">
+    <div class="container hero-container">
+      <h1>Aprende a criar renda digital com blogs, IA, afiliados e ferramentas online.</h1>
+      <p class="hero-subtitle">O ponto de partida prático para lusófonos que querem transformar conhecimento em negócios digitais reais e sustentáveis.</p>
+      <div class="hero-buttons">
+        <a href="/categorias/comecar-do-zero" class="btn-primary">Começar do Zero</a>
+        <a href="/ferramentas" class="btn-outline">Ver Ferramentas Gratuitas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice-bar">
+    <div class="container">
+      <p><strong>Transparência:</strong> Este é um projeto educativo. No futuro poderá incluir publicidade e links afiliados para se sustentar gratuitamente para o leitor.</p>
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explora por Tópico</h2>
+      </div>
+      <div class="categories-grid">
+        {categories.map((cat) => (
+          <CategoryCard name={cat.name} slug={cat.slug} description={cat.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-posts">
+    <div class="container">
+      <div class="section-header">
+        <h2>Artigos Recentes</h2>
+        <a href="/categorias" class="view-all">Ver todos &rarr;</a>
+      </div>
+      <div class="posts-grid">
+        {recentPosts.map((post: CollectionEntry<'posts'>) => (
+          <ArticleCard
+            title={post.data.title}
+            url={`/posts/${post.id.replace(/\.mdx$/, '')}`}
+            description={post.data.description}
+            date={post.data.date}
+            category={post.data.category}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-highlight">
+    <div class="container">
+      <div class="highlight-box">
+        <div class="highlight-content">
+          <h2>Calculadora de Ganhos com Blog</h2>
+          <p>Descobre quanto um blog pode gerar combinando tráfego, anúncios display e programas de afiliados. Uma simulação realista para definir as tuas metas.</p>
+          <a href="/ferramentas" class="btn-primary">Testar Calculadora</a>
+        </div>
+        <div class="highlight-visual" aria-hidden="true">
+          <div class="mockup-chart">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 50%"></div>
+            <div class="bar main" style="height: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {recommendedPosts.length > 0 && (
+    <section class="recommended-posts">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recomendados para Si</h2>
+        </div>
+        <div class="posts-grid">
+          {recommendedPosts.map((post: CollectionEntry<'posts'>) => (
+            <ArticleCard
+              title={post.data.title}
+              url={`/posts/${post.id.replace(/\.mdx$/, '')}`}
+              description={post.data.description}
+              date={post.data.date}
+              category={post.data.category}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="container">
+    <NewsletterBox />
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-section {
+    padding: 5rem 0 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #f0f4f8 0%, #fcfcfc 100%);
+  }
+  .hero-container { max-width: 800px; }
+  .hero-section h1 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+  }
+  @media (max-width: 768px) {
+    .hero-section h1 { font-size: 2rem; }
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    transition: all 0.2s ease;
+  }
+  .btn-outline:hover { background: var(--color-primary); color: white; }
+  .notice-bar {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+  .categories-section { padding: 4rem 0; background: var(--color-surface); }
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .recent-posts, .recommended-posts { padding: 4rem 0; }
+  .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+  .section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; }
+  .section-header h2 { margin: 0; }
+  .view-all { font-weight: 600; }
+  .tool-highlight {
+    padding: 4rem 0;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .highlight-box {
+    background: var(--color-primary);
+    border-radius: 12px;
+    padding: 3rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+    .highlight-box { grid-template-columns: 1fr; padding: 2rem; }
+    .highlight-visual { display: none; }
+  }
+  .highlight-content h2 { color: var(--color-accent); margin-top: 0; }
+  .highlight-content p { color: #e2e8f0; margin-bottom: 2rem; }
+  .mockup-chart { display: flex; align-items: flex-end; gap: 10px; height: 150px; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 8px; }
+  .bar { flex-grow: 1; background: var(--color-primary-light); border-radius: 4px 4px 0 0; }
+  .bar.main { background: var(--color-success-text); }
+</style>

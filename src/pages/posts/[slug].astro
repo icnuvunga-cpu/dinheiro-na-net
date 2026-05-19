@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map((post: CollectionEntry<'posts'>) => {
+    // In Astro v6 glob loader, id is the filename without extension
+    const slug = post.id.replace(/\.mdx$/, '');
+    return {
+      params: { slug },
+      props: { post },
+    };
+  });
+}
+
+type Props = { post: CollectionEntry<'posts'> };
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPostLayout frontmatter={post.data}>
+  <Content />
+</BlogPostLayout>

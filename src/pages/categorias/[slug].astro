@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { categories } from '../../data/siteConfig';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+
+  return categories.map((cat) => {
+    const catPosts = allPosts
+      .filter((post: CollectionEntry<'posts'>) => post.data.category === cat.name)
+      .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+
+    return {
+      params: { slug: cat.slug },
+      props: { category: cat, posts: catPosts },
+    };
+  });
+}
+
+type Props = {
+  category: { name: string; slug: string; description: string };
+  posts: CollectionEntry<'posts'>[];
+};
+
+const { category, posts } = Astro.props;
+---
+
+<BaseLayout title={`${category.name} | Dinheiro na Net`} description={category.description}>
+  <div class="container">
+    <div class="page-header">
+      <span class="badge">Categoria</span>
+      <h1>{category.name}</h1>
+      <p>{category.description}</p>
+    </div>
+
+    {posts.length > 0 ? (
+      <div class="posts-grid">
+        {posts.map((post: CollectionEntry<'posts'>) => (
+          <ArticleCard
+            title={post.data.title}
+            url={`/posts/${post.id.replace(/\.mdx$/, '')}`}
+            description={post.data.description}
+            date={post.data.date}
+            category={post.data.category}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <h3>Ainda a Escrever...</h3>
+        <p>Estamos a preparar guias para a categoria <strong>{category.name}</strong>. Regresse em breve!</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .page-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto 3.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .badge {
+    background: var(--color-success);
+    color: var(--color-success-text);
+    padding: 0.25rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  .page-header h1 { font-size: 2.5rem; margin-top: 1rem; }
+  .page-header p { font-size: 1.15rem; color: var(--color-text-muted); }
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+  .empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--color-surface);
+    border-radius: 8px;
+    border: 1px dashed var(--color-border);
+  }
+</style>

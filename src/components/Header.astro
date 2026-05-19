@@ -1,0 +1,189 @@
+---
+import { navigation } from '../data/siteConfig';
+---
+
+<a href="#main-content" class="skip-link">Saltar para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="site-logo" aria-label="Dinheiro na Net — Página Inicial">
+      <span class="logo-strong">Dinheiro</span><span class="logo-light"> na Net</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <ul role="list">
+        {navigation.map((item: any) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
+              class={
+                Astro.url.pathname === item.href ||
+                (item.href !== '/' && Astro.url.pathname.startsWith(item.href))
+                  ? 'nav-link active'
+                  : 'nav-link'
+              }
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Mobile toggle -->
+    <button class="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navegação mobile">
+      <ul role="list">
+        {navigation.map((item: any) => (
+          <li>
+            <a href={item.href} class="mobile-nav-link">{item.name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('.mobile-toggle') as HTMLButtonElement;
+  const menu = document.getElementById('mobile-menu') as HTMLElement;
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    menu.setAttribute('aria-hidden', String(isOpen));
+    menu.classList.toggle('is-open', !isOpen);
+    document.body.classList.toggle('menu-open', !isOpen);
+  });
+
+  // Close menu on nav link click
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      menu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+    });
+  });
+</script>
+
+<style>
+  .site-header {
+    background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    gap: 1.5rem;
+  }
+
+  /* Logo */
+  .site-logo {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    flex-shrink: 0;
+    letter-spacing: -0.01em;
+  }
+  .site-logo:hover { color: white; text-decoration: none; }
+  .logo-strong { font-weight: 800; color: var(--color-accent); }
+  .logo-light { color: rgba(255,255,255,0.92); }
+
+  /* Desktop Nav */
+  .main-nav { display: flex; align-items: center; }
+  .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.45rem 0.85rem;
+    color: rgba(255,255,255,0.82);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    transition: background-color 0.15s, color 0.15s;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+  }
+  .nav-link.active {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  /* Mobile toggle */
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s;
+  }
+  .mobile-toggle:hover { background-color: rgba(255,255,255,0.1); }
+
+  /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    background-color: var(--color-primary-hover);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .mobile-menu.is-open { display: block; }
+  .mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .mobile-nav-link {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background-color 0.15s;
+  }
+  .mobile-nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .main-nav { display: none; }
+    .mobile-toggle { display: flex; align-items: center; justify-content: center; }
+  }
+</style>

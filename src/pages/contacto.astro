@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Contacto | Dinheiro na Net"
+  description="Entre em contacto com a equipa do Dinheiro na Net para questões, sugestões ou colaborações."
+>
+  <div class="container--narrow" style="padding: 3rem 1.25rem 5rem">
+    <h1>Contacto</h1>
+    <p class="lead">Tens uma questão, sugestão de tema ou queres colaborar? Entra em contacto connosco.</p>
+
+    <div class="contact-options">
+      <div class="contact-card">
+        <div class="contact-icon" aria-hidden="true">✉️</div>
+        <h2>Email</h2>
+        <p>Para questões gerais, sugestões de artigos ou dúvidas sobre o conteúdo:</p>
+        <a href="mailto:contacto@dinheironanet.pages.dev" class="btn btn-primary">contacto@dinheironanet.pages.dev</a>
+        <p class="contact-note">Respondemos normalmente dentro de 5 dias úteis.</p>
+      </div>
+    </div>
+
+    <div class="contact-note-box">
+      <h3>O que não fazemos</h3>
+      <ul>
+        <li>Não fornecemos aconselhamento financeiro</li>
+        <li>Não garantimos resultados de monetização</li>
+        <li>Não vendemos cursos ou serviços pagos (por enquanto)</li>
+        <li>Não compramos links ou aceitamos guest posts pagos na fase atual</li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2rem; }
+  .contact-options { margin: 2rem 0; }
+  .contact-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+  }
+  .contact-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .contact-card h2 { margin-top: 0; }
+  .contact-note { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 1rem; margin-bottom: 0; }
+  .contact-note-box {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 2rem;
+    margin-top: 2.5rem;
+  }
+  .contact-note-box h3 { margin-top: 0; }
+  .contact-note-box ul { color: var(--color-text-muted); }
+</style>

@@ -1,0 +1,48 @@
+---
+import ToolLayout from '../../layouts/ToolLayout.astro';
+import BlogEarningsCalculator from '../../components/BlogEarningsCalculator.astro';
+---
+
+<ToolLayout 
+  title="Calculadora de Ganhos com Blog" 
+  description="Simula quanto um blog pode gerar com tráfego, AdSense e links de afiliados."
+>
+  <BlogEarningsCalculator />
+  
+  <div class="how-it-works">
+    <h2>Como funciona esta calculadora?</h2>
+    <p>Experimenta combinar diferentes metas de tráfego com RPM de anúncios e taxas de conversão afiliada para encontrar onde concentrar os teus esforços.</p>
+    
+    <h3>Termos chave</h3>
+    <ul>
+      <li><strong>RPM (Receita por mil impressões):</strong> Quanto recebes por cada 1000 pageviews. Nichos financeiros: 5-15€. Entretenimento: 0.5-2€.</li>
+      <li><strong>Taxa de Conversão:</strong> % de visitantes que compram via link de afiliado. Valores realistas: 0.5% a 2%.</li>
+      <li><strong>Comissão Média:</strong> O que ganhas em média por cada venda afiliada concretizada.</li>
+    </ul>
+    
+    <div class="disclaimer-box">
+      <strong>⚠️ Importante:</strong> Esta calculadora é apenas uma simulação educativa. Ganhos reais variam conforme país, nicho, qualidade do tráfego, comportamento dos usuários, programas de afiliados e políticas das plataformas.
+    </div>
+  </div>
+</ToolLayout>
+
+<style>
+  .how-it-works {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .how-it-works h2 { margin-top: 0; }
+  .how-it-works ul { padding-left: 1.5rem; }
+  .how-it-works li { margin-bottom: 0.75rem; }
+  .disclaimer-box {
+    background: var(--color-alert);
+    color: var(--color-alert-text);
+    border-left: 4px solid var(--color-alert-text);
+    padding: 1rem;
+    border-radius: 0 6px 6px 0;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+</style>

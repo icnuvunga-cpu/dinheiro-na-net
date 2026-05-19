@@ -1,0 +1,55 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AdSlot from '../components/AdSlot.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container tool-container">
+    <div class="tool-header">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+    
+    <div class="tool-content">
+      <slot />
+    </div>
+    
+    <div class="tool-footer-ad">
+      <AdSlot format="horizontal" title="Anúncio - Opcional Pós-Ferramenta" />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tool-container {
+    max-width: 900px;
+  }
+  .tool-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .tool-header h1 {
+    font-size: 2.5rem;
+  }
+  .tool-header p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+  }
+  .tool-content {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  }
+  .tool-footer-ad {
+    margin-top: 3rem;
+  }
+</style>

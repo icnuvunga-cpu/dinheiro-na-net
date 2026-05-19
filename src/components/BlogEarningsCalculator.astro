@@ -1,0 +1,318 @@
+---
+// Calculadora de Ganhos com Blog
+// Puramente educativa — sem backend, sem coleta de dados
+---
+
+<div class="calculator">
+  <div class="calc-header">
+    <h2>Calculadora de Ganhos com Blog</h2>
+    <p>Simula quanto um blog pode gerar com anúncios display (AdSense) e programas de afiliados. Os valores são estimativas educativas.</p>
+  </div>
+
+  <form id="calcForm" class="calc-form" novalidate>
+    <fieldset class="calc-fieldset">
+      <legend>Tráfego</legend>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="monthly-visitors">Visitantes únicos por mês</label>
+          <input
+            type="number"
+            id="monthly-visitors"
+            name="monthly-visitors"
+            value="5000"
+            min="0"
+            step="100"
+            aria-describedby="visitors-hint"
+          />
+          <span id="visitors-hint" class="field-hint">Ex: 5000 visitantes/mês</span>
+        </div>
+        <div class="form-group">
+          <label for="pages-per-visit">Páginas visualizadas por visita</label>
+          <input
+            type="number"
+            id="pages-per-visit"
+            name="pages-per-visit"
+            value="1.8"
+            min="1"
+            max="20"
+            step="0.1"
+            aria-describedby="ppv-hint"
+          />
+          <span id="ppv-hint" class="field-hint">Média: 1.5 a 2.5 páginas</span>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="calc-fieldset">
+      <legend>Anúncios (AdSense / Display)</legend>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="rpm">RPM estimado (€ por 1000 pageviews)</label>
+          <input
+            type="number"
+            id="rpm"
+            name="rpm"
+            value="2.50"
+            min="0"
+            step="0.25"
+            aria-describedby="rpm-hint"
+          />
+          <span id="rpm-hint" class="field-hint">Finanças: 5-15€ · Entretenimento: 0.5-2€</span>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="calc-fieldset">
+      <legend>Afiliados (opcional)</legend>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="conv-rate">Taxa de conversão (%)</label>
+          <input
+            type="number"
+            id="conv-rate"
+            name="conv-rate"
+            value="1"
+            min="0"
+            max="100"
+            step="0.1"
+            aria-describedby="conv-hint"
+          />
+          <span id="conv-hint" class="field-hint">% de visitantes que compram (típico: 0.5–2%)</span>
+        </div>
+        <div class="form-group">
+          <label for="avg-commission">Comissão média por venda (€)</label>
+          <input
+            type="number"
+            id="avg-commission"
+            name="avg-commission"
+            value="15"
+            min="0"
+            step="1"
+            aria-describedby="comm-hint"
+          />
+          <span id="comm-hint" class="field-hint">Valor médio ganho por venda afiliada</span>
+        </div>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary calc-btn">
+      Calcular estimativa
+    </button>
+  </form>
+
+  <div id="calc-results" class="calc-results" aria-live="polite" hidden>
+    <h3>Estimativa Mensal</h3>
+    <div class="results-grid">
+      <div class="result-card">
+        <span class="result-label">Pageviews totais</span>
+        <span class="result-value" id="total-pageviews">—</span>
+      </div>
+      <div class="result-card">
+        <span class="result-label">Receita com anúncios</span>
+        <span class="result-value" id="ads-revenue">—</span>
+      </div>
+      <div class="result-card">
+        <span class="result-label">Receita com afiliados</span>
+        <span class="result-value" id="aff-revenue">—</span>
+      </div>
+      <div class="result-card result-total">
+        <span class="result-label">Total estimado</span>
+        <span class="result-value" id="total-revenue">—</span>
+      </div>
+    </div>
+
+    <p class="calc-disclaimer">
+      ⚠️ <strong>Aviso:</strong> Esta calculadora é apenas uma simulação educativa. Ganhos reais variam conforme país, nicho, qualidade do tráfego, comportamento dos utilizadores, programas de afiliados e políticas das plataformas.
+    </p>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('calcForm') as HTMLFormElement;
+  const results = document.getElementById('calc-results') as HTMLElement;
+
+  function formatEuro(value: number): string {
+    return value.toLocaleString('pt-PT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 });
+  }
+
+  function numVal(id: string): number {
+    const el = document.getElementById(id) as HTMLInputElement;
+    return Math.max(0, parseFloat(el?.value) || 0);
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const visitors = numVal('monthly-visitors');
+    const pagesPerVisit = Math.max(1, numVal('pages-per-visit'));
+    const rpm = numVal('rpm');
+    const convRate = Math.min(100, numVal('conv-rate')) / 100;
+    const avgCommission = numVal('avg-commission');
+
+    const totalPageviews = Math.round(visitors * pagesPerVisit);
+    const adsRevenue = (totalPageviews / 1000) * rpm;
+    const sales = visitors * convRate;
+    const affRevenue = sales * avgCommission;
+    const total = adsRevenue + affRevenue;
+
+    document.getElementById('total-pageviews')!.textContent = totalPageviews.toLocaleString('pt-PT');
+    document.getElementById('ads-revenue')!.textContent = formatEuro(adsRevenue);
+    document.getElementById('aff-revenue')!.textContent = formatEuro(affRevenue);
+    document.getElementById('total-revenue')!.textContent = formatEuro(total);
+
+    results.hidden = false;
+    results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>
+
+<style>
+  .calculator {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .calc-header {
+    margin-bottom: 2rem;
+  }
+  .calc-header h2 { margin-top: 0; }
+  .calc-header p { color: var(--color-text-muted); }
+
+  /* Form */
+  .calc-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .calc-fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.6rem 1.2rem;
+    margin: 0;
+  }
+
+  .calc-fieldset legend {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 0.4rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+  }
+
+  .form-group input[type="number"] {
+    padding: 0.6rem 0.85rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-text-main);
+    background: var(--color-surface);
+    width: 100%;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    -moz-appearance: textfield;
+  }
+
+  .form-group input[type="number"]::-webkit-inner-spin-button,
+  .form-group input[type="number"]::-webkit-outer-spin-button { opacity: 1; }
+
+  .form-group input[type="number"]:focus {
+    outline: none;
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 3px rgba(26, 63, 104, 0.15);
+  }
+
+  .field-hint {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+
+  .calc-btn {
+    align-self: flex-start;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  /* Results */
+  .calc-results {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+
+  .calc-results h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .result-card {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .result-total {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+
+  .result-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+  }
+
+  .result-total .result-label { color: rgba(255,255,255,0.7); }
+
+  .result-value {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+  }
+
+  .result-total .result-value { color: var(--color-accent); }
+
+  .calc-disclaimer {
+    font-size: 0.875rem;
+    background: var(--color-alert-bg);
+    color: var(--color-alert-text);
+    border-left: 4px solid var(--color-alert-text);
+    padding: 0.9rem 1rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>

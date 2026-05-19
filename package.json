@@ -1,0 +1,37 @@
+{
+  "name": "dinheiro-na-net",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "audit": "node scripts/audit.mjs all",
+    "audit:content": "node scripts/audit.mjs content",
+    "audit:seo": "node scripts/audit.mjs seo",
+    "audit:deploy": "node scripts/audit.mjs deploy",
+    "operator:status": "node scripts/operator/operator.mjs status",
+    "operator:audit": "node scripts/operator/operator.mjs audit",
+    "operator:content": "node scripts/operator/operator.mjs content",
+    "operator:seo": "node scripts/operator/operator.mjs seo",
+    "operator:adsense": "node scripts/operator/operator.mjs adsense",
+    "operator:deploy-check": "node scripts/operator/operator.mjs deploy-check",
+    "operator:mobile": "node scripts/operator/operator.mjs mobile",
+    "operator:chatgpt": "node scripts/operator/operator.mjs chatgpt",
+    "operator:snapshot": "node scripts/operator/operator.mjs snapshot",
+    "new:post": "node scripts/new-post.mjs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^5.0.6",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^6.0.3"
+  }
+}

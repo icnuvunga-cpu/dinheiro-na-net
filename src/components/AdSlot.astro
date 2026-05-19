@@ -1,0 +1,56 @@
+---
+// Placeholder component to map future AdSense spots. Currently completely safe and empty of JS logic.
+interface Props {
+  format?: 'horizontal' | 'rectangle';
+  title?: string;
+}
+const { format = 'horizontal', title = 'Espaço Publicitário Reservado' } = Astro.props;
+---
+
+<div class={`ad-slot ad-${format}`}>
+  <div class="ad-content">
+    <span>[ {title} ]</span>
+    <small>Publicidade</small>
+  </div>
+</div>
+
+<style>
+  .ad-slot {
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    color: #94a3b8;
+    text-align: center;
+  }
+  
+  .ad-horizontal {
+    width: 100%;
+    max-width: 728px;
+    height: 90px;
+  }
+  
+  .ad-rectangle {
+    width: 300px;
+    height: 250px;
+  }
+  
+  .ad-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ad-content span {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .ad-content small {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    margin-top: 0.25rem;
+  }
+</style>

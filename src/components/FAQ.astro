@@ -1,0 +1,74 @@
+---
+interface Props {
+  faqs: { question: string; answer: string }[];
+}
+
+const { faqs } = Astro.props;
+---
+
+<div class="faq-section">
+  <h3>Perguntas Frequentes (FAQ)</h3>
+  <div class="faq-list">
+    {faqs.map((faq: any) => (
+      <details class="faq-item">
+        <summary>{faq.question}</summary>
+        <div class="faq-answer" set:html={faq.answer} />
+      </details>
+    ))}
+  </div>
+</div>
+
+<style>
+  .faq-section {
+    margin: 3rem 0;
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .faq-section h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+  
+  .faq-item summary {
+    font-weight: 600;
+    padding: 1rem 0;
+    cursor: pointer;
+    list-style: none; /* remove default arrow */
+    position: relative;
+    padding-right: 2rem;
+  }
+  
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--color-primary-light);
+  }
+  
+  .faq-item[open] summary::after {
+    content: "−";
+  }
+  
+  .faq-answer {
+    padding-bottom: 1rem;
+    color: var(--color-text-muted);
+  }
+</style>

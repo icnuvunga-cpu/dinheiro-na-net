@@ -1,0 +1,117 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="Dinheiro na Net — Página Inicial">
+          <span class="logo-strong">Dinheiro</span><span class="logo-light"> na Net</span>
+        </a>
+        <p class="footer-desc">Portal educativo sobre renda digital, blogs, IA e ferramentas online para lusófonos. Sem promessas de dinheiro fácil.</p>
+        <div class="disclaimer-box">
+          <strong>Aviso educativo:</strong> Os conteúdos deste site são informativos e não garantem qualquer resultado financeiro. O sucesso depende do esforço individual, contexto e condições de mercado.
+        </div>
+      </div>
+
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/categorias">Categorias</a></li>
+          <li><a href="/ferramentas">Ferramentas</a></li>
+          <li><a href="/sobre">Sobre</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/termos-de-uso">Termos de Uso</a></li>
+          <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
+          <li><a href="/aviso-de-afiliados">Aviso de Afiliados</a></li>
+          <li><a href="/politica-de-cookies">Política de Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Dinheiro na Net. Todos os direitos reservados. · Conteúdo educativo, não conselho financeiro.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-primary);
+    color: #cbd5e1;
+    padding: 3.5rem 0 0;
+    margin-top: 5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  /* Logo */
+  .footer-logo {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.85rem;
+    text-decoration: none;
+  }
+  .footer-logo:hover { text-decoration: none; }
+  .logo-strong { font-weight: 800; color: var(--color-accent); }
+  .logo-light { color: rgba(255,255,255,0.9); }
+
+  .footer-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .disclaimer-box {
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.25);
+    color: #94a3b8;
+    border-left: 3px solid var(--color-accent);
+    padding: 0.85rem 1rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    line-height: 1.55;
+  }
+
+  /* Headings */
+  .site-footer h4 {
+    color: white;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 1rem;
+  }
+
+  /* Links */
+  .site-footer ul { list-style: none; margin: 0; padding: 0; }
+  .site-footer li { margin-bottom: 0.5rem; }
+  .site-footer a { color: #94a3b8; font-size: 0.9rem; text-decoration: none; transition: color 0.15s; }
+  .site-footer a:hover { color: var(--color-accent); text-decoration: none; }
+
+  /* Bottom */
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 1.25rem 0;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #64748b;
+  }
+</style>
