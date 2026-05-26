@@ -169,3 +169,9 @@ reports/
 ---
 
 > Este projeto não inclui anúncios reais, login, base de dados ou backend. É um site 100% estático preparado para deploy gratuito.
+
+## Link publico
+
+Site online:
+
+https://dinheiro-na-net.icnuvunga.workers.dev/

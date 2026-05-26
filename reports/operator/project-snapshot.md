@@ -1,9 +1,12 @@
 ﻿# Project Snapshot - Dinheiro na Net
 
-Atualizado em: 2026-05-26 13:48:01
+Atualizado em: 2026-05-26 14:22:03
+
+Link publico oficial:
+https://dinheiro-na-net.icnuvunga.workers.dev/
 
 Estado atual:
-- Site online no Cloudflare Pages.
+- Site online no Cloudflare Workers.
 - GitHub conectado.
 - Build/deploy-check OK.
 - Operator Kit OK.
@@ -17,10 +20,11 @@ Estado atual:
 - Sem dominio pago.
 
 Ultimos commits:
+8e54b23 docs: update memory after editorial audit fix
 e317a02 fix: resolve editorial audit warnings
 0d6a3f9 docs: update project memory after Cloudflare deploy
 f6048c0 feat: create initial Dinheiro na Net blog
 
 Proximo passo recomendado:
-- Confirmar se o deploy automatico da Cloudflare terminou apos o ultimo push.
-- Depois preparar Search Console e Analytics futuramente.
+- Preparar Search Console e Analytics.
+- Nao pedir AdSense ainda.
