@@ -24,3 +24,12 @@ check.json
 Thumbs.db
 .idea/
 .vscode/
+
+# local human project memory - not public
+.project-memory/
+
+# local human project memory - not public
+.project-memory/
+
+# local human project memory - not public
+.project-memory/
