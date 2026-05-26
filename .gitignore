@@ -33,3 +33,6 @@ Thumbs.db
 
 # local human project memory - not public
 .project-memory/
+
+# local operator backups
+reports/operator/backups/

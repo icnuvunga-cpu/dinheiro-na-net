@@ -1,6 +1,6 @@
 # Operator AdSense Safety
 
-Gerado em: 2026-05-19T19:59:13.159Z
+Gerado em: 2026-05-26T11:13:10.984Z
 
 OK: 2
 Avisos: 0
