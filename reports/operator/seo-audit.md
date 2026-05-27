@@ -1,6 +1,6 @@
 # Operator SEO Audit
 
-Gerado em: 2026-05-26T11:13:10.984Z
+Gerado em: 2026-05-27T05:51:21.192Z
 
 OK: 26
 Avisos: 0
@@ -10,7 +10,7 @@ Erros: 0
 
 | Estado | Item | Detalhe |
 | --- | --- | --- |
-| OK | astro.config.mjs site | https://dinheironanet.pages.dev |
+| OK | astro.config.mjs site | https://dinheiro-na-net.icnuvunga.workers.dev |
 | OK | sitemap integration | Configurado |
 | OK | robots.txt | Existe |
 | OK | BaseLayout title | OK |

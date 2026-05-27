@@ -1,4 +1,4 @@
-// @ts-check
+﻿// @ts-check
 import { defineConfig } from 'astro/config';
 
 import mdx from '@astrojs/mdx';
@@ -7,6 +7,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dinheironanet.pages.dev',
+  site: 'https://dinheiro-na-net.icnuvunga.workers.dev',
   integrations: [mdx(), sitemap()]
 });

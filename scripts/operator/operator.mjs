@@ -6,7 +6,7 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const REPORT_DIR = path.join(ROOT, 'reports', 'operator');
 const POSTS_DIR = path.join(ROOT, 'src', 'content', 'posts');
-const PREFERRED_SITE = 'https://dinheironanet.pages.dev';
+const PREFERRED_SITE = 'https://dinheiro-na-net.icnuvunga.workers.dev';
 const DATE = new Date().toISOString();
 
 const officialCategories = [
@@ -26,11 +26,11 @@ const officialCategoryLabels = [
 ];
 
 const dangerousTerms = [
-  ['clique no anuncio', /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uú]ncio/i],
-  ['clicar no anuncio', /clicar\s+(no|na|em|num|neste|nesse|naquele)\s+an[uú]ncio/i],
+  ['clique no anuncio', /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uÃº]ncio/i],
+  ['clicar no anuncio', /clicar\s+(no|na|em|num|neste|nesse|naquele)\s+an[uÃº]ncio/i],
   ['ganhos garantidos', /ganhos?\s+garantid[oa]s?/i],
-  ['dinheiro facil garantido', /dinheiro\s+f[aá]cil\s+garantido/i],
-  ['trafego falso', /tr[aá]fego\s+falso/i],
+  ['dinheiro facil garantido', /dinheiro\s+f[aÃ¡]cil\s+garantido/i],
+  ['trafego falso', /tr[aÃ¡]fego\s+falso/i],
   ['bot de clique', /bot\s+de\s+clique/i],
   ['bots de clique', /bots\s+de\s+clique/i],
   ['cliques artificiais', /cliques?\s+artificiais/i],
@@ -215,11 +215,11 @@ function wordCount(body) {
 }
 
 function hasFaq(body) {
-  return /<FAQ\b/i.test(body) || /^##\s*(FAQ|Perguntas frequentes|Perguntas comuns|Duvidas|D[uú]vidas)/im.test(body);
+  return /<FAQ\b/i.test(body) || /^##\s*(FAQ|Perguntas frequentes|Perguntas comuns|Duvidas|D[uÃº]vidas)/im.test(body);
 }
 
 function hasConclusion(body) {
-  return /^##\s*(Conclus[aã]o|Resumo final|Proximo passo|Pr[oó]ximo passo)/im.test(body);
+  return /^##\s*(Conclus[aÃ£]o|Resumo final|Proximo passo|Pr[oÃ³]ximo passo)/im.test(body);
 }
 
 function findPatterns(text, patterns) {
@@ -769,3 +769,4 @@ function main() {
 }
 
 main();
+
