@@ -17,17 +17,17 @@ const reportFiles = {
 
 const dangerousPatterns = [
   { label: 'ganhos garantidos', pattern: /ganhos?\s+garantid[oa]s?/i },
-  { label: 'clique no anuncio', pattern: /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uÃº]ncio/i },
-  { label: 'dinheiro facil garantido', pattern: /dinheiro\s+f[aÃ¡]cil\s+garantido/i },
-  { label: 'trafego falso', pattern: /tr[aÃ¡]fego\s+falso/i },
+  { label: 'clique no anuncio', pattern: /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uú]ncio/i },
+  { label: 'dinheiro facil garantido', pattern: /dinheiro\s+f[aá]cil\s+garantido/i },
+  { label: 'trafego falso', pattern: /tr[aá]fego\s+falso/i },
   { label: 'bots de clique', pattern: /bots?\s+de\s+clique/i },
 ];
 
 const adManipulationPatterns = [
   { label: 'script AdSense', pattern: /adsbygoogle|googlesyndication|pagead2\.googlesyndication|ca-pub-/i },
-  { label: 'incentivo a clique em anuncio', pattern: /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uÃº]ncio/i },
-  { label: 'manipulacao de anuncios', pattern: /(incentiv|for[cÃ§]a|obriga|pede).{0,60}clique.{0,60}an[uÃº]ncio/i },
-  { label: 'trafego falso', pattern: /tr[aÃ¡]fego\s+falso/i },
+  { label: 'incentivo a clique em anuncio', pattern: /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uú]ncio/i },
+  { label: 'manipulacao de anuncios', pattern: /(incentiv|for[cç]a|obriga|pede).{0,60}clique.{0,60}an[uú]ncio/i },
+  { label: 'trafego falso', pattern: /tr[aá]fego\s+falso/i },
   { label: 'bots de clique', pattern: /bots?\s+de\s+clique/i },
 ];
 
@@ -245,7 +245,7 @@ function wordCount(body) {
 }
 
 function hasFaq(body) {
-  return /<FAQ\b/i.test(body) || /^##\s*(FAQ|Perguntas frequentes|Perguntas comuns|Duvidas|D[uÃº]vidas)/im.test(body);
+  return /<FAQ\b/i.test(body) || /^##\s*(FAQ|Perguntas frequentes|Perguntas comuns|Duvidas|D[uú]vidas)/im.test(body);
 }
 
 function isCleanSlug(slug) {

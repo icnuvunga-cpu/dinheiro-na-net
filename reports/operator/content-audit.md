@@ -1,6 +1,6 @@
 # Operator Content Audit
 
-Gerado em: 2026-05-27T09:56:10.259Z
+Gerado em: 2026-05-27T10:38:42.499Z
 
 Posts: 10
 OK: 10
@@ -19,13 +19,13 @@ Erros: 0
 
 | Arquivo | Estado | Title | Categoria | Palavras | Erros | Avisos |
 | --- | --- | --- | --- | --- | --- | --- |
-| src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Começar do Zero | 370 | - | - |
-| src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Começar do Zero | 314 | - | - |
-| src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Começar do Zero | 381 | - | - |
-| src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Começar do Zero | 434 | - | - |
-| src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em MoÃ§ambique | Pagamentos Online | 355 | - | - |
-| src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Começar do Zero | 308 | - | - |
-| src/content/posts/marketing-afiliados-inicio.mdx | OK | O que Ã© marketing de afiliados | Afiliados e Ferramentas | 343 | - | - |
-| src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Começar do Zero | 309 | - | - |
-| src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | Começar do Zero | 351 | - | - |
-| src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteÃºdo Ãºtil | IA e Produtividade | 356 | - | - |
+| src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Começar do Zero | 570 | - | - |
+| src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Começar do Zero | 497 | - | - |
+| src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Começar do Zero | 509 | - | - |
+| src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Começar do Zero | 485 | - | - |
+| src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | Pagamentos Online | 505 | - | - |
+| src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Começar do Zero | 501 | - | - |
+| src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | Afiliados e Ferramentas | 431 | - | - |
+| src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Começar do Zero | 501 | - | - |
+| src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | Começar do Zero | 455 | - | - |
+| src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteúdo útil | IA e Produtividade | 428 | - | - |

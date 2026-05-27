@@ -61,6 +61,31 @@ Comandos disponíveis:
 - `npm run operator:snapshot` — documento de continuidade do projeto.
 - `npm run new:post` — cria novo artigo MDX em modo rascunho.
 
+## Operação por PowerShell
+
+Comandos principais para continuar o projeto sem depender de agentes:
+
+- `npm run dev` — inicia o site local.
+- `npm run build` — gera a versão estática em `dist/`.
+- `npm run operator:health` — mostra posts, páginas principais, URL oficial, Analytics, Search Console, sitemap e Git.
+- `npm run operator:fix-encoding` — procura texto corrompido sem alterar ficheiros.
+- `npm run operator:fix-encoding -- --write` — corrige automaticamente padrões conhecidos de encoding.
+- `npm run operator:editorial` — audita frontmatter, H2, FAQ, conclusão, links internos, exemplos e termos exagerados.
+- `npm run operator:copy-scan` — escaneia textos visíveis do site.
+- `npm run operator:links` — valida links internos e referências à calculadora.
+- `npm run operator:prepublish` — roda build, auditorias e resumo antes de aceitar uma mudança.
+- `npm run operator:guide` — imprime e gera o guia de operação em PowerShell.
+- `npm run operator:workflow` — imprime e gera fluxos prontos de trabalho.
+
+Relatórios principais:
+
+- `reports/operator/POWERSHELL_OPERATOR_GUIDE.md`
+- `reports/operator/WORKFLOWS.md`
+- `reports/operator/editorial-audit.md`
+- `reports/operator/copy-scan.md`
+- `reports/operator/link-audit.md`
+- `reports/operator/prepublish-report.md`
+
 ## Build
 
 ```sh

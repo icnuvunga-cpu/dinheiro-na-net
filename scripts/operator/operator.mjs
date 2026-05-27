@@ -26,17 +26,87 @@ const officialCategoryLabels = [
 ];
 
 const dangerousTerms = [
-  ['clique no anuncio', /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uÃº]ncio/i],
-  ['clicar no anuncio', /clicar\s+(no|na|em|num|neste|nesse|naquele)\s+an[uÃº]ncio/i],
+  ['clique no anuncio', /clique\s+(aqui\s+)?(no|na|em|num|neste|nesse|naquele)\s+an[uú]ncio/i],
+  ['clicar no anuncio', /clicar\s+(no|na|em|num|neste|nesse|naquele)\s+an[uú]ncio/i],
   ['ganhos garantidos', /ganhos?\s+garantid[oa]s?/i],
-  ['dinheiro facil garantido', /dinheiro\s+f[aÃ¡]cil\s+garantido/i],
-  ['trafego falso', /tr[aÃ¡]fego\s+falso/i],
+  ['dinheiro facil garantido', /dinheiro\s+f[aá]cil\s+garantido/i],
+  ['trafego falso', /tr[aá]fego\s+falso/i],
   ['bot de clique', /bot\s+de\s+clique/i],
   ['bots de clique', /bots\s+de\s+clique/i],
   ['cliques artificiais', /cliques?\s+artificiais/i],
   ['manipular AdSense', /manipular\s+adsense/i],
   ['bypass', /\bbypass\b/i],
   ['esquema garantido', /esquema\s+garantido/i],
+];
+
+const encodingPatterns = [
+  ['mojibake A-tilde', /\u00c3[\u0080-\u00bf]/],
+  ['mojibake a-circumflex', /\u00e2(?:\u20ac|\u0153|\u201e|\u201d|\u201c|\u2122|\u2020)/],
+  ['texto NAO corrompido', /N\u00c3\u0192O/],
+  ['texto corrompido comum', /Come\u00c3\u00a7ar|Intelig\u00c3\u00aancia|An\u00c3\u00a1lise|neg\u00c3\u00b3cio|estrat\u00c3\u00a9gia|Mo\u00c3\u00a7ambique|conte\u00c3\u00bado|pol\u00c3\u00adtica/],
+];
+
+const encodingReplacements = [
+  ['N\u00c3\u0192O', 'NÃO'],
+  ['n\u00c3\u0192o', 'não'],
+  ['\u00c3\u2021', 'Ç'],
+  ['\u00c3\u20ac', 'À'],
+  ['\u00c3\u0081', 'Á'],
+  ['\u00c3\u201a', 'Â'],
+  ['\u00c3\u0192', '\u00c3'],
+  ['\u00c3\u2030', 'É'],
+  ['\u00c3\u0160', 'Ê'],
+  ['\u00c3\u008d', 'Í'],
+  ['\u00c3\u201c', 'Ó'],
+  ['\u00c3\u2022', 'Õ'],
+  ['\u00c3\u0161', 'Ú'],
+  ['\u00c3\u00a1', 'á'],
+  ['\u00c3\u00a2', '\u00e2'],
+  ['\u00c3\u00a3', 'ã'],
+  ['\u00c3\u00a7', 'ç'],
+  ['\u00c3\u00a9', 'é'],
+  ['\u00c3\u00aa', 'ê'],
+  ['\u00c3\u00ad', 'í'],
+  ['\u00c3\u00b3', 'ó'],
+  ['\u00c3\u00b4', 'ô'],
+  ['\u00c3\u00b5', 'õ'],
+  ['\u00c3\u00ba', 'ú'],
+  ['\u00c3\u00bc', 'ü'],
+  ['\u00e2\u20ac\u2122', "'"],
+  ['\u00e2\u20ac\u0153', '"'],
+  ['\u00e2\u20ac\u009d', '"'],
+  ['\u00e2\u20ac\u02dc', "'"],
+  ['\u00e2\u20ac\u201c', '-'],
+  ['\u00e2\u20ac\u201d', '-'],
+  ['\u00e2\u2020\u2019', '->'],
+  ['\u00e2\u0153\u201c', 'OK'],
+  ['\u00e2\u0153\u2026', 'OK'],
+  ['\u00e2\u0161 \u00ef\u00b8\u008f', 'Aviso:'],
+  ['\u00e2\u201a\u00ac', '€'],
+  ['\u00c2\u00ba', 'º'],
+  ['\u00c2\u00aa', 'ª'],
+  ['\u00c2\u00b7', '·'],
+];
+
+const exaggeratedTerms = [
+  ['ganhar rapidamente', /\bganhar rapidamente\b/i],
+  ['muito superior', /\bmuito superior\b/i],
+  ['garantido', /\bgarantid[oa]s?\b/i],
+  ['formula', /\bf[oó]rmula\b/i],
+  ['segredo', /\bsegredo\b/i],
+  ['automatico', /\bautom[aá]tico\b/i],
+  ['sem esforco', /\bsem esfor[cç]o\b/i],
+];
+
+const oldPagesDomainPattern = new RegExp(String.raw`(?:dinheironanet|dinheiro-na-net)\.${'pages'}\.${'dev'}`, 'i');
+
+const copyRiskPatterns = [
+  ['encoding quebrado', /Come\u00c3\u00a7ar|Intelig\u00c3\u00aancia|An\u00c3\u00a1lise|neg\u00c3\u00b3cio|estrat\u00c3\u00a9gia|Mo\u00c3\u00a7ambique|conte\u00c3\u00bado|pol\u00c3\u00adtica|quest\u00c3\u00b5es|sugest\u00c3\u00b5es|d\u00c3\u00bavidas|\u00c3[\u0080-\u00bf]|\u00e2\u0153|\u00e2\u20ac\u201d|\u00e2\u20ac\u201c/],
+  ['clique no anuncio', /clique\s+(?:aqui\s+)?(?:no|em|num|neste)\s+an[uú]ncio/i],
+  ['ganho garantido', /ganh[oa]s?\s+garantid[oa]s?/i],
+  ['url antiga do dominio temporario', oldPagesDomainPattern],
+  ['monetizacao ativa indevida', /recorremos\s+ao\s+modelo\s+de\s+afilia[cç][aã]o|temos\s+links\s+afiliados\s+ativos/i],
+  ['dominio antigo', oldPagesDomainPattern],
 ];
 
 const adsensePatterns = [
@@ -111,6 +181,111 @@ function sourceFiles() {
     if (exists(file)) files.push(p(file));
   }
   return files.filter((file) => textExtensions.has(path.extname(file)));
+}
+
+function operatorTextFiles() {
+  const files = [];
+  for (const dir of ['src', 'scripts']) {
+    files.push(...walk(p(dir), new Set(['node_modules', 'dist', '.astro', '.git'])));
+  }
+  if (exists('reports', 'operator')) {
+    files.push(
+      ...fs.readdirSync(p('reports', 'operator'), { withFileTypes: true })
+        .filter((entry) => entry.isFile() && entry.name.endsWith('.md') && entry.name !== 'fix-encoding.md')
+        .map((entry) => p('reports', 'operator', entry.name))
+    );
+  }
+  for (const file of ['README.md', 'RELATORIO_INICIAL.md']) {
+    if (exists(file)) files.push(p(file));
+  }
+  return [...new Set(files)].filter((file) => textExtensions.has(path.extname(file)));
+}
+
+function visibleCopyFiles() {
+  const files = [];
+  for (const dir of ['src']) {
+    files.push(...walk(p(dir), new Set(['node_modules', 'dist', '.astro', '.git'])));
+  }
+  return files.filter((file) => ['.astro', '.mdx', '.md', '.ts'].includes(path.extname(file)));
+}
+
+function applyEncodingFixes(text) {
+  let next = text;
+  for (const [from, to] of encodingReplacements) {
+    next = next.split(from).join(to);
+  }
+  next = next
+    .replace(new RegExp(String.raw`dinheironanet\.${'pages'}\.${'dev'}`, 'g'), 'dinheiro-na-net.icnuvunga.workers.dev')
+    .replace(new RegExp(String.raw`dinheiro-na-net\.${'pages'}\.${'dev'}`, 'g'), 'dinheiro-na-net.icnuvunga.workers.dev');
+  return next;
+}
+
+function findLineNumbers(text, pattern) {
+  const lines = text.split(/\r?\n/);
+  const hits = [];
+  for (let index = 0; index < lines.length; index += 1) {
+    if (pattern.test(lines[index])) hits.push(index + 1);
+    pattern.lastIndex = 0;
+  }
+  return hits;
+}
+
+function extractInternalLinks(text) {
+  const links = new Set();
+  for (const match of text.matchAll(/\[[^\]]+\]\((\/[^)\s#]+)(?:#[^)]+)?\)/g)) links.add(match[1].replace(/\/$/, '') || '/');
+  for (const match of text.matchAll(/href=["'](\/[^"'#]+)(?:#[^"']*)?["']/g)) links.add(match[1].replace(/\/$/, '') || '/');
+  return [...links];
+}
+
+function knownInternalRoutes() {
+  const routes = new Set([
+    '/',
+    '/sobre',
+    '/contacto',
+    '/categorias',
+    '/ferramentas',
+    '/termos-de-uso',
+    '/politica-de-privacidade',
+    '/politica-de-cookies',
+    '/aviso-de-afiliados',
+    '/favicon.svg',
+    '/favicon.ico',
+    '/robots.txt',
+    '/google4b64c5c3975c1fc5.html',
+  ]);
+  routes.add('/ferramentas/calculadora-ganhos-blog');
+  routes.add('/categorias');
+  for (const category of categoriesFromConfig()) routes.add(`/categorias/${category.slug}`);
+  for (const file of postFiles()) routes.add(`/posts/${path.basename(file, '.mdx')}`);
+  return routes;
+}
+
+function categoriesFromConfig() {
+  const source = read('src', 'data', 'siteConfig.ts');
+  return [...source.matchAll(/name:\s*["'`](.*?)["'`],\s*slug:\s*["'`](.*?)["'`]/g)]
+    .map((match) => ({ name: match[1], slug: match[2] }));
+}
+
+function runNpmScript(scriptName) {
+  const command = process.platform === 'win32'
+    ? ['cmd.exe', ['/d', '/s', '/c', `npm run ${scriptName}`]]
+    : ['npm', ['run', scriptName]];
+  const result = spawnSync(command[0], command[1], {
+    cwd: ROOT,
+    encoding: 'utf8',
+    timeout: 240000,
+  });
+  return {
+    scriptName,
+    ok: result.status === 0,
+    status: result.status,
+    output: stripAnsi(`${result.stdout ?? ''}${result.stderr ?? ''}`).trim(),
+  };
+}
+
+function gitStatusShort() {
+  const result = spawnSync('git', ['status', '--short'], { cwd: ROOT, encoding: 'utf8', timeout: 30000 });
+  return result.status === 0 ? result.stdout.trim() : `(git status falhou: ${result.stderr || result.status})`;
 }
 
 function markdownTable(headers, rows) {
@@ -215,11 +390,11 @@ function wordCount(body) {
 }
 
 function hasFaq(body) {
-  return /<FAQ\b/i.test(body) || /^##\s*(FAQ|Perguntas frequentes|Perguntas comuns|Duvidas|D[uÃº]vidas)/im.test(body);
+  return /<FAQ\b/i.test(body) || /^##\s*(FAQ|Perguntas frequentes|Perguntas comuns|Duvidas|D[uú]vidas)/im.test(body);
 }
 
 function hasConclusion(body) {
-  return /^##\s*(Conclus[aÃ£]o|Resumo final|Proximo passo|Pr[oÃ³]ximo passo)/im.test(body);
+  return /^##\s*(Conclus[aã]o|Resumo final|Proximo passo|Pr[oó]ximo passo)/im.test(body);
 }
 
 function findPatterns(text, patterns) {
@@ -738,6 +913,369 @@ function snapshotCommand() {
   console.log('Snapshot atualizado: reports/operator/project-snapshot.md');
 }
 
+function healthCommand() {
+  const config = read('src', 'data', 'siteConfig.ts');
+  const baseLayout = read('src', 'layouts', 'BaseLayout.astro');
+  const astroConfig = read('astro.config.mjs');
+  const checks = [
+    ['Posts existentes', String(postFiles().length)],
+    ['Paginas principais', mainPages().filter(([, file]) => exists(file)).length === mainPages().length ? 'OK' : 'FALTAM'],
+    ['URL oficial', config.includes(PREFERRED_SITE) && astroConfig.includes(PREFERRED_SITE) ? PREFERRED_SITE : 'VERIFICAR'],
+    ['GA4 G-X44LDYSG1', baseLayout.includes('G-X44LDYSG1') ? 'OK' : 'FALTA'],
+    ['Search Console verification', exists('public', 'google4b64c5c3975c1fc5.html') ? 'OK' : 'FALTA'],
+    ['robots.txt', exists('public', 'robots.txt') ? 'OK' : 'FALTA'],
+    ['Sitemap Astro', /sitemap\s*\(/.test(astroConfig) ? 'OK' : 'FALTA'],
+    ['dist', exists('dist') ? 'OK' : 'FALTA'],
+    ['Git status', gitStatusShort() || 'limpo'],
+  ];
+  const body = [
+    '# Operator Health',
+    '',
+    `Gerado em: ${DATE}`,
+    '',
+    markdownTable(['Item', 'Estado'], checks),
+    '',
+  ].join('\n');
+  writeReport('health.md', body);
+  console.log('=== OPERATOR HEALTH ===');
+  for (const [item, state] of checks) console.log(`${item}: ${state}`);
+  console.log('Relatorio: reports/operator/health.md');
+}
+
+function fixEncodingCommand() {
+  const write = process.argv.includes('--write');
+  const rows = [];
+  let changed = 0;
+  let suspicious = 0;
+
+  for (const file of operatorTextFiles()) {
+    const text = fs.readFileSync(file, 'utf8');
+    const fixed = applyEncodingFixes(text);
+    const hits = [];
+    for (const [name, pattern] of encodingPatterns) {
+      const lines = findLineNumbers(text, pattern);
+      if (lines.length > 0) hits.push(`${name} (linhas ${lines.slice(0, 8).join(', ')})`);
+    }
+    if (oldPagesDomainPattern.test(text)) hits.push('url antiga do dominio temporario');
+    if (hits.length > 0 || fixed !== text) {
+      suspicious += 1;
+      if (fixed !== text) changed += 1;
+      rows.push([rel(file), fixed !== text ? 'corrigivel' : 'verificar', hits.join('; ') || 'substituicoes aplicaveis']);
+      if (write && fixed !== text) fs.writeFileSync(file, fixed, 'utf8');
+    }
+  }
+
+  const body = [
+    '# Operator Fix Encoding',
+    '',
+    `Gerado em: ${DATE}`,
+    `Modo: ${write ? 'write' : 'relatorio'}`,
+    '',
+    `Ficheiros suspeitos: ${suspicious}`,
+    `Ficheiros ${write ? 'alterados' : 'corrigiveis'}: ${changed}`,
+    '',
+    rows.length ? markdownTable(['Arquivo', 'Estado', 'Detalhes'], rows) : 'Nenhum texto corrompido conhecido encontrado.',
+    '',
+    'Use `npm run operator:fix-encoding -- --write` para aplicar correcoes automaticamente.',
+    '',
+  ].join('\n');
+  writeReport('fix-encoding.md', body);
+
+  console.log('=== FIX ENCODING ===');
+  console.log(`Modo: ${write ? 'write' : 'relatorio'}`);
+  console.log(`Ficheiros suspeitos: ${suspicious}`);
+  console.log(`Ficheiros ${write ? 'alterados' : 'corrigiveis'}: ${changed}`);
+  console.log('Relatorio: reports/operator/fix-encoding.md');
+}
+
+function editorialAudit({ write = true } = {}) {
+  const rows = [];
+  const checks = [];
+
+  for (const post of posts()) {
+    const slug = path.basename(post.file, '.mdx');
+    const errors = [];
+    const warnings = [];
+    const body = post.body;
+    const links = extractInternalLinks(body);
+    const words = wordCount(body);
+    const h2Count = (body.match(/^##\s+\S/gm) ?? []).length;
+    const hasPractical = /pr[aá]tic[ao]s?|checklist|passos?|exemplo/i.test(body);
+    const hasLocal = /Mo[cç]ambique|lus[oó]fon|Portugal|Brasil|Angola|meticais|pa[ií]s/i.test(body);
+    const exaggerated = findPatterns(body, exaggeratedTerms);
+    const brokenEncoding = findPatterns(post.text, encodingPatterns);
+
+    if (!post.hasFrontmatter) errors.push('frontmatter ausente');
+    for (const field of ['title', 'description', 'date', 'updated', 'category']) {
+      if (!present(post.data[field])) errors.push(`${field} ausente`);
+    }
+    if (present(post.data.category) && !officialCategoryLabels.includes(post.data.category)) errors.push('categoria fora da lista oficial');
+    if (h2Count < 3) warnings.push('poucos H2');
+    if (!hasFaq(body)) warnings.push('FAQ ausente');
+    if (!hasConclusion(body)) warnings.push('conclusao ausente');
+    if (links.length < 2) warnings.push('poucos links internos');
+    if (words < 350) warnings.push('texto curto');
+    if (!hasPractical) warnings.push('sem secao pratica ou exemplo claro');
+    if (/mocambique|pagamento|afiliado|adsense|blog/i.test(normalize(`${slug} ${post.data.title}`)) && !hasLocal) warnings.push('pouco contexto local/lusofono');
+    if (exaggerated.length > 0) warnings.push(`termos exagerados: ${exaggerated.join(', ')}`);
+    if (brokenEncoding.length > 0) errors.push(`encoding quebrado: ${brokenEncoding.join(', ')}`);
+
+    const level = errors.length > 0 ? 'ERROR' : warnings.length > 0 ? 'WARN' : 'OK';
+    checks.push({ level, item: rel(post.file), detail: [...errors, ...warnings].join('; ') || 'OK' });
+    rows.push([rel(post.file), level, post.data.title || '', words, h2Count, links.length, [...errors, ...warnings].join('; ') || 'OK']);
+  }
+
+  const summary = summarize(checks);
+  const body = [
+    '# Operator Editorial Audit',
+    '',
+    `Gerado em: ${DATE}`,
+    '',
+    `Posts: ${postFiles().length}`,
+    `OK: ${summary.ok}`,
+    `Avisos: ${summary.warn}`,
+    `Erros: ${summary.error}`,
+    '',
+    markdownTable(['Arquivo', 'Estado', 'Titulo', 'Palavras', 'H2', 'Links internos', 'Observacoes'], rows),
+    '',
+  ].join('\n');
+  if (write) writeReport('editorial-audit.md', body);
+  return { name: 'editorial', checks, summary, report: 'reports/operator/editorial-audit.md' };
+}
+
+function copyScan({ write = true } = {}) {
+  const rows = [];
+  const checks = [];
+  for (const file of visibleCopyFiles()) {
+    const text = fs.readFileSync(file, 'utf8');
+    const hits = [];
+    for (const [name, pattern] of copyRiskPatterns) {
+      const lines = findLineNumbers(text, pattern);
+      if (lines.length > 0) hits.push(`${name} (linhas ${lines.slice(0, 10).join(', ')})`);
+    }
+    if (hits.length > 0) {
+      checks.push({ level: 'ERROR', item: rel(file), detail: hits.join('; ') });
+      rows.push([rel(file), hits.join('; ')]);
+    }
+  }
+  if (checks.length === 0) checks.push({ level: 'OK', item: 'copy visivel', detail: 'Nenhum problema conhecido encontrado.' });
+  const summary = summarize(checks);
+  const body = [
+    '# Operator Copy Scan',
+    '',
+    `Gerado em: ${DATE}`,
+    '',
+    `OK: ${summary.ok}`,
+    `Avisos: ${summary.warn}`,
+    `Erros: ${summary.error}`,
+    '',
+    rows.length ? markdownTable(['Arquivo', 'Problemas'], rows) : 'Nenhum problema conhecido encontrado em textos visiveis.',
+    '',
+  ].join('\n');
+  if (write) writeReport('copy-scan.md', body);
+  return { name: 'copy-scan', checks, summary, report: 'reports/operator/copy-scan.md' };
+}
+
+function linkAudit({ write = true } = {}) {
+  const known = knownInternalRoutes();
+  const rows = [];
+  const checks = [];
+  const calculatorExpected = new Set([
+    'afiliados-ou-adsense',
+    'como-ganhar-dinheiro-blog-2026',
+    'marketing-afiliados-inicio',
+    'o-que-e-adsense',
+    'quanto-custa-criar-blog',
+  ]);
+
+  for (const post of posts()) {
+    const slug = path.basename(post.file, '.mdx');
+    const links = extractInternalLinks(post.body);
+    const issues = [];
+    if (links.length === 0) issues.push('sem links internos');
+    for (const link of links) {
+      if (!known.has(link)) issues.push(`link interno quebrado: ${link}`);
+      if (oldPagesDomainPattern.test(link)) issues.push(`url antiga: ${link}`);
+    }
+    if (calculatorExpected.has(slug) && !links.includes('/ferramentas/calculadora-ganhos-blog')) {
+      issues.push('deveria linkar para calculadora');
+    }
+    const level = issues.length > 0 ? 'ERROR' : 'OK';
+    checks.push({ level, item: rel(post.file), detail: issues.join('; ') || 'OK' });
+    rows.push([rel(post.file), level, links.join(', ') || '-', issues.join('; ') || 'OK']);
+  }
+
+  for (const file of visibleCopyFiles().filter((item) => item.endsWith('.astro'))) {
+    const text = fs.readFileSync(file, 'utf8');
+    for (const link of extractInternalLinks(text)) {
+      if (!known.has(link)) {
+        checks.push({ level: 'ERROR', item: rel(file), detail: `link interno quebrado: ${link}` });
+        rows.push([rel(file), 'ERROR', link, `link interno quebrado: ${link}`]);
+      }
+    }
+  }
+
+  const summary = summarize(checks);
+  const body = [
+    '# Operator Link Audit',
+    '',
+    `Gerado em: ${DATE}`,
+    '',
+    `OK: ${summary.ok}`,
+    `Avisos: ${summary.warn}`,
+    `Erros: ${summary.error}`,
+    '',
+    markdownTable(['Arquivo', 'Estado', 'Links internos', 'Observacoes'], rows),
+    '',
+  ].join('\n');
+  if (write) writeReport('link-audit.md', body);
+  return { name: 'links', checks, summary, report: 'reports/operator/link-audit.md' };
+}
+
+function guideCommand() {
+  const body = [
+    '# Guia de Operacao por PowerShell',
+    '',
+    '## Comandos principais',
+    '',
+    '- `npm run dev` - abre o site local para escrever e testar.',
+    '- `npm run build` - gera a versao estatica em `dist/`.',
+    '- `npm run operator:health` - mostra estado geral do projeto.',
+    '- `npm run operator:fix-encoding` - procura texto corrompido sem alterar ficheiros.',
+    '- `npm run operator:fix-encoding -- --write` - aplica correcoes conhecidas de encoding.',
+    '- `npm run operator:editorial` - audita qualidade editorial dos posts.',
+    '- `npm run operator:copy-scan` - procura problemas em textos visiveis.',
+    '- `npm run operator:links` - audita links internos.',
+    '- `npm run operator:prepublish` - roda a validacao completa antes de push.',
+    '- `npm run operator:chatgpt` - gera resumo curto do estado do projeto.',
+    '',
+    '## Criar novo post',
+    '',
+    '`npm run new:post -- "Titulo do artigo" "Começar do Zero"`',
+    '',
+    'Depois edita o MDX criado em `src/content/posts/`, remove o draft quando estiver pronto e roda `npm run operator:prepublish`.',
+    '',
+    '## Validar antes de push',
+    '',
+    '1. `npm run operator:fix-encoding`',
+    '2. `npm run operator:prepublish`',
+    '3. `git status`',
+    '4. `git add ...`',
+    '5. `git commit -m "mensagem"`',
+    '6. `git push`',
+    '',
+    '## Memoria local',
+    '',
+    'Usa `npm run operator:snapshot` e guarda notas novas em `reports/operator/LOCAL_MEMORY_UPDATE_YYYYMMDD.md` quando houver uma decisao importante.',
+    '',
+  ].join('\n');
+  writeReport('POWERSHELL_OPERATOR_GUIDE.md', body);
+  console.log(body);
+  console.log('Relatorio: reports/operator/POWERSHELL_OPERATOR_GUIDE.md');
+}
+
+function workflowCommand() {
+  const body = [
+    '# Workflows do Operador',
+    '',
+    '## Melhorar artigo existente',
+    '',
+    '1. Editar o ficheiro MDX em `src/content/posts/`.',
+    '2. Rodar `npm run operator:editorial`.',
+    '3. Rodar `npm run operator:links`.',
+    '4. Rodar `npm run operator:prepublish`.',
+    '5. Rever `git status` e commitar.',
+    '',
+    '## Criar novo artigo',
+    '',
+    '1. `npm run new:post -- "Titulo" "Categoria"`.',
+    '2. Editar o rascunho.',
+    '3. Confirmar frontmatter, FAQ, conclusao e links internos.',
+    '4. Rodar `npm run operator:prepublish`.',
+    '',
+    '## Corrigir texto quebrado',
+    '',
+    '1. `npm run operator:fix-encoding`.',
+    '2. Se o relatorio estiver correto: `npm run operator:fix-encoding -- --write`.',
+    '3. Rodar `npm run operator:copy-scan`.',
+    '',
+    '## Validar SEO',
+    '',
+    '1. `npm run operator:seo`.',
+    '2. Corrigir title, description, canonical ou paginas principais.',
+    '3. Rodar `npm run build`.',
+    '',
+    '## Validar Analytics e Search Console sem mexer neles',
+    '',
+    '1. `npm run operator:health`.',
+    '2. Confirmar `GA4 G-X44LDYSG1: OK`.',
+    '3. Confirmar `Search Console verification: OK`.',
+    '4. Nao remover `public/google4b64c5c3975c1fc5.html`.',
+    '',
+    '## Preparar commit',
+    '',
+    '1. `npm run operator:prepublish`.',
+    '2. `git status`.',
+    '3. `git diff --stat`.',
+    '4. `git add ...`.',
+    '5. `git commit -m "mensagem"`.',
+    '',
+    '## Publicar alteracao',
+    '',
+    '1. Confirmar que o branch esta certo.',
+    '2. Rodar `git push`.',
+    '3. Aguardar o deploy conectado ao GitHub/Cloudflare.',
+    '4. Abrir o site oficial e verificar paginas principais.',
+    '',
+  ].join('\n');
+  writeReport('WORKFLOWS.md', body);
+  console.log(body);
+  console.log('Relatorio: reports/operator/WORKFLOWS.md');
+}
+
+function prepublishCommand() {
+  const scripts = [
+    'build',
+    'operator:content',
+    'operator:seo',
+    'operator:deploy-check',
+    'operator:editorial',
+    'operator:copy-scan',
+    'operator:links',
+    'operator:chatgpt',
+  ];
+  const results = scripts.map(runNpmScript);
+  const rows = results.map((result) => [
+    result.scriptName,
+    result.ok ? 'OK' : 'ERROR',
+    result.output.split(/\r?\n/).slice(-8).join('<br>') || '(sem saida)',
+  ]);
+  const ok = results.filter((result) => result.ok).length;
+  const errors = results.length - ok;
+  const body = [
+    '# Operator Prepublish Report',
+    '',
+    `Gerado em: ${DATE}`,
+    '',
+    `OK: ${ok}`,
+    `Erros: ${errors}`,
+    '',
+    markdownTable(['Comando', 'Estado', 'Resumo'], rows),
+    '',
+    '## Git status',
+    '',
+    '```text',
+    gitStatusShort() || 'limpo',
+    '```',
+    '',
+  ].join('\n');
+  writeReport('prepublish-report.md', body);
+  console.log('=== PREPUBLISH ===');
+  for (const result of results) console.log(`${result.scriptName}: ${result.ok ? 'OK' : 'ERROR'}`);
+  console.log('Relatorio: reports/operator/prepublish-report.md');
+  if (errors > 0) process.exitCode = 1;
+}
+
 function printSimpleResult(result, label) {
   console.log(`=== ${label} ===`);
   if (label === 'CONTENT') console.log(`Posts: ${postFiles().length}`);
@@ -754,17 +1292,25 @@ function main() {
   ensureReports();
 
   if (command === 'status') return statusCommand();
+  if (command === 'health') return healthCommand();
   if (command === 'audit') return auditCommand();
   if (command === 'content') return printSimpleResult(contentAudit(), 'CONTENT');
   if (command === 'seo') return printSimpleResult(seoAudit(), 'SEO');
   if (command === 'adsense') return printSimpleResult(adsenseAudit(), 'ADSENSE SAFETY');
   if (command === 'deploy-check') return printSimpleResult(deployCheck(), 'DEPLOY CHECK');
+  if (command === 'fix-encoding') return fixEncodingCommand();
+  if (command === 'editorial') return printSimpleResult(editorialAudit(), 'EDITORIAL');
+  if (command === 'copy-scan') return printSimpleResult(copyScan(), 'COPY SCAN');
+  if (command === 'links') return printSimpleResult(linkAudit(), 'LINKS');
+  if (command === 'prepublish') return prepublishCommand();
+  if (command === 'guide') return guideCommand();
+  if (command === 'workflow') return workflowCommand();
   if (command === 'mobile') return mobileCommand();
   if (command === 'chatgpt') return chatgptCommand();
   if (command === 'snapshot') return snapshotCommand();
 
   console.error(`Comando desconhecido: ${command}`);
-  console.error('Use: status, audit, content, seo, adsense, deploy-check, mobile, chatgpt, snapshot');
+  console.error('Use: status, health, audit, content, seo, adsense, deploy-check, fix-encoding, editorial, copy-scan, links, prepublish, guide, workflow, mobile, chatgpt, snapshot');
   process.exitCode = 1;
 }
 

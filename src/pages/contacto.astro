@@ -4,29 +4,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout 
   title="Contacto | Dinheiro na Net"
-  description="Entre em contacto com a equipa do Dinheiro na Net para questÃµes, sugestÃµes ou colaboraÃ§Ãµes."
+  description="Entre em contacto com a equipa do Dinheiro na Net para questões, sugestões ou colaborações."
 >
   <div class="container--narrow" style="padding: 3rem 1.25rem 5rem">
     <h1>Contacto</h1>
-    <p class="lead">Tens uma questÃ£o, sugestÃ£o de tema ou queres colaborar? Entra em contacto connosco.</p>
+    <p class="lead">Tens uma questão, sugestão de tema ou queres colaborar? Entra em contacto connosco.</p>
 
     <div class="contact-options">
       <div class="contact-card">
-        <div class="contact-icon" aria-hidden="true">âœ‰ï¸</div>
+        <div class="contact-icon" aria-hidden="true">Email</div>
         <h2>Email</h2>
-        <p>Para questÃµes gerais, sugestÃµes de artigos ou dÃºvidas sobre o conteÃºdo:</p>
+        <p>Para questões gerais, sugestões de artigos ou dúvidas sobre o conteúdo:</p>
         <a href="mailto:contacto@dinheiro-na-net.icnuvunga.workers.dev" class="btn btn-primary">contacto@dinheiro-na-net.icnuvunga.workers.dev</a>
-        <p class="contact-note">Respondemos normalmente dentro de 5 dias Ãºteis.</p>
+        <p class="contact-note">Respondemos normalmente dentro de 5 dias úteis.</p>
       </div>
     </div>
 
     <div class="contact-note-box">
-      <h3>O que nÃ£o fazemos</h3>
+      <h3>O que não fazemos</h3>
       <ul>
-        <li>NÃ£o fornecemos aconselhamento financeiro</li>
-        <li>NÃ£o garantimos resultados de monetizaÃ§Ã£o</li>
-        <li>NÃ£o vendemos cursos ou serviÃ§os pagos (por enquanto)</li>
-        <li>NÃ£o compramos links ou aceitamos guest posts pagos na fase atual</li>
+        <li>Não fornecemos aconselhamento financeiro</li>
+        <li>Não prometemos resultados de monetização</li>
+        <li>Não vendemos cursos ou serviços pagos na fase atual</li>
+        <li>Não compramos links ou aceitamos guest posts pagos na fase atual</li>
       </ul>
     </div>
   </div>
@@ -42,7 +42,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 2rem;
     text-align: center;
   }
-  .contact-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .contact-icon {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
   .contact-card h2 { margin-top: 0; }
   .contact-note { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 1rem; margin-bottom: 0; }
   .contact-note-box {
@@ -54,4 +61,3 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .contact-note-box h3 { margin-top: 0; }
   .contact-note-box ul { color: var(--color-text-muted); }
 </style>
-

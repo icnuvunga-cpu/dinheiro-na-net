@@ -1,15 +1,15 @@
-﻿export const siteConfig = {
+export const siteConfig = {
     title: "Dinheiro na Net",
-    description: "Aprende a criar renda digital com blogs, IA, afiliados e ferramentas online. Guias prÃ¡ticos para lusÃ³fonos.",
+    description: "Aprende a criar renda digital com blogs, IA, afiliados e ferramentas online. Guias práticos para lusófonos.",
     url: "https://dinheiro-na-net.icnuvunga.workers.dev",
 };
 
 export const categories = [
-    { name: "ComeÃ§ar do Zero", slug: "comecar-do-zero", description: "O bÃ¡sico para ganhares os teus primeiros euros ou reais online." },
-    { name: "IA e Produtividade", slug: "ia-e-produtividade", description: "Como a InteligÃªncia Artificial te pode ajudar a criar e otimizar." },
-    { name: "Afiliados e Ferramentas", slug: "afiliados-e-ferramentas", description: "AnÃ¡lise de programas de afiliados e melhores ferramentas do mercado." },
-    { name: "Pagamentos Online", slug: "pagamentos-online", description: "Como receber pagamentos em diversos paÃ­ses da lusofonia e exterior." },
-    { name: "Ferramentas Gratuitas", slug: "ferramentas-gratuitas", description: "Recursos grÃ¡tis para acelerar o teu negÃ³cio online." },
+    { name: "Começar do Zero", slug: "comecar-do-zero", description: "O básico para criares uma base digital com expectativas realistas." },
+    { name: "IA e Produtividade", slug: "ia-e-produtividade", description: "Como usar inteligência artificial com revisão humana e utilidade real." },
+    { name: "Afiliados e Ferramentas", slug: "afiliados-e-ferramentas", description: "Análise educativa de programas de afiliados e ferramentas digitais." },
+    { name: "Pagamentos Online", slug: "pagamentos-online", description: "Como pensar pagamentos em países da lusofonia e no trabalho remoto." },
+    { name: "Ferramentas Gratuitas", slug: "ferramentas-gratuitas", description: "Recursos grátis para planear e validar ideias online." },
 ];
 
 export const navigation = [
@@ -19,4 +19,3 @@ export const navigation = [
     { name: "Sobre", href: "/sobre" },
     { name: "Contacto", href: "/contacto" },
 ];
-

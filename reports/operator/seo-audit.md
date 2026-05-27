@@ -1,6 +1,6 @@
 # Operator SEO Audit
 
-Gerado em: 2026-05-27T09:56:10.805Z
+Gerado em: 2026-05-27T10:38:43.042Z
 
 OK: 26
 Avisos: 0
@@ -31,13 +31,13 @@ Erros: 0
 
 | Arquivo | Estado | Title | Description | Observacoes |
 | --- | --- | --- | --- | --- |
-| src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Descobre a diferenÃ§a estratÃ©gica nestes dois gigantes da monetizaÃ§Ã£o e por qual o teu site deverÃ¡ dar os primeiros passos de ganho. | OK |
-| src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | O tutorial prÃ¡tico absoluto (e barato) para tirar as tuas ideias da cabeÃ§a e metÃª-las online em poucas horas. | OK |
-| src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Mais de metade das perdas de motivaÃ§Ã£o nascem de decisÃµes de Nicho falhadas. Encontra um sub-mercado que una trÃ¡fego ao prazer da manutenÃ§Ã£o. | OK |
-| src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Aprende as estratégias mais atualizadas para criar um blog rentável na era do IA e focar-te em construção de audiência. | OK |
-| src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em MoÃ§ambique | Vencendo as dores do Paypal incompleto e contornos complexos: as tÃ¡ticas ativas em 2026 para os moÃ§ambicanos que laboram para fora atravÃ©s das redes. | OK |
-| src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Um catÃ¡logo honesto das pÃ©ssimas decisÃµes tomadas sistematicamente pela maioria aquando desenham as suas estratÃ©gias online. | OK |
-| src/content/posts/marketing-afiliados-inicio.mdx | OK | O que Ã© marketing de afiliados | A essÃªncia de ganhar Ã  comissÃ£o num mundo digital, atravÃ©s da recomendaÃ§Ã£o de ferramentas ou produtos de qualidade. | OK |
-| src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Desmistifica a principal plataforma de monetização do Google e entende como as métricas CPC e RPM afetam o teu bolso. | OK |
-| src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | Podes viver uma promessa de criar um blog absolutamente gratuito mas pagar em anos com frustraÃ§Ãµes. Avalia os reais custos de arrancar digitalmente. | OK |
-| src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteÃºdo Ãºtil | VÃª porquÃª a forma bÃ¡sica de mandar criar textos Ã  InteligÃªncia Artificial falha estrondosamente hoje em dia e muda as regras do teu prompt. | OK |
+| src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Compara afiliados e AdSense com critérios simples para decidir por onde começar a monetização de um blog sem criar falsas expectativas. | OK |
+| src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Um guia prático para criar um blog com base simples, páginas essenciais, primeiros artigos e expectativas realistas desde o início. | OK |
+| src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Aprende a escolher um nicho de blog com procura real, margem para conteúdo útil e possibilidade de monetização responsável. | OK |
+| src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Entende formas realistas de monetizar um blog em 2026 com conteúdo útil, tráfego qualificado, afiliados, anúncios e produtos próprios. | OK |
+| src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | Guia educativo sobre formas comuns de receber pagamentos online em Moçambique, com cuidados sobre plataformas, taxas e documentação. | OK |
+| src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Conhece erros editoriais, técnicos e estratégicos que dificultam a monetização de um blog e aprende como corrigi-los com calma. | OK |
+| src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | Entende como funciona o marketing de afiliados, quando faz sentido para blogs e quais cuidados manter antes de recomendar produtos. | OK |
+| src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Aprende o básico sobre Google AdSense, CPC, RPM, aprovação de sites e limites dos anúncios como forma de monetização. | OK |
+| src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | Vê os custos principais para criar um blog, desde domínio e alojamento até ferramentas opcionais, com uma abordagem simples para iniciantes. | OK |
+| src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteúdo útil | Aprende a usar inteligência artificial como apoio editorial sem publicar textos genéricos, exagerados ou sem experiência humana. | OK |
