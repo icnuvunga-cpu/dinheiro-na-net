@@ -1,6 +1,6 @@
 # Operator Deploy Readiness
 
-Gerado em: 2026-05-27T10:38:43.480Z
+Gerado em: 2026-05-27T10:45:07.845Z
 
 Deploy readiness: OK
 OK: 11
@@ -24,29 +24,29 @@ Erros: 0
 ## Saida resumida do build
 
 ```text
-12:38:49   ├─ /categorias/index.html (+7ms) 
-12:38:49   ├─ /contacto/index.html (+5ms) 
-12:38:49   ├─ /ferramentas/calculadora-ganhos-blog/index.html (+9ms) 
-12:38:49   ├─ /ferramentas/index.html (+5ms) 
-12:38:49   ├─ /politica-de-cookies/index.html (+7ms) 
-12:38:49   ├─ /politica-de-privacidade/index.html (+4ms) 
-12:38:49   ├─ /posts/afiliados-ou-adsense/index.html (+16ms) 
-12:38:49   ├─ /posts/como-criar-blog-do-zero/index.html (+9ms) 
-12:38:49   ├─ /posts/como-escolher-nicho-blog/index.html (+8ms) 
-12:38:49   ├─ /posts/como-ganhar-dinheiro-blog-2026/index.html (+8ms) 
-12:38:49   ├─ /posts/como-receber-dinheiro-mocambique/index.html (+8ms) 
-12:38:49   ├─ /posts/erros-impedem-ganhar-dinheiro/index.html (+8ms) 
-12:38:49   ├─ /posts/marketing-afiliados-inicio/index.html (+8ms) 
-12:38:49   ├─ /posts/o-que-e-adsense/index.html (+7ms) 
-12:38:49   ├─ /posts/quanto-custa-criar-blog/index.html (+10ms) 
-12:38:49   ├─ /posts/usar-ia-para-conteudo/index.html (+8ms) 
-12:38:49   ├─ /sobre/index.html (+4ms) 
-12:38:49   ├─ /termos-de-uso/index.html (+5ms) 
-12:38:49   ├─ /index.html (+9ms) 
-12:38:49 ✓ Completed in 244ms.
+12:45:15   ├─ /categorias/index.html (+11ms) 
+12:45:15   ├─ /contacto/index.html (+8ms) 
+12:45:15   ├─ /ferramentas/calculadora-ganhos-blog/index.html (+12ms) 
+12:45:15   ├─ /ferramentas/index.html (+6ms) 
+12:45:15   ├─ /politica-de-cookies/index.html (+6ms) 
+12:45:15   ├─ /politica-de-privacidade/index.html (+7ms) 
+12:45:15   ├─ /posts/afiliados-ou-adsense/index.html (+25ms) 
+12:45:15   ├─ /posts/como-criar-blog-do-zero/index.html (+7ms) 
+12:45:15   ├─ /posts/como-escolher-nicho-blog/index.html (+9ms) 
+12:45:15   ├─ /posts/como-ganhar-dinheiro-blog-2026/index.html (+10ms) 
+12:45:15   ├─ /posts/como-receber-dinheiro-mocambique/index.html (+10ms) 
+12:45:15   ├─ /posts/erros-impedem-ganhar-dinheiro/index.html (+9ms) 
+12:45:15   ├─ /posts/marketing-afiliados-inicio/index.html (+9ms) 
+12:45:15   ├─ /posts/o-que-e-adsense/index.html (+9ms) 
+12:45:15   ├─ /posts/quanto-custa-criar-blog/index.html (+11ms) 
+12:45:15   ├─ /posts/usar-ia-para-conteudo/index.html (+9ms) 
+12:45:15   ├─ /sobre/index.html (+5ms) 
+12:45:15   ├─ /termos-de-uso/index.html (+5ms) 
+12:45:15   ├─ /index.html (+10ms) 
+12:45:15 ✓ Completed in 315ms.
 
-12:38:49 [build] ✓ Completed in 3.33s.
-12:38:49 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
-12:38:49 [build] 26 page(s) built in 4.10s
-12:38:49 [build] Complete!
+12:45:15 [build] ✓ Completed in 3.93s.
+12:45:15 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+12:45:15 [build] 26 page(s) built in 4.80s
+12:45:15 [build] Complete!
 ```
