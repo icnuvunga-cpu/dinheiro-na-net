@@ -1,6 +1,6 @@
 # Operator Copy Scan
 
-Gerado em: 2026-05-27T10:45:16.400Z
+Gerado em: 2026-06-14T19:09:04.462Z
 
 OK: 1
 Avisos: 0
