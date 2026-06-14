@@ -15,6 +15,16 @@
 3. Confirmar frontmatter, FAQ, conclusao e links internos.
 4. Rodar `npm run operator:prepublish`.
 
+## Como escolher o proximo artigo a publicar
+
+1. Abrir `reports/operator/CONTENT_BACKLOG.md`.
+2. Escolher primeiro um artigo com status `Planeado`, prioridade `Alta` e o menor lote ainda nao validado.
+3. Se houver empate, preferir a categoria mais fraca no site: `Ferramentas Gratuitas`, `IA e Produtividade`, `Afiliados e Ferramentas` ou `Pagamentos Online`.
+4. Confirmar que o artigo tera pelo menos dois links internos naturais para posts atuais ou para a calculadora.
+5. Evitar temas sensiveis de pagamentos, afiliados ou AdSense sem verificar regras atuais antes de escrever.
+6. Criar e publicar apenas um artigo por vez; depois validar dados, links e qualidade antes de avancar para o proximo.
+7. Atualizar o status no backlog quando o artigo passar para `Rascunho`, `Publicado` ou `Revisar`.
+
 ## Corrigir texto quebrado
 
 1. `npm run operator:fix-encoding`.

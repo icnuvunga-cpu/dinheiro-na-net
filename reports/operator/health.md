@@ -1,6 +1,6 @@
 # Operator Health
 
-Gerado em: 2026-05-27T10:42:12.369Z
+Gerado em: 2026-06-14T19:49:59.278Z
 
 | Item | Estado |
 | --- | --- |
@@ -12,4 +12,4 @@ Gerado em: 2026-05-27T10:42:12.369Z
 | robots.txt | OK |
 | Sitemap Astro | OK |
 | dist | OK |
-| Git status | limpo |
+| Git status | M reports/operator/WORKFLOWS.md<br>?? reports/operator/CONTENT_BACKLOG.md<br>?? reports/operator/EDITORIAL_CYCLE_2_PLAN_20260614.md |
