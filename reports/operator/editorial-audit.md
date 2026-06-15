@@ -1,15 +1,16 @@
 # Operator Editorial Audit
 
-Gerado em: 2026-06-14T19:51:42.779Z
+Gerado em: 2026-06-15T20:38:21.486Z
 
-Posts: 10
+Posts: 11
 OK: 10
-Avisos: 0
+Avisos: 1
 Erros: 0
 
 | Arquivo | Estado | Titulo | Palavras | H2 | Links internos | Observacoes |
 | --- | --- | --- | --- | --- | --- | --- |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | 570 | 7 | 7 | OK |
+| src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | WARN | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | 3039 | 13 | 11 | termos exagerados: automatico, sem esforco |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | 497 | 8 | 4 | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | 509 | 7 | 5 | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | 485 | 7 | 8 | OK |

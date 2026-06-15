@@ -1,8 +1,8 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-14T19:51:29.594Z
+Gerado em: 2026-06-15T20:38:05.139Z
 
-OK: 26
+OK: 27
 Avisos: 0
 Erros: 0
 
@@ -32,6 +32,7 @@ Erros: 0
 | Arquivo | Estado | Title | Description | Observacoes |
 | --- | --- | --- | --- | --- |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Compara afiliados e AdSense com critérios simples para decidir por onde começar a monetização de um blog sem criar falsas expectativas. | OK |
+| src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Aprende como começar a ganhar dinheiro na internet do zero, mesmo sem experiência, com caminhos reais, passos simples, cuidados e erros a evitar. | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Um guia prático para criar um blog com base simples, páginas essenciais, primeiros artigos e expectativas realistas desde o início. | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Aprende a escolher um nicho de blog com procura real, margem para conteúdo útil e possibilidade de monetização responsável. | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Entende formas realistas de monetizar um blog em 2026 com conteúdo útil, tráfego qualificado, afiliados, anúncios e produtos próprios. | OK |

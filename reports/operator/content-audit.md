@@ -1,11 +1,11 @@
 # Operator Content Audit
 
-Gerado em: 2026-06-14T19:51:28.807Z
+Gerado em: 2026-06-15T20:38:04.439Z
 
-Posts: 10
+Posts: 11
 OK: 10
 Avisos: 0
-Erros: 0
+Erros: 1
 
 ## Categorias oficiais
 
@@ -20,6 +20,7 @@ Erros: 0
 | Arquivo | Estado | Title | Categoria | Palavras | Erros | Avisos |
 | --- | --- | --- | --- | --- | --- | --- |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Começar do Zero | 570 | - | - |
+| src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | ERROR | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Começar do Zero | 3039 | tags ausente; author ausente; draft ausente | - |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Começar do Zero | 497 | - | - |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Começar do Zero | 509 | - | - |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Começar do Zero | 485 | - | - |
