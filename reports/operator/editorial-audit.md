@@ -1,9 +1,9 @@
 # Operator Editorial Audit
 
-Gerado em: 2026-06-16T19:55:13.758Z
+Gerado em: 2026-06-16T20:17:35.995Z
 
-Posts: 13
-OK: 10
+Posts: 14
+OK: 11
 Avisos: 3
 Erros: 0
 
@@ -20,5 +20,6 @@ Erros: 0
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | 501 | 8 | 7 | OK |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | 431 | 7 | 5 | OK |
 | src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | 501 | 8 | 5 | OK |
+| src/content/posts/o-que-e-seo-importante-ganhar-dinheiro-blog.mdx | OK | O que é SEO e por que ele é importante para ganhar dinheiro com blog | 2363 | 45 | 7 | OK |
 | src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | 455 | 7 | 6 | OK |
 | src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteúdo útil | 428 | 7 | 6 | OK |

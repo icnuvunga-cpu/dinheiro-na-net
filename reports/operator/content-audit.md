@@ -1,9 +1,9 @@
 # Operator Content Audit
 
-Gerado em: 2026-06-16T19:55:04.610Z
+Gerado em: 2026-06-16T20:17:19.223Z
 
-Posts: 13
-OK: 13
+Posts: 14
+OK: 14
 Avisos: 0
 Erros: 0
 
@@ -30,5 +30,6 @@ Erros: 0
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Começar do Zero | 501 | - | - |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | Afiliados e Ferramentas | 431 | - | - |
 | src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Começar do Zero | 501 | - | - |
+| src/content/posts/o-que-e-seo-importante-ganhar-dinheiro-blog.mdx | OK | O que é SEO e por que ele é importante para ganhar dinheiro com blog | Começar do Zero | 2363 | - | - |
 | src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | Começar do Zero | 455 | - | - |
 | src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteúdo útil | IA e Produtividade | 428 | - | - |

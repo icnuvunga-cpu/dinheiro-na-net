@@ -1,20 +1,20 @@
 # Operator Prepublish Report
 
-Gerado em: 2026-06-16T19:54:56.157Z
+Gerado em: 2026-06-16T20:17:06.760Z
 
 OK: 8
 Erros: 0
 
 | Comando | Estado | Resumo |
 | --- | --- | --- |
-| build | OK | 21:55:04   ├─ /termos-de-uso/index.html (+8ms) <br>21:55:04   ├─ /index.html (+12ms) <br>21:55:04 ✓ Completed in 430ms.<br><br>21:55:04 [build] ✓ Completed in 4.98s.<br>21:55:04 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`<br>21:55:04 [build] 29 page(s) built in 5.84s<br>21:55:04 [build] Complete! |
-| operator:content | OK | > node scripts/operator/operator.mjs content<br><br>=== CONTENT ===<br>Posts: 13<br>OK: 13<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/content-audit.md |
-| operator:seo | OK | > dinheiro-na-net@0.0.1 operator:seo<br>> node scripts/operator/operator.mjs seo<br><br>=== SEO ===<br>OK: 29<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/seo-audit.md |
+| build | OK | 22:17:17   ├─ /termos-de-uso/index.html (+8ms) <br>22:17:17   ├─ /index.html (+15ms) <br>22:17:17 ✓ Completed in 559ms.<br><br>22:17:17 [build] ✓ Completed in 7.22s.<br>22:17:17 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`<br>22:17:17 [build] 30 page(s) built in 8.17s<br>22:17:17 [build] Complete! |
+| operator:content | OK | > node scripts/operator/operator.mjs content<br><br>=== CONTENT ===<br>Posts: 14<br>OK: 14<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/content-audit.md |
+| operator:seo | OK | > dinheiro-na-net@0.0.1 operator:seo<br>> node scripts/operator/operator.mjs seo<br><br>=== SEO ===<br>OK: 30<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/seo-audit.md |
 | operator:deploy-check | OK | > node scripts/operator/operator.mjs deploy-check<br><br>=== DEPLOY CHECK ===<br>Deploy readiness: OK<br>OK: 11<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/deploy-readiness.md |
-| operator:editorial | OK | > dinheiro-na-net@0.0.1 operator:editorial<br>> node scripts/operator/operator.mjs editorial<br><br>=== EDITORIAL ===<br>OK: 10<br>Avisos: 3<br>Erros: 0<br>Relatorio: reports/operator/editorial-audit.md |
+| operator:editorial | OK | > dinheiro-na-net@0.0.1 operator:editorial<br>> node scripts/operator/operator.mjs editorial<br><br>=== EDITORIAL ===<br>OK: 11<br>Avisos: 3<br>Erros: 0<br>Relatorio: reports/operator/editorial-audit.md |
 | operator:copy-scan | OK | > dinheiro-na-net@0.0.1 operator:copy-scan<br>> node scripts/operator/operator.mjs copy-scan<br><br>=== COPY SCAN ===<br>OK: 1<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/copy-scan.md |
-| operator:links | OK | > dinheiro-na-net@0.0.1 operator:links<br>> node scripts/operator/operator.mjs links<br><br>=== LINKS ===<br>OK: 13<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/link-audit.md |
-| operator:chatgpt | OK | Build/deploy-check: OK<br>Posts MDX: 13<br>Paginas principais: OK<br>Erros criticos: 0<br>Avisos: 0<br>Relatorios: reports/operator/audit.md; reports/operator/content-audit.md; reports/operator/seo-audit.md; reports/operator/adsense-safety.md; reports/operator/deploy-readiness.md<br>Ultimos resumos: content-audit.md: 13 OK, 0 avisos, 0 erros \| seo-audit.md: 29 OK, 0 avisos, 0 erros \| adsense-safety.md: 2 OK, 0 avisos, 0 erros \| deploy-readiness.md: OK, 11 OK, 0 avisos, 0 erros<br>Proximo passo recomendado: Fazer validacao visual/mobile antes de confirmar deploy. |
+| operator:links | OK | > dinheiro-na-net@0.0.1 operator:links<br>> node scripts/operator/operator.mjs links<br><br>=== LINKS ===<br>OK: 14<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/link-audit.md |
+| operator:chatgpt | OK | Build/deploy-check: OK<br>Posts MDX: 14<br>Paginas principais: OK<br>Erros criticos: 0<br>Avisos: 0<br>Relatorios: reports/operator/audit.md; reports/operator/content-audit.md; reports/operator/seo-audit.md; reports/operator/adsense-safety.md; reports/operator/deploy-readiness.md<br>Ultimos resumos: content-audit.md: 14 OK, 0 avisos, 0 erros \| seo-audit.md: 30 OK, 0 avisos, 0 erros \| adsense-safety.md: 2 OK, 0 avisos, 0 erros \| deploy-readiness.md: OK, 11 OK, 0 avisos, 0 erros<br>Proximo passo recomendado: Fazer validacao visual/mobile antes de confirmar deploy. |
 
 ## Git status
 
@@ -26,5 +26,5 @@ M reports/operator/chatgpt-summary.txt
  M reports/operator/editorial-audit.md
  M reports/operator/link-audit.md
  M reports/operator/seo-audit.md
-?? src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx
+?? src/content/posts/o-que-e-seo-importante-ganhar-dinheiro-blog.mdx
 ```

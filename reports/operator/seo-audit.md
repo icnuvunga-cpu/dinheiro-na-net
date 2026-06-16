@@ -1,8 +1,8 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-16T19:55:05.018Z
+Gerado em: 2026-06-16T20:17:19.988Z
 
-OK: 29
+OK: 30
 Avisos: 0
 Erros: 0
 
@@ -42,5 +42,6 @@ Erros: 0
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Conhece erros editoriais, técnicos e estratégicos que dificultam a monetização de um blog e aprende como corrigi-los com calma. | OK |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | Entende como funciona o marketing de afiliados, quando faz sentido para blogs e quais cuidados manter antes de recomendar produtos. | OK |
 | src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Aprende o básico sobre Google AdSense, CPC, RPM, aprovação de sites e limites dos anúncios como forma de monetização. | OK |
+| src/content/posts/o-que-e-seo-importante-ganhar-dinheiro-blog.mdx | OK | O que é SEO e por que ele é importante para ganhar dinheiro com blog | Entende o que é SEO, por que ele ajuda um blog a receber visitas do Google e como usar essa estratégia com conteúdo útil e honesto. | OK |
 | src/content/posts/quanto-custa-criar-blog.mdx | OK | Quanto custa criar um blog | Vê os custos principais para criar um blog, desde domínio e alojamento até ferramentas opcionais, com uma abordagem simples para iniciantes. | OK |
 | src/content/posts/usar-ia-para-conteudo.mdx | OK | Como usar IA para criar conteúdo útil | Aprende a usar inteligência artificial como apoio editorial sem publicar textos genéricos, exagerados ou sem experiência humana. | OK |
