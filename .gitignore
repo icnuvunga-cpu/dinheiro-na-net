@@ -36,3 +36,5 @@ Thumbs.db
 
 # local operator backups
 reports/operator/backups/
+
+.operator-backups/

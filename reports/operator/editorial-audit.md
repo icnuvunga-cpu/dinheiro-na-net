@@ -1,14 +1,15 @@
 # Operator Editorial Audit
 
-Gerado em: 2026-06-16T19:23:32.282Z
+Gerado em: 2026-06-16T19:47:44.153Z
 
-Posts: 11
+Posts: 12
 OK: 10
-Avisos: 1
+Avisos: 2
 Erros: 0
 
 | Arquivo | Estado | Titulo | Palavras | H2 | Links internos | Observacoes |
 | --- | --- | --- | --- | --- | --- | --- |
+| src/content/posts/7-formas-reais-ganhar-dinheiro-online-lusofonos.mdx | WARN | 7 formas reais de ganhar dinheiro online para lusófonos | 2794 | 21 | 12 | termos exagerados: formula |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | 570 | 7 | 7 | OK |
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | WARN | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | 3039 | 13 | 11 | termos exagerados: automatico, sem esforco |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | 497 | 8 | 4 | OK |

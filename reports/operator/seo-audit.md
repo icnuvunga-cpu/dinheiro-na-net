@@ -1,8 +1,8 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-16T19:23:24.914Z
+Gerado em: 2026-06-16T19:47:36.349Z
 
-OK: 27
+OK: 28
 Avisos: 0
 Erros: 0
 
@@ -31,6 +31,7 @@ Erros: 0
 
 | Arquivo | Estado | Title | Description | Observacoes |
 | --- | --- | --- | --- | --- |
+| src/content/posts/7-formas-reais-ganhar-dinheiro-online-lusofonos.mdx | OK | 7 formas reais de ganhar dinheiro online para lusófonos | Conhece 7 formas reais de ganhar dinheiro online para lusófonos, com vantagens, dificuldades, cuidados e caminhos práticos para começar. | OK |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Compara afiliados e AdSense com critérios simples para decidir por onde começar a monetização de um blog sem criar falsas expectativas. | OK |
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Aprende como começar a ganhar dinheiro na internet do zero, mesmo sem experiência, com caminhos reais, passos simples, cuidados e erros a evitar. | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Um guia prático para criar um blog com base simples, páginas essenciais, primeiros artigos e expectativas realistas desde o início. | OK |

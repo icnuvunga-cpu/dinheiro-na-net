@@ -1,13 +1,14 @@
 # Operator Link Audit
 
-Gerado em: 2026-06-16T19:23:33.191Z
+Gerado em: 2026-06-16T19:47:45.034Z
 
-OK: 11
+OK: 12
 Avisos: 0
 Erros: 0
 
 | Arquivo | Estado | Links internos | Observacoes |
 | --- | --- | --- | --- |
+| src/content/posts/7-formas-reais-ganhar-dinheiro-online-lusofonos.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/como-ganhar-dinheiro-blog-2026, /posts/como-criar-blog-do-zero, /posts/como-escolher-nicho-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /aviso-de-afiliados, /posts/como-receber-dinheiro-mocambique, /posts/usar-ia-para-conteudo, /posts/quanto-custa-criar-blog, /ferramentas/calculadora-ganhos-blog, /posts/erros-impedem-ganhar-dinheiro | OK |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | /posts/como-criar-blog-do-zero, /posts/como-ganhar-dinheiro-blog-2026, /posts/marketing-afiliados-inicio, /ferramentas/calculadora-ganhos-blog, /posts/o-que-e-adsense, /posts/erros-impedem-ganhar-dinheiro, /posts/quanto-custa-criar-blog | OK |
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | /posts/como-ganhar-dinheiro-blog-2026, /posts/como-criar-blog-do-zero, /posts/como-escolher-nicho-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /posts/usar-ia-para-conteudo, /ferramentas/calculadora-ganhos-blog, /posts/quanto-custa-criar-blog, /posts/como-receber-dinheiro-mocambique, /posts/erros-impedem-ganhar-dinheiro, /posts/o-que-e-adsense | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | /posts/como-escolher-nicho-blog, /posts/quanto-custa-criar-blog, /posts/usar-ia-para-conteudo, /posts/como-ganhar-dinheiro-blog-2026 | OK |

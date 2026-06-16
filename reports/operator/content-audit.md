@@ -1,9 +1,9 @@
 # Operator Content Audit
 
-Gerado em: 2026-06-16T19:23:24.486Z
+Gerado em: 2026-06-16T19:47:35.936Z
 
-Posts: 11
-OK: 11
+Posts: 12
+OK: 12
 Avisos: 0
 Erros: 0
 
@@ -19,6 +19,7 @@ Erros: 0
 
 | Arquivo | Estado | Title | Categoria | Palavras | Erros | Avisos |
 | --- | --- | --- | --- | --- | --- | --- |
+| src/content/posts/7-formas-reais-ganhar-dinheiro-online-lusofonos.mdx | OK | 7 formas reais de ganhar dinheiro online para lusófonos | Começar do Zero | 2794 | - | - |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Começar do Zero | 570 | - | - |
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Começar do Zero | 3039 | - | - |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Começar do Zero | 497 | - | - |
