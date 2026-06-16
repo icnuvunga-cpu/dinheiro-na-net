@@ -1,8 +1,8 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-16T20:34:26.266Z
+Gerado em: 2026-06-16T21:08:22.843Z
 
-OK: 31
+OK: 36
 Avisos: 0
 Erros: 0
 
@@ -33,12 +33,17 @@ Erros: 0
 | --- | --- | --- | --- | --- |
 | src/content/posts/7-formas-reais-ganhar-dinheiro-online-lusofonos.mdx | OK | 7 formas reais de ganhar dinheiro online para lusófonos | Conhece 7 formas reais de ganhar dinheiro online para lusófonos, com vantagens, dificuldades, cuidados e caminhos práticos para começar. | OK |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | Afiliados ou AdSense: qual escolher primeiro? | Compara afiliados e AdSense com critérios simples para decidir por onde começar a monetização de um blog sem criar falsas expectativas. | OK |
+| src/content/posts/blog-gratis-ou-blog-pago-qual-vale-a-pena.mdx | OK | Blog grátis ou blog pago: qual vale a pena para começar? | Entende as diferenças entre blog grátis e blog pago, quando cada opção faz sentido e qual caminho é melhor para começar com segurança. | OK |
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Aprende como começar a ganhar dinheiro na internet do zero, mesmo sem experiência, com caminhos reais, passos simples, cuidados e erros a evitar. | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Um guia prático para criar um blog com base simples, páginas essenciais, primeiros artigos e expectativas realistas desde o início. | OK |
+| src/content/posts/como-criar-calendario-editorial-simples-blog.mdx | OK | Como criar um calendário editorial simples para blog | Aprende a organizar ideias, datas e prioridades num calendário editorial simples para publicar artigos com mais consistência. | OK |
+| src/content/posts/como-criar-rotina-simples-trabalhar-online-todos-dias.mdx | OK | Como criar uma rotina simples para trabalhar online todos os dias | Aprende a criar uma rotina simples para trabalhar online com consistência, sem depender de motivação e sem tentar fazer tudo ao mesmo tempo. | OK |
+| src/content/posts/como-divulgar-blog-sem-spam-caminhos-seguros-iniciantes.mdx | OK | Como divulgar um blog sem spam: caminhos seguros para iniciantes | Aprende formas seguras e honestas de divulgar um blog, atrair leitores e criar confiança sem incomodar pessoas ou prejudicar tua marca. | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Aprende a escolher um nicho de blog com procura real, margem para conteúdo útil e possibilidade de monetização responsável. | OK |
 | src/content/posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo.mdx | OK | Como escrever artigos úteis para blog usando IA sem copiar conteúdo | Aprende a usar IA para escrever artigos úteis, originais e bem estruturados para blog, sem copiar conteúdo nem publicar textos genéricos. | OK |
 | src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | OK | Como evitar golpes de dinheiro fácil na internet | Aprende a identificar promessas suspeitas, proteger teus dados e escolher caminhos mais seguros para ganhar dinheiro online. | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Entende formas realistas de monetizar um blog em 2026 com conteúdo útil, tráfego qualificado, afiliados, anúncios e produtos próprios. | OK |
+| src/content/posts/como-pesquisar-ideias-artigos-blog-sem-copiar-concorrentes.mdx | OK | Como pesquisar ideias de artigos para blog sem copiar concorrentes | Aprende formas práticas de encontrar ideias de artigos para blog sem copiar outros sites e criando conteúdo com valor próprio. | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | Guia educativo sobre formas comuns de receber pagamentos online em Moçambique, com cuidados sobre plataformas, taxas e documentação. | OK |
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Conhece erros editoriais, técnicos e estratégicos que dificultam a monetização de um blog e aprende como corrigi-los com calma. | OK |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | Entende como funciona o marketing de afiliados, quando faz sentido para blogs e quais cuidados manter antes de recomendar produtos. | OK |

@@ -1,8 +1,8 @@
 # Operator Link Audit
 
-Gerado em: 2026-06-16T20:34:34.193Z
+Gerado em: 2026-06-16T21:08:32.630Z
 
-OK: 15
+OK: 20
 Avisos: 0
 Erros: 0
 
@@ -10,12 +10,17 @@ Erros: 0
 | --- | --- | --- | --- |
 | src/content/posts/7-formas-reais-ganhar-dinheiro-online-lusofonos.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/como-ganhar-dinheiro-blog-2026, /posts/como-criar-blog-do-zero, /posts/como-escolher-nicho-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /aviso-de-afiliados, /posts/como-receber-dinheiro-mocambique, /posts/usar-ia-para-conteudo, /posts/quanto-custa-criar-blog, /ferramentas/calculadora-ganhos-blog, /posts/erros-impedem-ganhar-dinheiro | OK |
 | src/content/posts/afiliados-ou-adsense.mdx | OK | /posts/como-criar-blog-do-zero, /posts/como-ganhar-dinheiro-blog-2026, /posts/marketing-afiliados-inicio, /ferramentas/calculadora-ganhos-blog, /posts/o-que-e-adsense, /posts/erros-impedem-ganhar-dinheiro, /posts/quanto-custa-criar-blog | OK |
+| src/content/posts/blog-gratis-ou-blog-pago-qual-vale-a-pena.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/como-ganhar-dinheiro-blog-2026, /posts/quanto-custa-criar-blog, /posts/como-criar-rotina-simples-trabalhar-online-todos-dias | OK |
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | /posts/como-ganhar-dinheiro-blog-2026, /posts/como-criar-blog-do-zero, /posts/como-escolher-nicho-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /posts/usar-ia-para-conteudo, /ferramentas/calculadora-ganhos-blog, /posts/quanto-custa-criar-blog, /posts/como-receber-dinheiro-mocambique, /posts/erros-impedem-ganhar-dinheiro, /posts/o-que-e-adsense | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | /posts/como-escolher-nicho-blog, /posts/quanto-custa-criar-blog, /posts/usar-ia-para-conteudo, /posts/como-ganhar-dinheiro-blog-2026 | OK |
+| src/content/posts/como-criar-calendario-editorial-simples-blog.mdx | OK | /posts/como-criar-rotina-simples-trabalhar-online-todos-dias, /posts/o-que-e-seo-importante-ganhar-dinheiro-blog, /posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo | OK |
+| src/content/posts/como-criar-rotina-simples-trabalhar-online-todos-dias.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/o-que-e-seo-importante-ganhar-dinheiro-blog, /posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo, /posts/7-formas-reais-ganhar-dinheiro-online-lusofonos | OK |
+| src/content/posts/como-divulgar-blog-sem-spam-caminhos-seguros-iniciantes.mdx | OK | /posts/como-criar-blog-do-zero, /posts/o-que-e-seo-importante-ganhar-dinheiro-blog, /posts/como-criar-calendario-editorial-simples-blog, /posts/como-pesquisar-ideias-artigos-blog-sem-copiar-concorrentes, /posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | /posts/afiliados-ou-adsense, /posts/erros-impedem-ganhar-dinheiro, /posts/usar-ia-para-conteudo, /posts/como-criar-blog-do-zero, /posts/como-ganhar-dinheiro-blog-2026 | OK |
 | src/content/posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/o-que-e-seo-importante-ganhar-dinheiro-blog, /posts/usar-ia-para-conteudo, /posts/como-escolher-nicho-blog | OK |
 | src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/7-formas-reais-ganhar-dinheiro-online-lusofonos, /posts/quanto-custa-criar-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /posts/como-receber-dinheiro-mocambique | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | /posts/marketing-afiliados-inicio, /posts/o-que-e-adsense, /posts/como-escolher-nicho-blog, /posts/como-criar-blog-do-zero, /ferramentas/calculadora-ganhos-blog, /posts/erros-impedem-ganhar-dinheiro, /posts/como-receber-dinheiro-mocambique, /posts/usar-ia-para-conteudo | OK |
+| src/content/posts/como-pesquisar-ideias-artigos-blog-sem-copiar-concorrentes.mdx | OK | /posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo, /ferramentas/calculadora-ganhos-blog, /posts/como-receber-dinheiro-mocambique, /posts/como-criar-calendario-editorial-simples-blog | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | /posts/como-ganhar-dinheiro-blog-2026, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /ferramentas/calculadora-ganhos-blog | OK |
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | /posts/como-escolher-nicho-blog, /posts/usar-ia-para-conteudo, /posts/como-receber-dinheiro-mocambique, /ferramentas/calculadora-ganhos-blog, /posts/afiliados-ou-adsense, /posts/o-que-e-adsense, /posts/marketing-afiliados-inicio | OK |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | /posts/como-receber-dinheiro-mocambique, /posts/afiliados-ou-adsense, /ferramentas/calculadora-ganhos-blog, /posts/como-criar-blog-do-zero, /posts/erros-impedem-ganhar-dinheiro | OK |

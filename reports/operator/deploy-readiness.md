@@ -1,6 +1,6 @@
 # Operator Deploy Readiness
 
-Gerado em: 2026-06-16T20:34:26.698Z
+Gerado em: 2026-06-16T21:08:23.234Z
 
 Deploy readiness: OK
 OK: 11
@@ -24,29 +24,29 @@ Erros: 0
 ## Saida resumida do build
 
 ```text
-22:34:32   ├─ /politica-de-privacidade/index.html (+4ms) 
-22:34:32   ├─ /posts/7-formas-reais-ganhar-dinheiro-online-lusofonos/index.html (+24ms) 
-22:34:32   ├─ /posts/afiliados-ou-adsense/index.html (+12ms) 
-22:34:32   ├─ /posts/como-comecar-ganhar-dinheiro-internet-zero/index.html (+12ms) 
-22:34:32   ├─ /posts/como-criar-blog-do-zero/index.html (+6ms) 
-22:34:32   ├─ /posts/como-escolher-nicho-blog/index.html (+8ms) 
-22:34:32   ├─ /posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo/index.html (+7ms) 
-22:34:32   ├─ /posts/como-evitar-golpes-dinheiro-facil-internet/index.html (+6ms) 
-22:34:32   ├─ /posts/como-ganhar-dinheiro-blog-2026/index.html (+5ms) 
-22:34:32   ├─ /posts/como-receber-dinheiro-mocambique/index.html (+5ms) 
-22:34:32   ├─ /posts/erros-impedem-ganhar-dinheiro/index.html (+8ms) 
-22:34:32   ├─ /posts/marketing-afiliados-inicio/index.html (+4ms) 
-22:34:32   ├─ /posts/o-que-e-adsense/index.html (+8ms) 
-22:34:32   ├─ /posts/o-que-e-seo-importante-ganhar-dinheiro-blog/index.html (+8ms) 
-22:34:32   ├─ /posts/quanto-custa-criar-blog/index.html (+6ms) 
-22:34:32   ├─ /posts/usar-ia-para-conteudo/index.html (+5ms) 
-22:34:32   ├─ /sobre/index.html (+3ms) 
-22:34:32   ├─ /termos-de-uso/index.html (+6ms) 
-22:34:32   ├─ /index.html (+5ms) 
-22:34:32 ✓ Completed in 254ms.
+23:08:31   ├─ /posts/como-criar-blog-do-zero/index.html (+10ms) 
+23:08:31   ├─ /posts/como-criar-calendario-editorial-simples-blog/index.html (+13ms) 
+23:08:31   ├─ /posts/como-criar-rotina-simples-trabalhar-online-todos-dias/index.html (+14ms) 
+23:08:31   ├─ /posts/como-divulgar-blog-sem-spam-caminhos-seguros-iniciantes/index.html (+12ms) 
+23:08:31   ├─ /posts/como-escolher-nicho-blog/index.html (+7ms) 
+23:08:31   ├─ /posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo/index.html (+11ms) 
+23:08:31   ├─ /posts/como-evitar-golpes-dinheiro-facil-internet/index.html (+8ms) 
+23:08:31   ├─ /posts/como-ganhar-dinheiro-blog-2026/index.html (+6ms) 
+23:08:31   ├─ /posts/como-pesquisar-ideias-artigos-blog-sem-copiar-concorrentes/index.html (+8ms) 
+23:08:31   ├─ /posts/como-receber-dinheiro-mocambique/index.html (+5ms) 
+23:08:31   ├─ /posts/erros-impedem-ganhar-dinheiro/index.html (+12ms) 
+23:08:31   ├─ /posts/marketing-afiliados-inicio/index.html (+9ms) 
+23:08:31   ├─ /posts/o-que-e-adsense/index.html (+7ms) 
+23:08:31   ├─ /posts/o-que-e-seo-importante-ganhar-dinheiro-blog/index.html (+10ms) 
+23:08:31   ├─ /posts/quanto-custa-criar-blog/index.html (+10ms) 
+23:08:31   ├─ /posts/usar-ia-para-conteudo/index.html (+8ms) 
+23:08:31   ├─ /sobre/index.html (+5ms) 
+23:08:31   ├─ /termos-de-uso/index.html (+12ms) 
+23:08:31   ├─ /index.html (+8ms) 
+23:08:31 ✓ Completed in 373ms.
 
-22:34:32 [build] ✓ Completed in 3.46s.
-22:34:32 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
-22:34:32 [build] 31 page(s) built in 4.14s
-22:34:32 [build] Complete!
+23:08:31 [build] ✓ Completed in 5.07s.
+23:08:31 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+23:08:31 [build] 36 page(s) built in 5.82s
+23:08:31 [build] Complete!
 ```
