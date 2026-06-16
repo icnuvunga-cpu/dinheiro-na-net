@@ -1,6 +1,6 @@
 # Operator Fix Encoding
 
-Gerado em: 2026-06-14T19:09:03.701Z
+Gerado em: 2026-06-16T04:37:14.443Z
 Modo: relatorio
 
 Ficheiros suspeitos: 0
