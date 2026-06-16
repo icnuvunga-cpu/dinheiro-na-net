@@ -1,9 +1,9 @@
 # Operator Content Audit
 
-Gerado em: 2026-06-16T20:17:19.223Z
+Gerado em: 2026-06-16T20:34:25.868Z
 
-Posts: 14
-OK: 14
+Posts: 15
+OK: 15
 Avisos: 0
 Erros: 0
 
@@ -24,6 +24,7 @@ Erros: 0
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Começar do Zero | 3039 | - | - |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Começar do Zero | 497 | - | - |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Começar do Zero | 509 | - | - |
+| src/content/posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo.mdx | OK | Como escrever artigos úteis para blog usando IA sem copiar conteúdo | IA e Produtividade | 2240 | - | - |
 | src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | OK | Como evitar golpes de dinheiro fácil na internet | Começar do Zero | 2134 | - | - |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Começar do Zero | 485 | - | - |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | Pagamentos Online | 505 | - | - |

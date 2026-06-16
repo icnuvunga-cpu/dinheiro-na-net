@@ -1,8 +1,8 @@
 # Operator Link Audit
 
-Gerado em: 2026-06-16T20:17:37.392Z
+Gerado em: 2026-06-16T20:34:34.193Z
 
-OK: 14
+OK: 15
 Avisos: 0
 Erros: 0
 
@@ -13,6 +13,7 @@ Erros: 0
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | /posts/como-ganhar-dinheiro-blog-2026, /posts/como-criar-blog-do-zero, /posts/como-escolher-nicho-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /posts/usar-ia-para-conteudo, /ferramentas/calculadora-ganhos-blog, /posts/quanto-custa-criar-blog, /posts/como-receber-dinheiro-mocambique, /posts/erros-impedem-ganhar-dinheiro, /posts/o-que-e-adsense | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | /posts/como-escolher-nicho-blog, /posts/quanto-custa-criar-blog, /posts/usar-ia-para-conteudo, /posts/como-ganhar-dinheiro-blog-2026 | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | /posts/afiliados-ou-adsense, /posts/erros-impedem-ganhar-dinheiro, /posts/usar-ia-para-conteudo, /posts/como-criar-blog-do-zero, /posts/como-ganhar-dinheiro-blog-2026 | OK |
+| src/content/posts/como-escrever-artigos-uteis-blog-usando-ia-sem-copiar-conteudo.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/o-que-e-seo-importante-ganhar-dinheiro-blog, /posts/usar-ia-para-conteudo, /posts/como-escolher-nicho-blog | OK |
 | src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | OK | /posts/como-comecar-ganhar-dinheiro-internet-zero, /posts/7-formas-reais-ganhar-dinheiro-online-lusofonos, /posts/quanto-custa-criar-blog, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /posts/como-receber-dinheiro-mocambique | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | /posts/marketing-afiliados-inicio, /posts/o-que-e-adsense, /posts/como-escolher-nicho-blog, /posts/como-criar-blog-do-zero, /ferramentas/calculadora-ganhos-blog, /posts/erros-impedem-ganhar-dinheiro, /posts/como-receber-dinheiro-mocambique, /posts/usar-ia-para-conteudo | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | /posts/como-ganhar-dinheiro-blog-2026, /posts/marketing-afiliados-inicio, /posts/afiliados-ou-adsense, /ferramentas/calculadora-ganhos-blog | OK |
