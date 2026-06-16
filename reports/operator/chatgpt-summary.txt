@@ -1,11 +1,11 @@
 DINHEIRO NA NET - RESUMO PARA CHATGPT
-Data: 2026-06-16T19:17:34.926Z
+Data: 2026-06-16T19:23:34.228Z
 Pasta: E:\Projetos\dinheiro-na-net
 Build/deploy-check: OK
 Posts MDX: 11
 Paginas principais: OK
-Erros criticos: src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx (tags ausente; author ausente; draft ausente)
+Erros criticos: 0
 Avisos: 0
 Relatorios: reports/operator/audit.md; reports/operator/content-audit.md; reports/operator/seo-audit.md; reports/operator/adsense-safety.md; reports/operator/deploy-readiness.md
-Ultimos resumos: content-audit.md: 10 OK, 0 avisos, 1 erros | seo-audit.md: 27 OK, 0 avisos, 0 erros | adsense-safety.md: 2 OK, 0 avisos, 0 erros | deploy-readiness.md: OK, 11 OK, 0 avisos, 0 erros
-Proximo passo recomendado: Corrigir erros criticos reportados antes de deploy.
+Ultimos resumos: content-audit.md: 11 OK, 0 avisos, 0 erros | seo-audit.md: 27 OK, 0 avisos, 0 erros | adsense-safety.md: 2 OK, 0 avisos, 0 erros | deploy-readiness.md: OK, 11 OK, 0 avisos, 0 erros
+Proximo passo recomendado: Fazer validacao visual/mobile antes de confirmar deploy.
