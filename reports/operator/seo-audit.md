@@ -1,8 +1,8 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-16T19:47:36.349Z
+Gerado em: 2026-06-16T19:55:05.018Z
 
-OK: 28
+OK: 29
 Avisos: 0
 Erros: 0
 
@@ -36,6 +36,7 @@ Erros: 0
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Aprende como começar a ganhar dinheiro na internet do zero, mesmo sem experiência, com caminhos reais, passos simples, cuidados e erros a evitar. | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Um guia prático para criar um blog com base simples, páginas essenciais, primeiros artigos e expectativas realistas desde o início. | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | Aprende a escolher um nicho de blog com procura real, margem para conteúdo útil e possibilidade de monetização responsável. | OK |
+| src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | OK | Como evitar golpes de dinheiro fácil na internet | Aprende a identificar promessas suspeitas, proteger teus dados e escolher caminhos mais seguros para ganhar dinheiro online. | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Entende formas realistas de monetizar um blog em 2026 com conteúdo útil, tráfego qualificado, afiliados, anúncios e produtos próprios. | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | Guia educativo sobre formas comuns de receber pagamentos online em Moçambique, com cuidados sobre plataformas, taxas e documentação. | OK |
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Conhece erros editoriais, técnicos e estratégicos que dificultam a monetização de um blog e aprende como corrigi-los com calma. | OK |

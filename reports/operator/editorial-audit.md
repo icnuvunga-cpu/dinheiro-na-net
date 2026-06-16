@@ -1,10 +1,10 @@
 # Operator Editorial Audit
 
-Gerado em: 2026-06-16T19:47:44.153Z
+Gerado em: 2026-06-16T19:55:13.758Z
 
-Posts: 12
+Posts: 13
 OK: 10
-Avisos: 2
+Avisos: 3
 Erros: 0
 
 | Arquivo | Estado | Titulo | Palavras | H2 | Links internos | Observacoes |
@@ -14,6 +14,7 @@ Erros: 0
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | WARN | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | 3039 | 13 | 11 | termos exagerados: automatico, sem esforco |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | 497 | 8 | 4 | OK |
 | src/content/posts/como-escolher-nicho-blog.mdx | OK | Como escolher nicho para blog | 509 | 7 | 5 | OK |
+| src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | WARN | Como evitar golpes de dinheiro fácil na internet | 2134 | 25 | 6 | termos exagerados: automatico, sem esforco |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | 485 | 7 | 8 | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | 505 | 7 | 4 | OK |
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | 501 | 8 | 7 | OK |
