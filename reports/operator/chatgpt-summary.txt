@@ -1,11 +1,11 @@
 DINHEIRO NA NET - RESUMO PARA CHATGPT
-Data: 2026-06-17T20:13:34.511Z
+Data: 2026-06-17T21:02:03.594Z
 Pasta: E:\Projetos\dinheiro-na-net
 Build/deploy-check: OK
-Posts MDX: 40
+Posts MDX: 50
 Paginas principais: OK
 Erros criticos: 0
 Avisos: 0
 Relatorios: reports/operator/audit.md; reports/operator/content-audit.md; reports/operator/seo-audit.md; reports/operator/adsense-safety.md; reports/operator/deploy-readiness.md
-Ultimos resumos: content-audit.md: 40 OK, 0 avisos, 0 erros | seo-audit.md: 56 OK, 0 avisos, 0 erros | adsense-safety.md: 2 OK, 0 avisos, 0 erros | deploy-readiness.md: OK, 11 OK, 0 avisos, 0 erros
+Ultimos resumos: content-audit.md: 50 OK, 0 avisos, 0 erros | seo-audit.md: 66 OK, 0 avisos, 0 erros | adsense-safety.md: 2 OK, 0 avisos, 0 erros | deploy-readiness.md: OK, 11 OK, 0 avisos, 0 erros
 Proximo passo recomendado: Fazer validacao visual/mobile antes de confirmar deploy.
