@@ -1,8 +1,8 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-16T21:27:45.650Z
+Gerado em: 2026-06-17T06:27:24.528Z
 
-OK: 46
+OK: 56
 Avisos: 0
 Erros: 0
 
@@ -39,7 +39,13 @@ Erros: 0
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | OK | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | Aprende como começar a ganhar dinheiro na internet do zero, mesmo sem experiência, com caminhos reais, passos simples, cuidados e erros a evitar. | OK |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | Um guia prático para criar um blog com base simples, páginas essenciais, primeiros artigos e expectativas realistas desde o início. | OK |
 | src/content/posts/como-criar-calendario-editorial-simples-blog.mdx | OK | Como criar um calendário editorial simples para blog | Aprende a organizar ideias, datas e prioridades num calendário editorial simples para publicar artigos com mais consistência. | OK |
+| src/content/posts/como-criar-checklist-gratuito-atrair-leitores-blog.mdx | OK | Como criar um checklist gratuito para atrair leitores para o blog | Aprende a criar um checklist simples, útil e alinhado ao teu blog para captar contactos e ajudar leitores iniciantes. | OK |
+| src/content/posts/como-criar-ebook-simples-vender-blog.mdx | OK | Como criar um eBook simples para vender no blog | Aprende a planejar, estruturar e vender um eBook simples usando o conteúdo e a experiência do teu blog. | OK |
+| src/content/posts/como-criar-lista-contactos-blog-iniciantes.mdx | OK | Como criar uma lista de contactos para o teu blog desde o início | Aprende por que uma lista de contactos é importante para um blog e como começar de forma simples, transparente e útil para o leitor. | OK |
 | src/content/posts/como-criar-pagina-recursos-recomendados-blog.mdx | OK | Como criar uma página de recursos recomendados no blog | Aprende a criar uma página de recursos recomendados com ferramentas, avisos, links úteis e transparência para o leitor. | OK |
+| src/content/posts/como-criar-pagina-servicos-digitais-blog.mdx | OK | Como criar uma página de serviços digitais no teu blog | Aprende a montar uma página de serviços simples, clara e profissional para receber pedidos de clientes pelo teu blog. | OK |
+| src/content/posts/como-criar-produto-digital-simples-primeiro-blog.mdx | OK | Como criar um produto digital simples a partir do teu blog | Aprende a transformar conteúdos, checklists e experiência do blog em um primeiro produto digital simples e útil. | OK |
+| src/content/posts/como-criar-rotina-mensal-revisao-blog.mdx | OK | Como criar uma rotina mensal de revisão do blog | Aprende a fazer uma revisão mensal simples para melhorar artigos, links, métricas, páginas e próximos passos do teu blog. | OK |
 | src/content/posts/como-criar-rotina-simples-trabalhar-online-todos-dias.mdx | OK | Como criar uma rotina simples para trabalhar online todos os dias | Aprende a criar uma rotina simples para trabalhar online com consistência, sem depender de motivação e sem tentar fazer tudo ao mesmo tempo. | OK |
 | src/content/posts/como-criar-servico-digital-simples-vender-online.mdx | OK | Como criar um serviço digital simples para vender online | Aprende a transformar uma habilidade simples em serviço digital, definir pacote, preço, entrega e primeiros clientes. | OK |
 | src/content/posts/como-divulgar-blog-sem-spam-caminhos-seguros-iniciantes.mdx | OK | Como divulgar um blog sem spam: caminhos seguros para iniciantes | Aprende formas seguras e honestas de divulgar um blog, atrair leitores e criar confiança sem incomodar pessoas ou prejudicar tua marca. | OK |
@@ -49,11 +55,15 @@ Erros: 0
 | src/content/posts/como-escrever-review-honesto-ferramenta-digital.mdx | OK | Como escrever um review honesto de uma ferramenta digital | Aprende a criar análises úteis de ferramentas digitais, com prós, contras, exemplos e transparência para o leitor. | OK |
 | src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | OK | Como evitar golpes de dinheiro fácil na internet | Aprende a identificar promessas suspeitas, proteger teus dados e escolher caminhos mais seguros para ganhar dinheiro online. | OK |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | Entende formas realistas de monetizar um blog em 2026 com conteúdo útil, tráfego qualificado, afiliados, anúncios e produtos próprios. | OK |
+| src/content/posts/como-medir-trafego-blog-sem-complicar.mdx | OK | Como medir o tráfego do blog sem complicar | Aprende as métricas básicas para acompanhar tráfego do blog sem se perder em números e sem tirar conclusões erradas. | OK |
 | src/content/posts/como-organizar-pagamentos-servicos-digitais-mocambique.mdx | OK | Como organizar pagamentos de serviços digitais em Moçambique | Aprende cuidados simples para combinar, receber, registar e organizar pagamentos de serviços digitais em Moçambique. | OK |
 | src/content/posts/como-pesquisar-ideias-artigos-blog-sem-copiar-concorrentes.mdx | OK | Como pesquisar ideias de artigos para blog sem copiar concorrentes | Aprende formas práticas de encontrar ideias de artigos para blog sem copiar outros sites e criando conteúdo com valor próprio. | OK |
 | src/content/posts/como-preparar-blog-para-adsense-sem-pressa.mdx | OK | Como preparar um blog para AdSense sem pressa | Aprende os cuidados básicos para preparar um blog para AdSense com conteúdo útil, navegação clara e experiência segura. | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | Guia educativo sobre formas comuns de receber pagamentos online em Moçambique, com cuidados sobre plataformas, taxas e documentação. | OK |
+| src/content/posts/como-saber-se-nicho-blog-tem-potencial-dinheiro.mdx | OK | Como saber se um nicho de blog tem potencial de dinheiro | Aprende critérios simples para avaliar se um nicho de blog pode gerar tráfego, confiança e monetização no futuro. | OK |
+| src/content/posts/como-transformar-artigo-blog-posts-redes-sociais.mdx | OK | Como transformar um artigo de blog em posts para redes sociais | Aprende a reaproveitar artigos do blog em conteúdos curtos para redes sociais sem parecer repetitivo ou fazer spam. | OK |
 | src/content/posts/como-usar-links-internos-melhorar-seo-blog.mdx | OK | Como usar links internos para melhorar o SEO do blog | Aprende o que são links internos, por que eles ajudam o leitor e como criar uma rede de conteúdos mais forte no teu blog. | OK |
+| src/content/posts/como-vender-servicos-com-blog-sem-ser-chato.mdx | OK | Como vender serviços com um blog sem ser chato | Aprende a usar artigos, páginas e exemplos para vender serviços digitais com confiança, sem pressão e sem parecer insistente. | OK |
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | Conhece erros editoriais, técnicos e estratégicos que dificultam a monetização de um blog e aprende como corrigi-los com calma. | OK |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | Entende como funciona o marketing de afiliados, quando faz sentido para blogs e quais cuidados manter antes de recomendar produtos. | OK |
 | src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | Aprende o básico sobre Google AdSense, CPC, RPM, aprovação de sites e limites dos anúncios como forma de monetização. | OK |

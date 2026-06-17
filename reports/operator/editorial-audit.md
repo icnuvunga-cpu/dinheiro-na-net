@@ -1,9 +1,9 @@
 # Operator Editorial Audit
 
-Gerado em: 2026-06-16T21:27:52.396Z
+Gerado em: 2026-06-17T06:27:31.490Z
 
-Posts: 30
-OK: 20
+Posts: 40
+OK: 30
 Avisos: 10
 Erros: 0
 
@@ -17,7 +17,13 @@ Erros: 0
 | src/content/posts/como-comecar-ganhar-dinheiro-internet-zero.mdx | WARN | Como começar a ganhar dinheiro na internet do zero, mesmo sem experiência | 3039 | 13 | 11 | termos exagerados: automatico, sem esforco |
 | src/content/posts/como-criar-blog-do-zero.mdx | OK | Como criar um blog do zero | 497 | 8 | 4 | OK |
 | src/content/posts/como-criar-calendario-editorial-simples-blog.mdx | WARN | Como criar um calendário editorial simples para blog | 1185 | 42 | 3 | pouco contexto local/lusofono |
+| src/content/posts/como-criar-checklist-gratuito-atrair-leitores-blog.mdx | OK | Como criar um checklist gratuito para atrair leitores para o blog | 997 | 24 | 5 | OK |
+| src/content/posts/como-criar-ebook-simples-vender-blog.mdx | OK | Como criar um eBook simples para vender no blog | 983 | 24 | 5 | OK |
+| src/content/posts/como-criar-lista-contactos-blog-iniciantes.mdx | OK | Como criar uma lista de contactos para o teu blog desde o início | 1021 | 24 | 5 | OK |
 | src/content/posts/como-criar-pagina-recursos-recomendados-blog.mdx | WARN | Como criar uma página de recursos recomendados no blog | 878 | 30 | 5 | pouco contexto local/lusofono |
+| src/content/posts/como-criar-pagina-servicos-digitais-blog.mdx | OK | Como criar uma página de serviços digitais no teu blog | 966 | 24 | 5 | OK |
+| src/content/posts/como-criar-produto-digital-simples-primeiro-blog.mdx | OK | Como criar um produto digital simples a partir do teu blog | 968 | 24 | 5 | OK |
+| src/content/posts/como-criar-rotina-mensal-revisao-blog.mdx | OK | Como criar uma rotina mensal de revisão do blog | 959 | 24 | 5 | OK |
 | src/content/posts/como-criar-rotina-simples-trabalhar-online-todos-dias.mdx | WARN | Como criar uma rotina simples para trabalhar online todos os dias | 1412 | 36 | 4 | termos exagerados: segredo |
 | src/content/posts/como-criar-servico-digital-simples-vender-online.mdx | OK | Como criar um serviço digital simples para vender online | 877 | 25 | 3 | OK |
 | src/content/posts/como-divulgar-blog-sem-spam-caminhos-seguros-iniciantes.mdx | OK | Como divulgar um blog sem spam: caminhos seguros para iniciantes | 1219 | 32 | 5 | OK |
@@ -27,11 +33,15 @@ Erros: 0
 | src/content/posts/como-escrever-review-honesto-ferramenta-digital.mdx | OK | Como escrever um review honesto de uma ferramenta digital | 970 | 34 | 2 | OK |
 | src/content/posts/como-evitar-golpes-dinheiro-facil-internet.mdx | WARN | Como evitar golpes de dinheiro fácil na internet | 2134 | 25 | 6 | termos exagerados: automatico, sem esforco |
 | src/content/posts/como-ganhar-dinheiro-blog-2026.mdx | OK | Como ganhar dinheiro com blog em 2026 | 485 | 7 | 8 | OK |
+| src/content/posts/como-medir-trafego-blog-sem-complicar.mdx | OK | Como medir o tráfego do blog sem complicar | 991 | 24 | 4 | OK |
 | src/content/posts/como-organizar-pagamentos-servicos-digitais-mocambique.mdx | OK | Como organizar pagamentos de serviços digitais em Moçambique | 904 | 20 | 2 | OK |
 | src/content/posts/como-pesquisar-ideias-artigos-blog-sem-copiar-concorrentes.mdx | OK | Como pesquisar ideias de artigos para blog sem copiar concorrentes | 1199 | 36 | 4 | OK |
 | src/content/posts/como-preparar-blog-para-adsense-sem-pressa.mdx | OK | Como preparar um blog para AdSense sem pressa | 976 | 25 | 6 | OK |
 | src/content/posts/como-receber-dinheiro-mocambique.mdx | OK | Como receber dinheiro online em Moçambique | 505 | 7 | 4 | OK |
+| src/content/posts/como-saber-se-nicho-blog-tem-potencial-dinheiro.mdx | OK | Como saber se um nicho de blog tem potencial de dinheiro | 970 | 24 | 5 | OK |
+| src/content/posts/como-transformar-artigo-blog-posts-redes-sociais.mdx | OK | Como transformar um artigo de blog em posts para redes sociais | 985 | 24 | 5 | OK |
 | src/content/posts/como-usar-links-internos-melhorar-seo-blog.mdx | OK | Como usar links internos para melhorar o SEO do blog | 928 | 28 | 8 | OK |
+| src/content/posts/como-vender-servicos-com-blog-sem-ser-chato.mdx | OK | Como vender serviços com um blog sem ser chato | 971 | 24 | 5 | OK |
 | src/content/posts/erros-impedem-ganhar-dinheiro.mdx | OK | Erros que impedem um blog de ganhar dinheiro | 501 | 8 | 7 | OK |
 | src/content/posts/marketing-afiliados-inicio.mdx | OK | O que é marketing de afiliados | 431 | 7 | 5 | OK |
 | src/content/posts/o-que-e-adsense.mdx | OK | O que é AdSense e como funciona | 501 | 8 | 5 | OK |
