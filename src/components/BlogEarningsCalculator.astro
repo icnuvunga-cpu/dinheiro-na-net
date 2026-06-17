@@ -131,7 +131,7 @@
   const form = document.getElementById('calcForm') as HTMLFormElement;
   const results = document.getElementById('calc-results') as HTMLElement;
 
-  function formatEuro(value: number): string {
+  function formatDollar(value: number): string {
     return value.toLocaleString('pt-PT', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
   }
 
@@ -156,9 +156,9 @@
     const total = adsRevenue + affRevenue;
 
     document.getElementById('total-pageviews')!.textContent = totalPageviews.toLocaleString('pt-PT');
-    document.getElementById('ads-revenue')!.textContent = formatEuro(adsRevenue);
-    document.getElementById('aff-revenue')!.textContent = formatEuro(affRevenue);
-    document.getElementById('total-revenue')!.textContent = formatEuro(total);
+    document.getElementById('ads-revenue')!.textContent = formatDollar(adsRevenue);
+    document.getElementById('aff-revenue')!.textContent = formatDollar(affRevenue);
+    document.getElementById('total-revenue')!.textContent = formatDollar(total);
 
     results.hidden = false;
     results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -316,4 +316,5 @@
     line-height: 1.6;
   }
 </style>
+
 

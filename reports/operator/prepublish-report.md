@@ -1,13 +1,13 @@
 # Operator Prepublish Report
 
-Gerado em: 2026-06-17T20:11:16.670Z
+Gerado em: 2026-06-17T20:13:17.976Z
 
 OK: 8
 Erros: 0
 
 | Comando | Estado | Resumo |
 | --- | --- | --- |
-| build | OK | 22:11:23   ├─ /termos-de-uso/index.html (+3ms) <br>22:11:23   ├─ /index.html (+5ms) <br>22:11:23 ✓ Completed in 333ms.<br><br>22:11:23 [build] ✓ Completed in 4.07s.<br>22:11:23 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`<br>22:11:23 [build] 56 page(s) built in 4.83s<br>22:11:23 [build] Complete! |
+| build | OK | 22:13:24   ├─ /termos-de-uso/index.html (+6ms) <br>22:13:24   ├─ /index.html (+6ms) <br>22:13:24 ✓ Completed in 371ms.<br><br>22:13:24 [build] ✓ Completed in 4.45s.<br>22:13:24 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`<br>22:13:24 [build] 56 page(s) built in 5.08s<br>22:13:24 [build] Complete! |
 | operator:content | OK | > node scripts/operator/operator.mjs content<br><br>=== CONTENT ===<br>Posts: 40<br>OK: 40<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/content-audit.md |
 | operator:seo | OK | > dinheiro-na-net@0.0.1 operator:seo<br>> node scripts/operator/operator.mjs seo<br><br>=== SEO ===<br>OK: 56<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/seo-audit.md |
 | operator:deploy-check | OK | > node scripts/operator/operator.mjs deploy-check<br><br>=== DEPLOY CHECK ===<br>Deploy readiness: OK<br>OK: 11<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/deploy-readiness.md |
@@ -27,5 +27,4 @@ M reports/operator/chatgpt-summary.txt
  M reports/operator/link-audit.md
  M reports/operator/seo-audit.md
  M src/components/BlogEarningsCalculator.astro
- M src/pages/ferramentas/calculadora-ganhos-blog.astro
 ```
