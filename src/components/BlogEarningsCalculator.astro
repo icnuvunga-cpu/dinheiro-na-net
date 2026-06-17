@@ -1,4 +1,4 @@
----
+﻿---
 // Calculadora de Ganhos com Blog
 // Puramente educativa — sem backend, sem coleta de dados
 ---
@@ -47,7 +47,7 @@
       <legend>Anúncios (AdSense / Display)</legend>
       <div class="form-row">
         <div class="form-group">
-          <label for="rpm">RPM estimado (€ por 1000 pageviews)</label>
+          <label for="rpm">RPM estimado ($ por 1000 pageviews)</label>
           <input
             type="number"
             id="rpm"
@@ -57,7 +57,7 @@
             step="0.25"
             aria-describedby="rpm-hint"
           />
-          <span id="rpm-hint" class="field-hint">Finanças: 5-15€ · Entretenimento: 0.5-2€</span>
+          <span id="rpm-hint" class="field-hint">Finanças: 5-15$ · Entretenimento: 0.5-2$</span>
         </div>
       </div>
     </fieldset>
@@ -80,7 +80,7 @@
           <span id="conv-hint" class="field-hint">% de visitantes que compram (típico: 0.5–2%)</span>
         </div>
         <div class="form-group">
-          <label for="avg-commission">Comissão média por venda (€)</label>
+          <label for="avg-commission">Comissão média por venda ($)</label>
           <input
             type="number"
             id="avg-commission"
@@ -132,7 +132,7 @@
   const results = document.getElementById('calc-results') as HTMLElement;
 
   function formatEuro(value: number): string {
-    return value.toLocaleString('pt-PT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 });
+    return value.toLocaleString('pt-PT', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
   }
 
   function numVal(id: string): number {
@@ -316,3 +316,4 @@
     line-height: 1.6;
   }
 </style>
+
