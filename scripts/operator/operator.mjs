@@ -1,4 +1,4 @@
-﻿import { spawnSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -251,6 +251,7 @@ function knownInternalRoutes() {
   '/recursos-recomendados',
   '/servicos',
   '/lista-de-contactos',
+  '/pedido-de-orcamento',
     '/favicon.svg',
     '/favicon.ico',
     '/robots.txt',

@@ -1,10 +1,10 @@
-﻿---
+---
+import ServiceRequestCTA from '../components/ServiceRequestCTA.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'Serviços digitais e apoio para projetos online';
 const description = 'Serviços simples para organizar blog, conteúdo, ferramentas, páginas e estratégia digital com clareza.';
 ---
-
 <BaseLayout title={title} description={description}>
   <main class="services-page">
     <section class="hero">
@@ -73,7 +73,10 @@ const description = 'Serviços simples para organizar blog, conteúdo, ferrament
         ou métodos que prejudiquem a confiança do leitor.
       </p>
     </section>
-  </main>
+  
+<!-- monetizacao-v2-service-request -->
+<ServiceRequestCTA />
+</main>
 
   <style>
     .services-page { max-width: 1120px; margin: 0 auto; padding: 3rem 1rem; }

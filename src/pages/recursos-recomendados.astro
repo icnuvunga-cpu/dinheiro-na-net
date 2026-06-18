@@ -1,10 +1,10 @@
-﻿---
+---
+import CategoryRecommendationGrid from '../components/CategoryRecommendationGrid.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'Recursos recomendados para criar renda digital';
 const description = 'Ferramentas, guias e recursos úteis para quem quer criar blog, trabalhar online, usar IA e monetizar com responsabilidade.';
 ---
-
 <BaseLayout title={title} description={description}>
   <main class="monetization-page">
     <section class="hero">
@@ -71,7 +71,10 @@ const description = 'Ferramentas, guias e recursos úteis para quem quer criar b
       </p>
       <a class="button" href="/servicos/">Ver serviços disponíveis</a>
     </section>
-  </main>
+  
+<!-- monetizacao-v2-category-grid -->
+<CategoryRecommendationGrid />
+</main>
 
   <style>
     .monetization-page { max-width: 1120px; margin: 0 auto; padding: 3rem 1rem; }
