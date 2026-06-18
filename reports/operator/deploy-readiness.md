@@ -1,6 +1,6 @@
 # Operator Deploy Readiness
 
-Gerado em: 2026-06-18T06:47:50.090Z
+Gerado em: 2026-06-18T07:02:44.755Z
 
 Deploy readiness: OK
 OK: 11
@@ -24,29 +24,29 @@ Erros: 0
 ## Saida resumida do build
 
 ```text
-08:48:00   ├─ /posts/como-receber-dinheiro-mocambique/index.html (+10ms) 
-08:48:00   ├─ /posts/como-saber-se-nicho-blog-tem-potencial-dinheiro/index.html (+10ms) 
-08:48:00   ├─ /posts/como-transformar-artigo-blog-posts-redes-sociais/index.html (+9ms) 
-08:48:00   ├─ /posts/como-usar-links-internos-melhorar-seo-blog/index.html (+12ms) 
-08:48:00   ├─ /posts/como-validar-artigo-blog-antes-publicar/index.html (+11ms) 
-08:48:00   ├─ /posts/como-vender-servicos-com-blog-sem-ser-chato/index.html (+11ms) 
-08:48:00   ├─ /posts/erros-impedem-ganhar-dinheiro/index.html (+11ms) 
-08:48:00   ├─ /posts/marketing-afiliados-inicio/index.html (+6ms) 
-08:48:00   ├─ /posts/o-que-e-adsense/index.html (+7ms) 
-08:48:00   ├─ /posts/o-que-e-rpm-cpc-ctr-adsense-blog/index.html (+10ms) 
-08:48:00   ├─ /posts/o-que-e-seo-importante-ganhar-dinheiro-blog/index.html (+6ms) 
-08:48:00   ├─ /posts/paginas-legais-blog-politica-termos-afiliados/index.html (+9ms) 
-08:48:00   ├─ /posts/quanto-custa-criar-blog/index.html (+6ms) 
-08:48:00   ├─ /posts/usar-ia-para-conteudo/index.html (+5ms) 
-08:48:00   ├─ /recursos-recomendados/index.html (+8ms) 
-08:48:00   ├─ /servicos/index.html (+7ms) 
-08:48:00   ├─ /sobre/index.html (+13ms) 
-08:48:00   ├─ /termos-de-uso/index.html (+4ms) 
-08:48:00   ├─ /index.html (+7ms) 
-08:48:00 ✓ Completed in 642ms.
+09:02:55   ├─ /posts/como-receber-dinheiro-mocambique/index.html (+7ms) 
+09:02:55   ├─ /posts/como-saber-se-nicho-blog-tem-potencial-dinheiro/index.html (+7ms) 
+09:02:55   ├─ /posts/como-transformar-artigo-blog-posts-redes-sociais/index.html (+6ms) 
+09:02:56   ├─ /posts/como-usar-links-internos-melhorar-seo-blog/index.html (+8ms) 
+09:02:56   ├─ /posts/como-validar-artigo-blog-antes-publicar/index.html (+6ms) 
+09:02:56   ├─ /posts/como-vender-servicos-com-blog-sem-ser-chato/index.html (+9ms) 
+09:02:56   ├─ /posts/erros-impedem-ganhar-dinheiro/index.html (+7ms) 
+09:02:56   ├─ /posts/marketing-afiliados-inicio/index.html (+6ms) 
+09:02:56   ├─ /posts/o-que-e-adsense/index.html (+7ms) 
+09:02:56   ├─ /posts/o-que-e-rpm-cpc-ctr-adsense-blog/index.html (+7ms) 
+09:02:56   ├─ /posts/o-que-e-seo-importante-ganhar-dinheiro-blog/index.html (+8ms) 
+09:02:56   ├─ /posts/paginas-legais-blog-politica-termos-afiliados/index.html (+13ms) 
+09:02:56   ├─ /posts/quanto-custa-criar-blog/index.html (+5ms) 
+09:02:56   ├─ /posts/usar-ia-para-conteudo/index.html (+5ms) 
+09:02:56   ├─ /recursos-recomendados/index.html (+7ms) 
+09:02:56   ├─ /servicos/index.html (+4ms) 
+09:02:56   ├─ /sobre/index.html (+3ms) 
+09:02:56   ├─ /termos-de-uso/index.html (+5ms) 
+09:02:56   ├─ /index.html (+7ms) 
+09:02:56 ✓ Completed in 544ms.
 
-08:48:00 [build] ✓ Completed in 6.93s.
-08:48:00 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
-08:48:00 [build] 70 page(s) built in 7.90s
-08:48:00 [build] Complete!
+09:02:56 [build] ✓ Completed in 7.23s.
+09:02:56 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+09:02:56 [build] 70 page(s) built in 8.47s
+09:02:56 [build] Complete!
 ```
