@@ -1,0 +1,19 @@
+---
+const href = '/pedido-de-orcamento/';
+---
+<section class="service-request-cta" aria-label="Pedido de orçamento">
+  <div>
+    <p class="label">Planeamento do projeto</p>
+    <h2>Queres receber uma proposta por etapas?</h2>
+    <p>Organiza o objetivo, prazo e contexto do teu projeto antes de entrar em contacto. O pedido preparado ajuda a tornar a conversa mais clara.</p>
+  </div>
+  <a href={href}>Preparar pedido de orçamento</a>
+</section>
+<style>
+  .service-request-cta { margin-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.35rem; border-radius: 22px; color: white; background: linear-gradient(135deg, #0f172a, #1d4ed8); }
+  .label { margin: 0; color: #bbf7d0; font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .service-request-cta h2 { margin: .35rem 0 .6rem; color: white; }
+  .service-request-cta p { margin-bottom: 0; color: white; max-width: 670px; }
+  .service-request-cta a { display: inline-flex; white-space: nowrap; padding: .76rem 1rem; border-radius: 999px; background: white; color: #0f172a; text-decoration: none; font-weight: 800; }
+  @media (max-width: 720px) { .service-request-cta { align-items: flex-start; flex-direction: column; } .service-request-cta a { white-space: normal; } }
+</style>

@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Pedido de orçamento para projeto digital';
+const description = 'Prepara um pedido claro para serviços de blog, conteúdo, páginas e recursos digitais.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="quote-page">
+    <section class="hero">
+      <p class="eyebrow">Pedido de orçamento</p>
+      <h1>Organiza o teu pedido antes de entrar em contacto</h1>
+      <p>Preenche os campos abaixo para preparar uma mensagem clara. O formulário não envia dados automaticamente: no fim, podes copiar o resumo e colar na página de contacto.</p>
+    </section>
+
+    <section class="layout">
+      <form id="quote-form" class="quote-form">
+        <div class="field-grid">
+          <label>Nome<input id="name" type="text" placeholder="O teu nome" required /></label>
+          <label>Melhor contacto<input id="contact" type="text" placeholder="E-mail, WhatsApp ou outro contacto" required /></label>
+        </div>
+        <label>Tipo de apoio
+          <select id="service" required>
+            <option value="">Seleciona uma opção</option>
+            <option>Organização de blog</option>
+            <option>Conteúdo e revisão</option>
+            <option>Ferramenta ou recurso digital</option>
+            <option>Página de serviços ou recursos</option>
+            <option>Outro projeto digital</option>
+          </select>
+        </label>
+        <label>Objetivo principal<textarea id="objective" rows="4" placeholder="Explica o que queres criar, melhorar ou organizar" required></textarea></label>
+        <div class="field-grid">
+          <label>Faixa de orçamento<select id="budget"><option>Ainda não definido</option><option>Quero começar pequeno</option><option>Tenho orçamento definido</option><option>Prefiro receber proposta por etapas</option></select></label>
+          <label>Prazo desejado<select id="timeline"><option>Sem urgência</option><option>Esta semana</option><option>Nas próximas 2 semanas</option><option>Ainda estou a planear</option></select></label>
+        </div>
+        <label>Contexto adicional<textarea id="details" rows="5" placeholder="Links, público, recursos já existentes ou outras informações úteis"></textarea></label>
+        <div class="form-actions"><button type="submit">Preparar pedido</button><a href="/contacto/">Ir para Contacto</a></div>
+      </form>
+
+      <aside class="side-card">
+        <h2>Como funciona</h2>
+        <ol><li>Preenche o resumo do projeto.</li><li>Gera uma mensagem organizada.</li><li>Copia o texto preparado.</li><li>Envia pela página de contacto.</li></ol>
+        <p>O orçamento final depende do objetivo, escopo, prazo, materiais disponíveis e nível de apoio necessário.</p>
+      </aside>
+    </section>
+
+    <section id="result-section" class="result" hidden>
+      <p class="eyebrow">Pedido preparado</p>
+      <h2>Revê e copia esta mensagem</h2>
+      <textarea id="request-output" rows="14" readonly></textarea>
+      <div class="form-actions"><button id="copy-request" type="button">Copiar pedido</button><a href="/contacto/">Abrir Contacto</a></div>
+      <p id="copy-status" class="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script>
+    const form = document.querySelector('#quote-form');
+    const resultSection = document.querySelector('#result-section');
+    const output = document.querySelector('#request-output');
+    const copyButton = document.querySelector('#copy-request');
+    const copyStatus = document.querySelector('#copy-status');
+    const value = (id) => document.querySelector(`#${id}`)?.value?.trim() || 'Não informado';
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      output.value = [
+        'Olá. Gostaria de pedir uma proposta de apoio para um projeto digital.', '',
+        `Nome: ${value('name')}`,
+        `Contacto: ${value('contact')}`,
+        `Tipo de apoio: ${value('service')}`,
+        `Objetivo: ${value('objective')}`,
+        `Faixa de orçamento: ${value('budget')}`,
+        `Prazo desejado: ${value('timeline')}`,
+        `Contexto adicional: ${value('details')}`, '',
+        'Agradeço uma resposta com próximo passo, escopo possível e proposta por etapas, quando aplicável.'
+      ].join('\n');
+      resultSection.hidden = false;
+      resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      copyStatus.textContent = 'Pedido preparado. Revê o texto antes de copiar.';
+    });
+
+    copyButton?.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(output.value); }
+      catch { output.select(); document.execCommand('copy'); }
+      copyStatus.textContent = 'Pedido copiado. Agora podes colar na página de Contacto.';
+    });
+  </script>
+
+  <style>
+    .quote-page { max-width: 1120px; margin: 0 auto; padding: 3rem 1rem; }
+    .hero { padding: 2rem; border-radius: 28px; color: white; background: linear-gradient(135deg, #0f172a, #1d4ed8); }
+    .eyebrow { margin: 0; font-size: .82rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #bbf7d0; }
+    .hero h1 { margin: .55rem 0 1rem; color: white; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.06; }
+    .hero p { max-width: 780px; color: white; font-size: 1.06rem; }
+    .layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    .quote-form, .side-card, .result { padding: 1.4rem; border: 1px solid rgba(148,163,184,.3); border-radius: 22px; background: white; box-shadow: 0 14px 32px rgba(15,23,42,.06); }
+    .quote-form label { display: grid; gap: .45rem; margin-bottom: 1rem; font-weight: 750; }
+    .quote-form input, .quote-form textarea, .quote-form select, .result textarea { width: 100%; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 12px; padding: .75rem; font: inherit; background: #fff; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .form-actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; margin-top: .35rem; }
+    .form-actions button, .form-actions a { border: 0; border-radius: 999px; padding: .78rem 1.05rem; text-decoration: none; font: inherit; font-weight: 800; cursor: pointer; background: #0f172a; color: white; }
+    .form-actions a { background: #e2e8f0; color: #0f172a; }
+    .side-card h2, .result h2 { margin-top: 0; }
+    .side-card li { margin: .65rem 0; }
+    .result { margin-top: 1rem; }
+    .status { margin-bottom: 0; color: #166534; font-weight: 700; }
+    @media (max-width: 800px) { .layout, .field-grid { grid-template-columns: 1fr; } .hero { padding: 1.3rem; } }
+  </style>
+</BaseLayout>
