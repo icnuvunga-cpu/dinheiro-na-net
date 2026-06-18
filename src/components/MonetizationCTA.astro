@@ -1,0 +1,45 @@
+---
+const resourcesHref = '/recursos-recomendados/';
+const servicesHref = '/servicos/';
+const calculatorHref = '/ferramentas/calculadora-ganhos-blog/';
+---
+
+<section class="monetization-cta" aria-label="Próximos passos úteis">
+  <div>
+    <p class="cta-label">Próximo passo</p>
+    <h2>Queres transformar este aprendizado em ação?</h2>
+    <p>
+      Usa os recursos do Dinheiro na Net para organizar o teu blog, calcular cenários,
+      conhecer ferramentas úteis e preparar uma estratégia mais clara.
+    </p>
+  </div>
+  <div class="cta-actions">
+    <a href={resourcesHref}>Ver recursos</a>
+    <a href={calculatorHref}>Usar calculadora</a>
+    <a href={servicesHref}>Serviços</a>
+  </div>
+</section>
+
+<style>
+  .monetization-cta {
+    margin: 2.5rem 0;
+    padding: 1.35rem;
+    border-radius: 24px;
+    border: 1px solid rgba(148,163,184,.28);
+    background: linear-gradient(135deg, rgba(34,197,94,.12), rgba(59,130,246,.10));
+  }
+  .monetization-cta h2 { margin: .25rem 0 .5rem; }
+  .cta-label { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: #15803d; }
+  .cta-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+  .cta-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7rem .95rem;
+    border-radius: 999px;
+    background: #0f172a;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+  }
+</style>

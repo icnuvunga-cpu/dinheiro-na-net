@@ -1,0 +1,93 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Recursos recomendados para criar renda digital';
+const description = 'Ferramentas, guias e recursos úteis para quem quer criar blog, trabalhar online, usar IA e monetizar com responsabilidade.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="monetization-page">
+    <section class="hero">
+      <p class="eyebrow">Recursos recomendados</p>
+      <h1>Ferramentas e guias úteis para crescer online com mais organização</h1>
+      <p>
+        Esta página reúne recursos que podem ajudar quem quer criar blog, organizar conteúdo,
+        usar IA com responsabilidade, estudar monetização e começar serviços digitais.
+      </p>
+      <p class="notice">
+        Alguns links desta página podem ser afiliados no futuro. Quando isso acontecer,
+        a recomendação continuará sendo feita com transparência e responsabilidade.
+        Lê também o nosso <a href="/aviso-de-afiliados/">aviso de afiliados</a>.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Começar um blog</h2>
+        <p>Guias para quem está a construir a primeira base de conteúdo.</p>
+        <ul>
+          <li><a href="/posts/como-criar-blog-do-zero/">Como criar um blog do zero</a></li>
+          <li><a href="/posts/blog-gratis-ou-blog-pago-qual-vale-a-pena/">Blog grátis ou pago?</a></li>
+          <li><a href="/posts/como-criar-plano-90-dias-blog-do-zero/">Plano de 90 dias para blog</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>SEO e organização</h2>
+        <p>Recursos para organizar artigos, links internos e estratégia editorial.</p>
+        <ul>
+          <li><a href="/posts/o-que-e-seo-importante-ganhar-dinheiro-blog/">O que é SEO</a></li>
+          <li><a href="/posts/como-usar-links-internos-melhorar-seo-blog/">Links internos para SEO</a></li>
+          <li><a href="/posts/como-organizar-categorias-tags-blog-sem-confusao/">Categorias e tags sem confusão</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Ferramentas gratuitas</h2>
+        <p>Ferramentas e checklists que ajudam a aplicar o conteúdo.</p>
+        <ul>
+          <li><a href="/ferramentas/calculadora-ganhos-blog/">Calculadora de ganhos com blog</a></li>
+          <li><a href="/posts/como-criar-checklist-gratuito-atrair-leitores-blog/">Como criar checklist gratuito</a></li>
+          <li><a href="/posts/como-validar-artigo-blog-antes-publicar/">Checklist para validar artigos</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Monetização responsável</h2>
+        <p>Conteúdos sobre AdSense, afiliados, serviços e produtos digitais.</p>
+        <ul>
+          <li><a href="/posts/como-preparar-blog-para-adsense-sem-pressa/">Preparar blog para AdSense</a></li>
+          <li><a href="/posts/como-escolher-programas-afiliados-confiaveis-blog/">Escolher programas de afiliados</a></li>
+          <li><a href="/posts/como-criar-produto-digital-simples-primeiro-blog/">Criar produto digital simples</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="cta">
+      <h2>Precisas de ajuda para organizar o teu projeto?</h2>
+      <p>
+        Se tens uma ideia de blog, serviço digital ou ferramenta online, a página de serviços explica
+        formas simples de apoio e organização.
+      </p>
+      <a class="button" href="/servicos/">Ver serviços disponíveis</a>
+    </section>
+  </main>
+
+  <style>
+    .monetization-page { max-width: 1120px; margin: 0 auto; padding: 3rem 1rem; }
+    .hero { background: linear-gradient(135deg, rgba(34,197,94,.12), rgba(59,130,246,.10)); border: 1px solid rgba(148,163,184,.25); border-radius: 28px; padding: 2rem; margin-bottom: 2rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .85rem; color: #15803d; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.05; margin: .5rem 0 1rem; }
+    .hero p { font-size: 1.08rem; max-width: 760px; }
+    .notice { margin-top: 1rem; padding: 1rem; border-radius: 16px; background: rgba(255,255,255,.7); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .card { border: 1px solid rgba(148,163,184,.25); border-radius: 22px; padding: 1.35rem; background: white; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
+    .card h2 { margin-top: 0; }
+    .card ul { padding-left: 1.1rem; }
+    .card li { margin: .45rem 0; }
+    .cta { margin-top: 2rem; border-radius: 24px; padding: 1.6rem; background: #0f172a; color: white; }
+    .cta .button { display: inline-block; margin-top: .75rem; padding: .75rem 1rem; border-radius: 999px; background: white; color: #0f172a; font-weight: 700; text-decoration: none; }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } .hero { padding: 1.25rem; } }
+  </style>
+</BaseLayout>
+

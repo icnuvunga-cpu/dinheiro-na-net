@@ -1,0 +1,26 @@
+---
+const href = '/lista-de-contactos/';
+---
+
+<section class="newsletter-cta" aria-label="Lista de contactos">
+  <p class="cta-label">Lista de contactos</p>
+  <h2>Recebe recursos úteis quando a lista estiver ativa</h2>
+  <p>
+    Acompanha checklists, ferramentas e guias práticos para criar projetos digitais
+    com mais organização.
+  </p>
+  <a href={href}>Conhecer a lista</a>
+</section>
+
+<style>
+  .newsletter-cta {
+    margin: 2rem 0;
+    padding: 1.25rem;
+    border-radius: 22px;
+    border: 1px solid rgba(148,163,184,.28);
+    background: white;
+    box-shadow: 0 12px 30px rgba(15,23,42,.06);
+  }
+  .cta-label { margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; color: #15803d; }
+  .newsletter-cta a { display: inline-block; margin-top: .75rem; font-weight: 800; }
+</style>

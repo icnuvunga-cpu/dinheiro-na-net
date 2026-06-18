@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Serviços digitais e apoio para projetos online';
+const description = 'Serviços simples para organizar blog, conteúdo, ferramentas, páginas e estratégia digital com clareza.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="services-page">
+    <section class="hero">
+      <p class="eyebrow">Serviços</p>
+      <h1>Apoio prático para organizar blogs, conteúdo e pequenos projetos digitais</h1>
+      <p>
+        Esta página apresenta serviços que podem apoiar quem quer estruturar um blog,
+        organizar conteúdo, criar páginas, preparar recursos e transformar ideias digitais
+        em processos mais claros.
+      </p>
+    </section>
+
+    <section class="packages">
+      <article class="package">
+        <h2>Organização de blog</h2>
+        <p>Ideal para quem tem uma ideia e precisa transformar isso em estrutura.</p>
+        <ul>
+          <li>definição de categorias;</li>
+          <li>organização de calendário editorial;</li>
+          <li>mapa de conteúdos;</li>
+          <li>checklist de páginas essenciais.</li>
+        </ul>
+      </article>
+
+      <article class="package">
+        <h2>Conteúdo e revisão</h2>
+        <p>Para melhorar artigos, títulos, introduções, FAQ e links internos.</p>
+        <ul>
+          <li>revisão editorial;</li>
+          <li>sugestão de títulos;</li>
+          <li>melhoria de estrutura;</li>
+          <li>organização de links internos.</li>
+        </ul>
+      </article>
+
+      <article class="package">
+        <h2>Ferramentas e recursos</h2>
+        <p>Para transformar ideias em calculadoras, checklists ou páginas úteis.</p>
+        <ul>
+          <li>planeamento de ferramenta simples;</li>
+          <li>estrutura de página de recursos;</li>
+          <li>checklist gratuito;</li>
+          <li>apoio na validação antes de publicar.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="process">
+      <h2>Como funciona</h2>
+      <ol>
+        <li>Envias uma mensagem explicando o que queres organizar.</li>
+        <li>Definimos o objetivo e o tipo de apoio necessário.</li>
+        <li>Recebes um plano simples com escopo, prazo e próximos passos.</li>
+        <li>O trabalho é feito por etapas, com revisão antes da entrega final.</li>
+      </ol>
+      <p>
+        Para pedidos e contacto, usa a página <a href="/contacto/">Contacto</a>.
+      </p>
+    </section>
+
+    <section class="safe">
+      <h2>Princípios de trabalho</h2>
+      <p>
+        O foco é organização, clareza, conteúdo útil e crescimento responsável.
+        Não trabalhamos com promessas exageradas, spam, manipulação de publicidade
+        ou métodos que prejudiquem a confiança do leitor.
+      </p>
+    </section>
+  </main>
+
+  <style>
+    .services-page { max-width: 1120px; margin: 0 auto; padding: 3rem 1rem; }
+    .hero { border-radius: 28px; padding: 2rem; background: linear-gradient(135deg, rgba(15,23,42,.95), rgba(30,64,175,.88)); color: white; margin-bottom: 2rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .85rem; color: #bbf7d0; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: .5rem 0 1rem; }
+    .hero p { max-width: 760px; font-size: 1.08rem; }
+    .packages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .package, .process, .safe { border: 1px solid rgba(148,163,184,.25); border-radius: 22px; padding: 1.35rem; background: white; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
+    .package h2 { margin-top: 0; }
+    .process, .safe { margin-top: 1rem; }
+    .process ol { padding-left: 1.2rem; }
+    .process li, .package li { margin: .45rem 0; }
+    @media (max-width: 900px) { .packages { grid-template-columns: 1fr; } .hero { padding: 1.25rem; } }
+  </style>
+</BaseLayout>

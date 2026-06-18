@@ -1,4 +1,4 @@
-import { spawnSync } from 'node:child_process';
+﻿import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -248,6 +248,9 @@ function knownInternalRoutes() {
     '/politica-de-privacidade',
     '/politica-de-cookies',
     '/aviso-de-afiliados',
+  '/recursos-recomendados',
+  '/servicos',
+  '/lista-de-contactos',
     '/favicon.svg',
     '/favicon.ico',
     '/robots.txt',
@@ -1315,4 +1318,5 @@ function main() {
 }
 
 main();
+
 

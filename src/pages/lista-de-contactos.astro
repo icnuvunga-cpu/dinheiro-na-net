@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Lista de contactos do Dinheiro na Net';
+const description = 'Entra na lista para receber recursos, checklists e novidades do Dinheiro na Net quando a área estiver ativa.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="newsletter-page">
+    <section class="hero">
+      <p class="eyebrow">Lista de contactos</p>
+      <h1>Recebe recursos úteis para criar e organizar projetos digitais</h1>
+      <p>
+        Esta área está preparada para a futura lista de contactos do Dinheiro na Net.
+        A ideia é enviar checklists, guias, avisos de novas ferramentas e conteúdos
+        úteis para quem quer crescer online com responsabilidade.
+      </p>
+    </section>
+
+    <section class="box">
+      <h2>O que poderás receber</h2>
+      <ul>
+        <li>checklists para blog, SEO e conteúdo;</li>
+        <li>avisos de novas ferramentas gratuitas;</li>
+        <li>guias práticos sobre afiliados, AdSense e produtos digitais;</li>
+        <li>novidades sobre serviços e recursos recomendados.</li>
+      </ul>
+      <p>
+        Por enquanto, usa a página <a href="/contacto/">Contacto</a> para pedidos,
+        sugestões ou interesse em receber novidades.
+      </p>
+    </section>
+
+    <section class="box">
+      <h2>Compromisso</h2>
+      <p>
+        A lista deve funcionar com permissão, clareza e respeito. Não será usada para
+        envio excessivo de mensagens nem para promessas exageradas.
+      </p>
+      <p>
+        Para entender melhor esta estratégia, lê
+        <a href="/posts/como-criar-lista-contactos-blog-iniciantes/">como criar uma lista de contactos para o teu blog</a>.
+      </p>
+    </section>
+  </main>
+
+  <style>
+    .newsletter-page { max-width: 960px; margin: 0 auto; padding: 3rem 1rem; }
+    .hero { border-radius: 28px; padding: 2rem; background: linear-gradient(135deg, rgba(34,197,94,.14), rgba(250,204,21,.12)); border: 1px solid rgba(148,163,184,.25); }
+    .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .85rem; color: #15803d; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: .5rem 0 1rem; }
+    .box { margin-top: 1rem; border-radius: 22px; padding: 1.35rem; border: 1px solid rgba(148,163,184,.25); background: white; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
+    .box li { margin: .45rem 0; }
+  </style>
+</BaseLayout>
