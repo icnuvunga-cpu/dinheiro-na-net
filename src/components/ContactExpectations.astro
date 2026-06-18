@@ -1,0 +1,37 @@
+<section class="contact-expectations" aria-label="Boas práticas de contacto">
+  <div>
+    <p class="eyebrow">Contacto com clareza</p>
+    <h2>O que ajuda a receber uma resposta mais útil</h2>
+  </div>
+
+  <div class="items">
+    <article>
+      <h3>Explica o objetivo</h3>
+      <p>Indica o que queres criar, melhorar, aprender ou resolver.</p>
+    </article>
+    <article>
+      <h3>Partilha contexto</h3>
+      <p>Links, público, recursos existentes e prazo ajudam a entender o projeto.</p>
+    </article>
+    <article>
+      <h3>Usa linguagem simples</h3>
+      <p>Uma mensagem clara reduz trocas desnecessárias e facilita o próximo passo.</p>
+    </article>
+  </div>
+
+  <p class="closing">
+    O foco é analisar cada pedido com responsabilidade. Não há promessa automática de resultado, preço ou prazo antes de entender o contexto.
+  </p>
+</section>
+
+<style>
+  .contact-expectations { margin-top: 1rem; padding: 1.35rem; border-radius: 22px; color: white; background: linear-gradient(135deg, #0f172a, #1d4ed8); }
+  .eyebrow { margin: 0; color: #bbf7d0; font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .contact-expectations h2 { margin: .35rem 0 1rem; color: white; }
+  .items { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+  .items article { padding: 1rem; border-radius: 16px; background: rgba(255,255,255,.1); }
+  .items h3 { margin: 0 0 .4rem; color: white; }
+  .items p, .closing { color: white; }
+  .closing { margin: 1rem 0 0; }
+  @media (max-width: 760px) { .items { grid-template-columns: 1fr; } }
+</style>

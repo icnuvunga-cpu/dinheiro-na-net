@@ -1,0 +1,123 @@
+---
+const quoteHref = '/pedido-de-orcamento/';
+const servicesHref = '/servicos/';
+---
+
+<section class="contact-commercial-paths" aria-label="Caminhos de contacto">
+  <div class="heading">
+    <p class="eyebrow">Como podemos ajudar</p>
+    <h2>Escolhe o tipo de conversa mais adequado ao teu objetivo</h2>
+    <p>
+      Organizar o contacto desde o início ajuda a tornar a resposta mais clara e útil.
+      Escolhe um caminho abaixo ou usa o formulário desta página para explicar a tua necessidade.
+    </p>
+  </div>
+
+  <div class="cards">
+    <article class="path-card">
+      <span class="number">01</span>
+      <h3>Pedido de orçamento</h3>
+      <p>
+        Tens um blog, página, conteúdo ou recurso digital para organizar? Prepara um pedido com objetivo, prazo e contexto.
+      </p>
+      <a href={quoteHref}>Preparar pedido de orçamento</a>
+    </article>
+
+    <article class="path-card">
+      <span class="number">02</span>
+      <h3>Parceria ou recomendação</h3>
+      <p>
+        Tens uma ferramenta, recurso ou ideia de parceria que pode fazer sentido para o público do blog?
+      </p>
+      <a href="#parceria-contacto">Preparar mensagem de parceria</a>
+    </article>
+
+    <article class="path-card">
+      <span class="number">03</span>
+      <h3>Dúvida geral</h3>
+      <p>
+        Queres fazer uma pergunta sobre um artigo, ferramenta ou conteúdo do Dinheiro na Net?
+      </p>
+      <a href="#duvidas-contacto">Preparar mensagem de dúvida</a>
+    </article>
+  </div>
+
+  <div class="note">
+    <strong>Antes de enviar:</strong> podes conhecer os <a href={servicesHref}>serviços disponíveis</a> e organizar o pedido com mais detalhes.
+  </div>
+</section>
+
+<section class="message-helpers" aria-label="Modelos de mensagem">
+  <article id="parceria-contacto" class="helper-card">
+    <p class="eyebrow">Parceria</p>
+    <h2>Mensagem base para parceria</h2>
+    <textarea id="partnership-template" readonly rows="7">Olá. Gostaria de apresentar uma possível parceria ou recomendação para o Dinheiro na Net.
+
+Nome ou projeto:
+Tipo de recurso:
+Público que pode beneficiar:
+Link ou contexto:
+Motivo da recomendação:
+
+Obrigado.</textarea>
+    <button type="button" data-copy-target="partnership-template" data-status-target="partnership-status">Copiar mensagem de parceria</button>
+    <p id="partnership-status" class="copy-status" aria-live="polite"></p>
+  </article>
+
+  <article id="duvidas-contacto" class="helper-card">
+    <p class="eyebrow">Dúvida geral</p>
+    <h2>Mensagem base para dúvida</h2>
+    <textarea id="question-template" readonly rows="7">Olá. Tenho uma dúvida sobre o Dinheiro na Net.
+
+Página ou artigo relacionado:
+A minha dúvida:
+O que já tentei ou entendi:
+Contexto adicional:
+
+Obrigado.</textarea>
+    <button type="button" data-copy-target="question-template" data-status-target="question-status">Copiar mensagem de dúvida</button>
+    <p id="question-status" class="copy-status" aria-live="polite"></p>
+  </article>
+</section>
+
+<script>
+  const copyButtons = document.querySelectorAll('[data-copy-target]');
+
+  copyButtons.forEach((button) => {
+    button.addEventListener('click', async () => {
+      const sourceId = button.dataset.copyTarget;
+      const statusId = button.dataset.statusTarget;
+      const source = document.getElementById(sourceId);
+      const status = document.getElementById(statusId);
+
+      if (!source || !status) return;
+
+      try {
+        await navigator.clipboard.writeText(source.value);
+      } catch {
+        source.select();
+        document.execCommand('copy');
+      }
+
+      status.textContent = 'Mensagem copiada. Cola no formulário de contacto acima e ajusta os detalhes.';
+    });
+  });
+</script>
+
+<style>
+  .contact-commercial-paths { margin-top: 2.25rem; }
+  .heading { max-width: 780px; }
+  .eyebrow { margin: 0; color: #15803d; font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+  .heading h2, .helper-card h2 { margin: .35rem 0 .7rem; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .path-card, .helper-card { padding: 1.25rem; border: 1px solid rgba(148,163,184,.3); border-radius: 22px; background: white; box-shadow: 0 12px 30px rgba(15,23,42,.05); }
+  .number { display: inline-flex; width: 2rem; height: 2rem; align-items: center; justify-content: center; border-radius: 999px; background: #dcfce7; color: #166534; font-weight: 900; }
+  .path-card h3 { margin: .8rem 0 .5rem; }
+  .path-card a { display: inline-block; margin-top: .45rem; font-weight: 800; }
+  .note { margin-top: 1rem; padding: 1rem 1.15rem; border-radius: 16px; background: rgba(34,197,94,.1); }
+  .message-helpers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  .helper-card textarea { width: 100%; box-sizing: border-box; margin: .8rem 0; padding: .75rem; border: 1px solid #cbd5e1; border-radius: 12px; font: inherit; resize: vertical; background: #f8fafc; }
+  .helper-card button { border: 0; border-radius: 999px; padding: .72rem 1rem; background: #0f172a; color: white; font: inherit; font-weight: 800; cursor: pointer; }
+  .copy-status { min-height: 1.25rem; margin: .7rem 0 0; color: #166534; font-weight: 700; }
+  @media (max-width: 860px) { .cards, .message-helpers { grid-template-columns: 1fr; } }
+</style>
