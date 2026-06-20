@@ -27,7 +27,7 @@ import { categories } from '../../data/siteConfig';
   .page-header p { font-size: 1.2rem; color: var(--color-text-muted); }
   .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 1.5rem;
     padding-bottom: 4rem;
   }

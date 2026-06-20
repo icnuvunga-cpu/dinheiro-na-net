@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import AffiliateNotice from '../components/AffiliateNotice.astro';
 import NewsletterBox from '../components/NewsletterBox.astro';
 import { formatDate } from '../utils/posts';
+import { categories } from '../data/siteConfig';
 
 interface Props {
   frontmatter: {
@@ -18,6 +19,8 @@ interface Props {
 
 const { frontmatter } = Astro.props;
 const { title, description, date, updated, category, author = 'Dinheiro na Net', tags = [] } = frontmatter;
+const categoryConfig = categories.find((item) => item.name === category);
+const categoryHref = categoryConfig ? `/categorias/${categoryConfig.slug}` : '/categorias';
 ---
 
 <BaseLayout title={title} description={description} type="article">
@@ -28,7 +31,7 @@ const { title, description, date, updated, category, author = 'Dinheiro na Net',
         <article class="post-article" aria-labelledby="post-title">
           <header class="post-header">
             <div class="post-meta">
-              <a href={`/categorias/${category.toLowerCase().replace(/\s+/g, '-').replace(/ã/g,'a').replace(/ê/g,'e').replace(/í/g,'i').replace(/ó/g,'o').replace(/ú/g,'u')}`} class="badge badge--category">{category}</a>
+              <a href={categoryHref} class="badge badge--category">{category}</a>
               <time datetime={date}>{formatDate(date)}</time>
               {updated && <span class="post-updated">· Atualizado em {formatDate(updated)}</span>}
             </div>

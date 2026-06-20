@@ -1,13 +1,13 @@
 # Operator Prepublish Report
 
-Gerado em: 2026-06-18T07:39:24.491Z
+Gerado em: 2026-06-20T06:00:19.265Z
 
 OK: 8
 Erros: 0
 
 | Comando | Estado | Resumo |
 | --- | --- | --- |
-| build | OK | 09:39:35   ├─ /termos-de-uso/index.html (+7ms) <br>09:39:35   ├─ /index.html (+10ms) <br>09:39:35 ✓ Completed in 615ms.<br><br>09:39:35 [build] ✓ Completed in 7.29s.<br>09:39:35 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`<br>09:39:35 [build] 70 page(s) built in 8.11s<br>09:39:35 [build] Complete! |
+| build | OK | 08:00:30   ├─ /termos-de-uso/index.html (+3ms) <br>08:00:30   ├─ /index.html (+10ms) <br>08:00:30 ✓ Completed in 544ms.<br><br>08:00:30 [build] ✓ Completed in 7.45s.<br>08:00:30 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`<br>08:00:30 [build] 70 page(s) built in 8.32s<br>08:00:30 [build] Complete! |
 | operator:content | OK | > node scripts/operator/operator.mjs content<br><br>=== CONTENT ===<br>Posts: 50<br>OK: 50<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/content-audit.md |
 | operator:seo | OK | > dinheiro-na-net@0.0.1 operator:seo<br>> node scripts/operator/operator.mjs seo<br><br>=== SEO ===<br>OK: 66<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/seo-audit.md |
 | operator:deploy-check | OK | > node scripts/operator/operator.mjs deploy-check<br><br>=== DEPLOY CHECK ===<br>Deploy readiness: OK<br>OK: 11<br>Avisos: 0<br>Erros: 0<br>Relatorio: reports/operator/deploy-readiness.md |
@@ -19,15 +19,23 @@ Erros: 0
 ## Git status
 
 ```text
-M reports/operator/chatgpt-summary.txt
+M public/robots.txt
+ M reports/operator/chatgpt-summary.txt
  M reports/operator/content-audit.md
  M reports/operator/copy-scan.md
  M reports/operator/deploy-readiness.md
  M reports/operator/editorial-audit.md
  M reports/operator/link-audit.md
+ M reports/operator/prepublish-report.md
  M reports/operator/seo-audit.md
+ M src/components/BlogEarningsCalculator.astro
+ M src/components/Header.astro
+ M src/layouts/BlogPostLayout.astro
+ M src/layouts/ToolLayout.astro
+ M src/pages/categorias/[slug].astro
+ M src/pages/categorias/index.astro
  M src/pages/contacto.astro
-?? reports/operator/contacto-comercial-v1.md
-?? src/components/ContactCommercialPaths.astro
-?? src/components/ContactExpectations.astro
+ M src/pages/ferramentas/calculadora-ganhos-blog.astro
+ M src/pages/index.astro
+?? reports/operator/pre-launch-technical-audit.md
 ```

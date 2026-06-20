@@ -1,6 +1,6 @@
 # Operator SEO Audit
 
-Gerado em: 2026-06-18T07:39:36.199Z
+Gerado em: 2026-06-20T06:00:31.995Z
 
 OK: 66
 Avisos: 0

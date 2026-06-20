@@ -1,5 +1,22 @@
-﻿---
+---
 import { navigation } from '../data/siteConfig';
+
+const headerNavigation = [
+  ...navigation,
+  { name: 'Recursos', href: '/recursos-recomendados/' },
+  { name: 'Serviços', href: '/servicos/' }
+];
+
+const normalizePath = (path: string) =>
+  path !== '/' && path.endsWith('/') ? path.slice(0, -1) : path;
+
+const currentPath = normalizePath(Astro.url.pathname);
+const isActivePath = (href: string) => {
+  if (href === '/') return currentPath === '/';
+
+  const normalizedHref = normalizePath(href);
+  return currentPath === normalizedHref || currentPath.startsWith(`${normalizedHref}/`);
+};
 ---
 
 <a href="#main-content" class="skip-link">Saltar para o conteúdo</a>
@@ -12,27 +29,23 @@ import { navigation } from '../data/siteConfig';
 
     <nav class="main-nav" aria-label="Navegação principal">
       <ul role="list">
-        {navigation.map((item: any) => (
-          <li>
-            <a
-              href={item.href}
-              aria-current={Astro.url.pathname === item.href ? 'page' : undefined}
-              class={
-                Astro.url.pathname === item.href ||
-                (item.href !== '/' && Astro.url.pathname.startsWith(item.href))
-                  ? 'nav-link active'
-                  : 'nav-link'
-              }
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {headerNavigation.map((item) => {
+          const isActive = isActivePath(item.href);
+
+          return (
+            <li>
+              <a
+                href={item.href}
+                aria-current={isActive ? 'page' : undefined}
+                class={isActive ? 'nav-link active' : 'nav-link'}
+              >
+                {item.name}
+              </a>
+            </li>
+          );
+        })}
       </ul>
-    
-  <a href="/recursos-recomendados/">Recursos</a>
-  <a href="/servicos/">Serviços</a>
-</nav>
+    </nav>
 
     <!-- Mobile toggle -->
     <button class="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
@@ -48,16 +61,23 @@ import { navigation } from '../data/siteConfig';
   <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
     <nav aria-label="Navegação mobile">
       <ul role="list">
-        {navigation.map((item: any) => (
-          <li>
-            <a href={item.href} class="mobile-nav-link">{item.name}</a>
-          </li>
-        ))}
+        {headerNavigation.map((item) => {
+          const isActive = isActivePath(item.href);
+
+          return (
+            <li>
+              <a
+                href={item.href}
+                aria-current={isActive ? 'page' : undefined}
+                class={isActive ? 'mobile-nav-link active' : 'mobile-nav-link'}
+              >
+                {item.name}
+              </a>
+            </li>
+          );
+        })}
       </ul>
-    
-  <a href="/recursos-recomendados/">Recursos</a>
-  <a href="/servicos/">Serviços</a>
-</nav>
+    </nav>
   </div>
 </header>
 
@@ -121,15 +141,19 @@ import { navigation } from '../data/siteConfig';
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     gap: 0.25rem;
   }
+  .main-nav li { margin: 0; }
 
   .nav-link {
-    display: block;
+    display: inline-flex;
+    align-items: center;
     padding: 0.45rem 0.85rem;
     color: rgba(255,255,255,0.82);
     font-size: 0.9rem;
     font-weight: 500;
+    line-height: 1.2;
     border-radius: var(--radius-md);
     transition: background-color 0.15s, color 0.15s;
     text-decoration: none;
@@ -172,12 +196,15 @@ import { navigation } from '../data/siteConfig';
     flex-direction: column;
     gap: 0.25rem;
   }
+  .mobile-menu li { margin: 0; }
   .mobile-nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 0.6rem 0.75rem;
     color: rgba(255,255,255,0.9);
     font-size: 1rem;
     font-weight: 500;
+    line-height: 1.2;
     border-radius: var(--radius-md);
     text-decoration: none;
     transition: background-color 0.15s;
@@ -187,27 +214,13 @@ import { navigation } from '../data/siteConfig';
     color: white;
     text-decoration: none;
   }
+  .mobile-nav-link.active {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
 
   @media (max-width: 768px) {
     .main-nav { display: none; }
     .mobile-toggle { display: flex; align-items: center; justify-content: center; }
   }
-</style>
-
-
-
-<style is:global>
-  header nav a[href="/recursos-recomendados/"],
-  header nav a[href="/servicos/"] {
-    color: #e5e7eb !important;
-    margin-left: 1.25rem;
-    font-weight: 700;
-  }
-
-  header nav a[href="/recursos-recomendados/"]:hover,
-  header nav a[href="/servicos/"]:hover {
-    color: #ffffff !important;
-  }
-
-  /* monetization-header-fix */
 </style>

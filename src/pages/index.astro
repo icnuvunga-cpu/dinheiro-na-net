@@ -160,11 +160,11 @@ const recommendedPosts = sortedPosts.slice(3, 6);
   .categories-section { padding: 4rem 0; background: var(--color-surface); }
   .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
     gap: 1.5rem;
   }
   .recent-posts, .recommended-posts { padding: 4rem 0; }
-  .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+  .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 2rem; }
   .section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; }
   .section-header h2 { margin: 0; }
   .view-all { font-weight: 600; }

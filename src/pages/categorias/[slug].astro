@@ -78,7 +78,7 @@ const { category, posts } = Astro.props;
   .page-header p { font-size: 1.15rem; color: var(--color-text-muted); }
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: 2rem;
     padding-bottom: 4rem;
   }
