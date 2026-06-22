@@ -1,5 +1,5 @@
 DINHEIRO NA NET - RESUMO PARA CHATGPT
-Data: 2026-06-22T10:07:52.972Z
+Data: 2026-06-22T19:46:02.169Z
 Pasta: E:\Projetos\dinheiro-na-net
 Build/deploy-check: OK
 Posts MDX: 50

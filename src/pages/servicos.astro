@@ -1,11 +1,96 @@
 ---
-import ServiceRequestCTA from '../components/ServiceRequestCTA.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { buildWhatsAppHref, whatsappMessages } from '../data/siteConfig';
+import { buildWhatsAppHref } from '../data/siteConfig';
 
 const title = 'Serviços digitais e apoio para projetos online';
 const description = 'Serviços simples para organizar blog, conteúdo, ferramentas, páginas e estratégia digital com clareza.';
-const servicesWhatsappHref = buildWhatsAppHref(whatsappMessages.services);
+const serviceOffers = [
+  {
+    title: 'Mini Diagnóstico de Site',
+    price: 'desde US$25',
+    audience: 'Pessoa ou pequeno negócio que já possui site ou blog, mas precisa entender problemas básicos e prioridades.',
+    includes: [
+      'análise de até 5 páginas',
+      'revisão de menu, links, contacto, organização e visualização mobile',
+      'checklist com até 10 melhorias prioritárias',
+      'orientação curta por WhatsApp sobre próximos passos',
+      'entrega estimada em até 2 dias úteis',
+    ],
+    excludes: [
+      'implementação completa das melhorias',
+      'auditoria SEO avançada',
+      'garantia de posição no Google',
+      'domínio, hospedagem, e-mail profissional ou serviços pagos',
+      'revisão ilimitada',
+    ],
+    whatsappHref: buildWhatsAppHref(`Olá, Equipa Dinheiro na Net. Gostaria de pedir um Mini Diagnóstico de Site.
+
+Link do site:
+Objetivo:
+Principal dificuldade:`),
+    analyticsLabel: 'mini diagnostico de site',
+  },
+  {
+    title: 'Página Comercial Essencial',
+    price: 'desde US$75',
+    audience: 'Profissional, pequeno negócio ou projeto que precisa de uma página clara para apresentar serviços e facilitar contacto.',
+    includes: [
+      'uma página principal de Serviços, Contacto, Recursos ou Pedido de Orçamento',
+      'estrutura adaptada para telemóvel e computador',
+      'botão de WhatsApp',
+      'organização dos textos fornecidos pelo cliente',
+      'uma revisão pequena após a primeira entrega',
+      'prazo estimado de 3 a 5 dias úteis',
+    ],
+    excludes: [
+      'domínio, hospedagem, e-mail profissional, loja online ou pagamentos online',
+      'logótipo completo',
+      'redação extensa de textos',
+      'integrações externas',
+      'funcionalidades complexas',
+      'alterações ilimitadas',
+    ],
+    whatsappHref: buildWhatsAppHref(`Olá, Equipa Dinheiro na Net. Gostaria de saber mais sobre a Página Comercial Essencial.
+
+Objetivo da página:
+Tipo de negócio ou projeto:
+Páginas ou secções necessárias:
+Prazo desejado:`),
+    analyticsLabel: 'pagina comercial essencial',
+  },
+  {
+    title: 'Blog ou Site Inicial Organizado',
+    price: 'desde US$150',
+    audience: 'Pessoa, projeto ou pequeno negócio que quer iniciar uma presença online simples e organizada.',
+    includes: [
+      'estrutura inicial de blog ou site',
+      'até 4 páginas principais, normalmente Home, Sobre, Serviços e Contacto',
+      'menu organizado',
+      'ligação ao WhatsApp',
+      'adaptação para telemóvel',
+      'SEO técnico básico',
+      'uma revisão pequena',
+      'orientação básica para atualizar conteúdos',
+      'prazo estimado de 7 a 12 dias úteis',
+    ],
+    excludes: [
+      'domínio, hospedagem, e-mail profissional, publicidade paga ou e-mail marketing',
+      'dezenas de artigos',
+      'loja online, pagamentos, login, área de membros ou sistemas complexos',
+      'criação de identidade visual completa',
+      'promessa de vendas, tráfego ou posição no Google',
+      'alterações ilimitadas',
+    ],
+    whatsappHref: buildWhatsAppHref(`Olá, Equipa Dinheiro na Net. Gostaria de pedir um orçamento para um Blog ou Site Inicial Organizado.
+
+Objetivo:
+Tipo de projeto:
+Páginas desejadas:
+Já tenho textos e imagens?:
+Prazo desejado:`),
+    analyticsLabel: 'blog ou site inicial organizado',
+  },
+];
 ---
 <BaseLayout title={title} description={description}>
   <main class="services-page">
@@ -13,45 +98,65 @@ const servicesWhatsappHref = buildWhatsAppHref(whatsappMessages.services);
       <p class="eyebrow">Serviços</p>
       <h1>Apoio prático para organizar blogs, conteúdo e pequenos projetos digitais</h1>
       <p>
-        Esta página apresenta serviços que podem apoiar quem quer estruturar um blog,
-        organizar conteúdo, criar páginas, preparar recursos e transformar ideias digitais
-        em processos mais claros.
+        A Equipa Dinheiro na Net ajuda pessoas, pequenos negócios e projetos lusófonos
+        a organizar presença online com clareza, escopo definido e comunicação direta por WhatsApp.
       </p>
     </section>
 
-    <section class="packages">
-      <article class="package">
-        <h2>Organização de blog</h2>
-        <p>Ideal para quem tem uma ideia e precisa transformar isso em estrutura.</p>
-        <ul>
-          <li>definição de categorias;</li>
-          <li>organização de calendário editorial;</li>
-          <li>mapa de conteúdos;</li>
-          <li>checklist de páginas essenciais.</li>
-        </ul>
-      </article>
+    <section class="packages" aria-label="Serviços iniciais e preços de lançamento">
+      {serviceOffers.map((offer) => (
+        <article class="package">
+          <div class="package-header">
+            <p class="service-label">Oferta inicial</p>
+            <h2>{offer.title}</h2>
+            <p class="price">{offer.price}</p>
+          </div>
+          <p class="audience">{offer.audience}</p>
 
-      <article class="package">
-        <h2>Conteúdo e revisão</h2>
-        <p>Para melhorar artigos, títulos, introduções, FAQ e links internos.</p>
-        <ul>
-          <li>revisão editorial;</li>
-          <li>sugestão de títulos;</li>
-          <li>melhoria de estrutura;</li>
-          <li>organização de links internos.</li>
-        </ul>
-      </article>
+          <div class="scope-grid">
+            <div>
+              <h3>Inclui</h3>
+              <ul>
+                {offer.includes.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h3>Não inclui</h3>
+              <ul>
+                {offer.excludes.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </div>
 
-      <article class="package">
-        <h2>Ferramentas e recursos</h2>
-        <p>Para transformar ideias em calculadoras, checklists ou páginas úteis.</p>
-        <ul>
-          <li>planeamento de ferramenta simples;</li>
-          <li>estrutura de página de recursos;</li>
-          <li>checklist gratuito;</li>
-          <li>apoio na validação antes de publicar.</li>
-        </ul>
-      </article>
+          <a
+            class="whatsapp-button"
+            href={offer.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Abrir WhatsApp para ${offer.title}`}
+            data-analytics-event="whatsapp_click"
+            data-analytics-category="commercial"
+            data-analytics-label={offer.analyticsLabel}
+          >
+            Pedir pelo WhatsApp
+          </a>
+        </article>
+      ))}
+    </section>
+
+    <section class="pricing-note" aria-label="Notas sobre preços e confirmação">
+      <h2>Notas sobre valores e confirmação</h2>
+      <p>
+        Os valores são de referência e dependem do objetivo, número de páginas, conteúdo disponível
+        e funcionalidades necessárias.
+      </p>
+      <p>
+        Para clientes em Moçambique, o pagamento pode ser feito no equivalente em meticais,
+        conforme a taxa combinada antes do início do projeto.
+      </p>
+      <p>
+        Antes do início, cada pedido é confirmado por WhatsApp com objetivo, escopo, prazo e valor final.
+      </p>
     </section>
 
     <section class="process">
@@ -62,9 +167,7 @@ const servicesWhatsappHref = buildWhatsAppHref(whatsappMessages.services);
         <li>Recebes um plano simples com escopo, prazo e próximos passos.</li>
         <li>O trabalho é feito por etapas, com revisão antes da entrega final.</li>
       </ol>
-      <p>
-        Para começar, podes preparar um pedido organizado ou falar diretamente pelo WhatsApp.
-      </p>
+      <p>Escolhe a oferta mais próxima do teu objetivo e envia o contexto pelo WhatsApp.</p>
       <div class="process-actions">
         <a
           href="/pedido-de-orcamento/"
@@ -73,17 +176,6 @@ const servicesWhatsappHref = buildWhatsAppHref(whatsappMessages.services);
           data-analytics-label="servicos pagina"
         >
           Preparar pedido de orçamento
-        </a>
-        <a
-          href={servicesWhatsappHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Abrir WhatsApp para falar sobre serviços do Dinheiro na Net"
-          data-analytics-event="whatsapp_click"
-          data-analytics-category="commercial"
-          data-analytics-label="servicos pagina"
-        >
-          Falar no WhatsApp
         </a>
       </div>
     </section>
@@ -96,9 +188,6 @@ const servicesWhatsappHref = buildWhatsAppHref(whatsappMessages.services);
         ou métodos que prejudiquem a confiança do leitor.
       </p>
     </section>
-  
-<!-- monetizacao-v2-service-request -->
-<ServiceRequestCTA />
 </main>
 
   <style>
@@ -107,15 +196,35 @@ const servicesWhatsappHref = buildWhatsAppHref(whatsappMessages.services);
     .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; font-size: .85rem; color: #bbf7d0; }
     .hero h1 { color: #ffffff; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: .5rem 0 1rem; }
     .hero p { color: #ffffff; max-width: 760px; font-size: 1.08rem; }
-    .packages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-    .package, .process, .safe { border: 1px solid rgba(148,163,184,.25); border-radius: 22px; padding: 1.35rem; background: white; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
-    .package h2 { margin-top: 0; }
+    .packages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
+    .package, .pricing-note, .process, .safe { border: 1px solid rgba(148,163,184,.25); border-radius: 22px; padding: 1.35rem; background: white; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
+    .package { display: flex; flex-direction: column; gap: 1rem; }
+    .package-header { border-bottom: 1px solid rgba(148,163,184,.25); padding-bottom: 1rem; }
+    .service-label { margin: 0 0 .45rem; color: #15803d; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+    .package h2 { margin: 0; font-size: 1.35rem; line-height: 1.18; }
+    .price { margin: .65rem 0 0; color: #14532d; font-size: 1.45rem; font-weight: 900; }
+    .audience { margin: 0; color: #334155; line-height: 1.6; }
+    .scope-grid { display: grid; grid-template-columns: 1fr; gap: .9rem; }
+    .scope-grid h3 { margin: 0 0 .55rem; font-size: .9rem; color: #0f172a; }
+    .scope-grid ul { padding-left: 1.1rem; margin: 0; color: #475569; }
+    .scope-grid li { margin: .45rem 0; }
+    .whatsapp-button { display: inline-flex; justify-content: center; align-items: center; margin-top: auto; padding: .78rem 1rem; border-radius: 999px; background: #0f172a; color: white; font-weight: 800; text-decoration: none; text-align: center; }
+    .whatsapp-button:hover { color: white; text-decoration: none; background: #1e3a8a; }
+    .pricing-note { margin-top: 1rem; background: #f8fafc; border-left: 4px solid #22c55e; }
+    .pricing-note h2 { margin-top: 0; }
+    .pricing-note p { color: #334155; }
+    .pricing-note p:last-child { margin-bottom: 0; font-weight: 700; }
     .process, .safe { margin-top: 1rem; }
     .process ol { padding-left: 1.2rem; }
-    .process li, .package li { margin: .45rem 0; }
+    .process li { margin: .45rem 0; }
     .process-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .9rem; }
     .process-actions a { display: inline-flex; padding: .72rem 1rem; border-radius: 999px; background: #0f172a; color: white; font-weight: 800; text-decoration: none; }
-    .process-actions a:last-child { background: #dcfce7; color: #166534; }
-    @media (max-width: 900px) { .packages { grid-template-columns: 1fr; } .hero { padding: 1.25rem; } }
+    @media (max-width: 980px) { .packages { grid-template-columns: 1fr; } .hero { padding: 1.25rem; } }
+    @media (max-width: 520px) {
+      .services-page { padding-inline: .85rem; }
+      .package, .pricing-note, .process, .safe { padding: 1.1rem; }
+      .price { font-size: 1.25rem; }
+      .whatsapp-button, .process-actions a { width: 100%; }
+    }
   </style>
 </BaseLayout>
