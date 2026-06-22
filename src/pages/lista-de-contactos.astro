@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildWhatsAppHref, whatsappMessages } from '../data/siteConfig';
 
 const title = 'Lista de contactos do Dinheiro na Net';
 const description = 'Entra na lista para receber recursos, checklists e novidades do Dinheiro na Net quando a área estiver ativa.';
+const generalWhatsappHref = buildWhatsAppHref(whatsappMessages.general);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -26,8 +28,22 @@ const description = 'Entra na lista para receber recursos, checklists e novidade
         <li>novidades sobre serviços e recursos recomendados.</li>
       </ul>
       <p>
-        Por enquanto, usa a página <a href="/contacto/">Contacto</a> para pedidos,
-        sugestões ou interesse em receber novidades.
+        Por enquanto, esta página não recolhe e-mails nem inscrições. Para pedidos,
+        sugestões ou interesse em receber novidades, usa o WhatsApp do projeto.
+      </p>
+      <p>
+        <a
+          class="whatsapp-link"
+          href={generalWhatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir WhatsApp para falar com a Equipa Dinheiro na Net"
+          data-analytics-event="whatsapp_click"
+          data-analytics-category="commercial"
+          data-analytics-label="lista de contactos"
+        >
+          Falar pelo WhatsApp
+        </a>
       </p>
     </section>
 
@@ -51,5 +67,6 @@ const description = 'Entra na lista para receber recursos, checklists e novidade
     .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: .5rem 0 1rem; }
     .box { margin-top: 1rem; border-radius: 22px; padding: 1.35rem; border: 1px solid rgba(148,163,184,.25); background: white; box-shadow: 0 12px 30px rgba(15,23,42,.06); }
     .box li { margin: .45rem 0; }
+    .whatsapp-link { display: inline-flex; padding: .72rem 1rem; border-radius: 999px; background: #0f172a; color: white; font-weight: 800; text-decoration: none; }
   </style>
 </BaseLayout>

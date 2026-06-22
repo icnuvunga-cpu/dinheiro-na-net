@@ -1,5 +1,8 @@
 ﻿---
+import { buildWhatsAppHref, contactConfig, whatsappMessages } from '../data/siteConfig';
+
 const currentYear = new Date().getFullYear();
+const whatsappHref = buildWhatsAppHref(whatsappMessages.general);
 ---
 
 <footer class="site-footer">
@@ -46,6 +49,17 @@ const currentYear = new Date().getFullYear();
     <a href="/recursos-recomendados/">Recursos recomendados</a>
     <a href="/servicos/">Serviços</a>
     <a href="/lista-de-contactos/">Lista de contactos</a>
+    <a
+      href={whatsappHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Abrir WhatsApp da ${contactConfig.publicName}`}
+      data-analytics-event="whatsapp_click"
+      data-analytics-category="commercial"
+      data-analytics-label="footer"
+    >
+      WhatsApp {contactConfig.whatsappDisplay}
+    </a>
   </section>
 </footer>
 

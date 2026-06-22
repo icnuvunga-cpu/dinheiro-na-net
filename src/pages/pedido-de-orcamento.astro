@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildWhatsAppHref, contactConfig, whatsappMessages } from '../data/siteConfig';
 
 const title = 'Pedido de orçamento para projeto digital';
 const description = 'Prepara um pedido claro para serviços de blog, conteúdo, páginas e recursos digitais.';
+const whatsappBaseUrl = `https://wa.me/${contactConfig.whatsappNumber}`;
+const quoteWhatsappHref = buildWhatsAppHref(whatsappMessages.quote);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -10,14 +13,14 @@ const description = 'Prepara um pedido claro para serviços de blog, conteúdo, 
     <section class="hero">
       <p class="eyebrow">Pedido de orçamento</p>
       <h1>Organiza o teu pedido antes de entrar em contacto</h1>
-      <p>Preenche os campos abaixo para preparar uma mensagem clara. O formulário não envia dados automaticamente: no fim, podes copiar o resumo e colar na página de contacto.</p>
+      <p>Preenche os campos abaixo para preparar uma mensagem clara. O formulário não envia dados automaticamente: no fim, podes copiar o resumo ou abrir o WhatsApp com o pedido organizado.</p>
     </section>
 
     <section class="layout">
       <form id="quote-form" class="quote-form">
         <div class="field-grid">
           <label>Nome<input id="name" type="text" placeholder="O teu nome" required /></label>
-          <label>Melhor contacto<input id="contact" type="text" placeholder="E-mail, WhatsApp ou outro contacto" required /></label>
+          <label>Contacto de retorno<input id="contact" type="text" placeholder="WhatsApp ou outro contacto que prefiras" required /></label>
         </div>
         <label>Tipo de apoio
           <select id="service" required>
@@ -35,12 +38,25 @@ const description = 'Prepara um pedido claro para serviços de blog, conteúdo, 
           <label>Prazo desejado<select id="timeline"><option>Sem urgência</option><option>Esta semana</option><option>Nas próximas 2 semanas</option><option>Ainda estou a planear</option></select></label>
         </div>
         <label>Contexto adicional<textarea id="details" rows="5" placeholder="Links, público, recursos já existentes ou outras informações úteis"></textarea></label>
-        <div class="form-actions"><button type="submit">Preparar pedido</button><a href="/contacto/">Ir para Contacto</a></div>
+        <div class="form-actions">
+          <button type="submit">Preparar pedido</button>
+          <a
+            href={quoteWhatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir WhatsApp com modelo simples de pedido de orçamento"
+            data-analytics-event="whatsapp_click"
+            data-analytics-category="commercial"
+            data-analytics-label="pedido modelo vazio"
+          >
+            Abrir WhatsApp sem preencher
+          </a>
+        </div>
       </form>
 
       <aside class="side-card">
         <h2>Como funciona</h2>
-        <ol><li>Preenche o resumo do projeto.</li><li>Gera uma mensagem organizada.</li><li>Copia o texto preparado.</li><li>Envia pela página de contacto.</li></ol>
+        <ol><li>Preenche o resumo do projeto.</li><li>Gera uma mensagem organizada.</li><li>Revê o texto preparado.</li><li>Abre o WhatsApp para continuar a conversa.</li></ol>
         <p>O orçamento final depende do objetivo, escopo, prazo, materiais disponíveis e nível de apoio necessário.</p>
       </aside>
     </section>
@@ -49,41 +65,57 @@ const description = 'Prepara um pedido claro para serviços de blog, conteúdo, 
       <p class="eyebrow">Pedido preparado</p>
       <h2>Revê e copia esta mensagem</h2>
       <textarea id="request-output" rows="14" readonly></textarea>
-      <div class="form-actions"><button id="copy-request" type="button">Copiar pedido</button><a href="/contacto/">Abrir Contacto</a></div>
+      <div class="form-actions">
+        <button id="copy-request" type="button">Copiar pedido</button>
+        <a
+          id="open-whatsapp-request"
+          href={quoteWhatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir WhatsApp com pedido de orçamento preparado"
+          data-analytics-event="whatsapp_click"
+          data-analytics-category="commercial"
+          data-analytics-label="pedido de orcamento"
+        >
+          Abrir WhatsApp com pedido
+        </a>
+      </div>
       <p id="copy-status" class="status" aria-live="polite"></p>
     </section>
   </main>
 
-  <script>
+  <script define:vars={{ whatsappBaseUrl }}>
     const form = document.querySelector('#quote-form');
     const resultSection = document.querySelector('#result-section');
     const output = document.querySelector('#request-output');
     const copyButton = document.querySelector('#copy-request');
+    const whatsappLink = document.querySelector('#open-whatsapp-request');
     const copyStatus = document.querySelector('#copy-status');
     const value = (id) => document.querySelector(`#${id}`)?.value?.trim() || 'Não informado';
+    const buildWhatsappLink = (message) => `${whatsappBaseUrl}?text=${encodeURIComponent(message)}`;
 
     form?.addEventListener('submit', (event) => {
       event.preventDefault();
       output.value = [
-        'Olá. Gostaria de pedir uma proposta de apoio para um projeto digital.', '',
-        `Nome: ${value('name')}`,
-        `Contacto: ${value('contact')}`,
-        `Tipo de apoio: ${value('service')}`,
+        'Olá, Equipa Dinheiro na Net. Gostaria de pedir um orçamento.', '',
         `Objetivo: ${value('objective')}`,
-        `Faixa de orçamento: ${value('budget')}`,
-        `Prazo desejado: ${value('timeline')}`,
-        `Contexto adicional: ${value('details')}`, '',
-        'Agradeço uma resposta com próximo passo, escopo possível e proposta por etapas, quando aplicável.'
+        `Tipo de ajuda: ${value('service')}`,
+        `Prazo: ${value('timeline')}`,
+        `Contexto ou link: ${value('details')}`, '',
+        `Nome: ${value('name')}`,
+        `Contacto de retorno: ${value('contact')}`,
+        `Faixa de orçamento: ${value('budget')}`
       ].join('\n');
+      if (whatsappLink) whatsappLink.href = buildWhatsappLink(output.value);
       resultSection.hidden = false;
       resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      copyStatus.textContent = 'Pedido preparado. Revê o texto antes de copiar.';
+      copyStatus.textContent = 'Pedido preparado. Revê o texto e abre o WhatsApp para continuar.';
     });
 
     copyButton?.addEventListener('click', async () => {
       try { await navigator.clipboard.writeText(output.value); }
       catch { output.select(); document.execCommand('copy'); }
-      copyStatus.textContent = 'Pedido copiado. Agora podes colar na página de Contacto.';
+      copyStatus.textContent = 'Pedido copiado. Agora abre o WhatsApp e cola o texto se precisares ajustar antes de enviar.';
     });
   </script>
 

@@ -40,9 +40,10 @@
 ## Validar Analytics e Search Console sem mexer neles
 
 1. `npm run operator:health`.
-2. Confirmar `GA4 G-X44LDYSG1: OK`.
+2. Confirmar `GA4 opcional: OK (condicional)`.
 3. Confirmar `Search Console verification: OK`.
 4. Nao remover `public/google4b64c5c3975c1fc5.html`.
+5. Confirmar que `PUBLIC_GA_MEASUREMENT_ID` so existe no ambiente quando o dono decidir ativar Analytics.
 
 ## Preparar commit
 

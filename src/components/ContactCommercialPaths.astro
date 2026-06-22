@@ -1,6 +1,10 @@
 ---
+import { buildWhatsAppHref, whatsappMessages } from '../data/siteConfig';
+
 const quoteHref = '/pedido-de-orcamento/';
 const servicesHref = '/servicos/';
+const partnershipWhatsappHref = buildWhatsAppHref(whatsappMessages.partnership);
+const contentQuestionWhatsappHref = buildWhatsAppHref(whatsappMessages.contentQuestion);
 ---
 
 <section class="contact-commercial-paths" aria-label="Caminhos de contacto">
@@ -9,7 +13,7 @@ const servicesHref = '/servicos/';
     <h2>Escolhe o tipo de conversa mais adequado ao teu objetivo</h2>
     <p>
       Organizar o contacto desde o início ajuda a tornar a resposta mais clara e útil.
-      Escolhe um caminho abaixo ou usa o formulário desta página para explicar a tua necessidade.
+      Escolhe um caminho abaixo ou abre o WhatsApp com uma mensagem já estruturada.
     </p>
   </div>
 
@@ -29,7 +33,17 @@ const servicesHref = '/servicos/';
       <p>
         Tens uma ferramenta, recurso ou ideia de parceria que pode fazer sentido para o público do blog?
       </p>
-      <a href="#parceria-contacto">Preparar mensagem de parceria</a>
+      <a
+        href={partnershipWhatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir WhatsApp com modelo de parceria ou recomendação"
+        data-analytics-event="whatsapp_click"
+        data-analytics-category="commercial"
+        data-analytics-label="parceria contacto"
+      >
+        Abrir WhatsApp para parceria
+      </a>
     </article>
 
     <article class="path-card">
@@ -38,7 +52,17 @@ const servicesHref = '/servicos/';
       <p>
         Queres fazer uma pergunta sobre um artigo, ferramenta ou conteúdo do Dinheiro na Net?
       </p>
-      <a href="#duvidas-contacto">Preparar mensagem de dúvida</a>
+      <a
+        href={contentQuestionWhatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir WhatsApp com modelo de dúvida sobre conteúdo"
+        data-analytics-event="whatsapp_click"
+        data-analytics-category="commercial"
+        data-analytics-label="duvida conteudo contacto"
+      >
+        Abrir WhatsApp para dúvida
+      </a>
     </article>
   </div>
 
@@ -51,31 +75,51 @@ const servicesHref = '/servicos/';
   <article id="parceria-contacto" class="helper-card">
     <p class="eyebrow">Parceria</p>
     <h2>Mensagem base para parceria</h2>
-    <textarea id="partnership-template" readonly rows="7">Olá. Gostaria de apresentar uma possível parceria ou recomendação para o Dinheiro na Net.
+    <textarea id="partnership-template" readonly rows="7">Olá, Equipa Dinheiro na Net. Gostaria de apresentar uma possível parceria ou recomendação.
 
 Nome ou projeto:
 Tipo de recurso:
-Público que pode beneficiar:
 Link ou contexto:
-Motivo da recomendação:
-
-Obrigado.</textarea>
-    <button type="button" data-copy-target="partnership-template" data-status-target="partnership-status">Copiar mensagem de parceria</button>
+Motivo do contacto:</textarea>
+    <div class="helper-actions">
+      <button type="button" data-copy-target="partnership-template" data-status-target="partnership-status">Copiar mensagem de parceria</button>
+      <a
+        href={partnershipWhatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir WhatsApp com mensagem de parceria"
+        data-analytics-event="whatsapp_click"
+        data-analytics-category="commercial"
+        data-analytics-label="parceria helper"
+      >
+        Abrir WhatsApp
+      </a>
+    </div>
     <p id="partnership-status" class="copy-status" aria-live="polite"></p>
   </article>
 
   <article id="duvidas-contacto" class="helper-card">
     <p class="eyebrow">Dúvida geral</p>
     <h2>Mensagem base para dúvida</h2>
-    <textarea id="question-template" readonly rows="7">Olá. Tenho uma dúvida sobre o Dinheiro na Net.
+    <textarea id="question-template" readonly rows="7">Olá, Equipa Dinheiro na Net. Tenho uma dúvida sobre um conteúdo do site.
 
-Página ou artigo relacionado:
+Página ou artigo:
 A minha dúvida:
-O que já tentei ou entendi:
-Contexto adicional:
-
-Obrigado.</textarea>
-    <button type="button" data-copy-target="question-template" data-status-target="question-status">Copiar mensagem de dúvida</button>
+Contexto adicional:</textarea>
+    <div class="helper-actions">
+      <button type="button" data-copy-target="question-template" data-status-target="question-status">Copiar mensagem de dúvida</button>
+      <a
+        href={contentQuestionWhatsappHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir WhatsApp com mensagem de dúvida sobre conteúdo"
+        data-analytics-event="whatsapp_click"
+        data-analytics-category="commercial"
+        data-analytics-label="duvida helper"
+      >
+        Abrir WhatsApp
+      </a>
+    </div>
     <p id="question-status" class="copy-status" aria-live="polite"></p>
   </article>
 </section>
@@ -99,7 +143,7 @@ Obrigado.</textarea>
         document.execCommand('copy');
       }
 
-      status.textContent = 'Mensagem copiada. Cola no formulário de contacto acima e ajusta os detalhes.';
+      status.textContent = 'Mensagem copiada. Agora abre o WhatsApp e cola o texto, se quiseres ajustar antes de enviar.';
     });
   });
 </script>
@@ -117,7 +161,9 @@ Obrigado.</textarea>
   .note { margin-top: 1rem; padding: 1rem 1.15rem; border-radius: 16px; background: rgba(34,197,94,.1); }
   .message-helpers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
   .helper-card textarea { width: 100%; box-sizing: border-box; margin: .8rem 0; padding: .75rem; border: 1px solid #cbd5e1; border-radius: 12px; font: inherit; resize: vertical; background: #f8fafc; }
-  .helper-card button { border: 0; border-radius: 999px; padding: .72rem 1rem; background: #0f172a; color: white; font: inherit; font-weight: 800; cursor: pointer; }
+  .helper-actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+  .helper-card button, .helper-card .helper-actions a { border: 0; border-radius: 999px; padding: .72rem 1rem; background: #0f172a; color: white; font: inherit; font-weight: 800; cursor: pointer; text-decoration: none; }
+  .helper-card .helper-actions a { background: #dcfce7; color: #166534; }
   .copy-status { min-height: 1.25rem; margin: .7rem 0 0; color: #166534; font-weight: 700; }
   @media (max-width: 860px) { .cards, .message-helpers { grid-template-columns: 1fr; } }
 </style>

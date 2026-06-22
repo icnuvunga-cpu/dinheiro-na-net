@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCommercialPaths from '../components/ContactCommercialPaths.astro';
 import ContactExpectations from '../components/ContactExpectations.astro';
+import { buildWhatsAppHref, contactConfig, whatsappMessages } from '../data/siteConfig';
+
+const generalWhatsappHref = buildWhatsAppHref(whatsappMessages.general);
 ---
 
 <BaseLayout 
@@ -14,11 +17,22 @@ import ContactExpectations from '../components/ContactExpectations.astro';
 
     <div class="contact-options">
       <div class="contact-card">
-        <div class="contact-icon" aria-hidden="true">Email</div>
-        <h2>Email</h2>
-        <p>Para questões gerais, sugestões de artigos ou dúvidas sobre o conteúdo:</p>
-        <a href="mailto:contacto@dinheiro-na-net.icnuvunga.workers.dev" class="btn btn-primary">contacto@dinheiro-na-net.icnuvunga.workers.dev</a>
-        <p class="contact-note">Respondemos normalmente dentro de 5 dias úteis.</p>
+        <div class="contact-icon" aria-hidden="true">WhatsApp</div>
+        <h2>Fala com a {contactConfig.publicName}</h2>
+        <p>Para dúvidas gerais, sugestões de artigos, pedidos de orientação ou colaboração, usa o WhatsApp público do projeto.</p>
+        <a
+          href={generalWhatsappHref}
+          class="btn btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir WhatsApp da ${contactConfig.publicName}`}
+          data-analytics-event="whatsapp_click"
+          data-analytics-category="commercial"
+          data-analytics-label="contacto geral"
+        >
+          WhatsApp {contactConfig.whatsappDisplay}
+        </a>
+        <p class="contact-note">Nesta fase não há e-mail público profissional. O WhatsApp é o canal funcional para contacto direto.</p>
       </div>
     </div>
 
@@ -27,7 +41,7 @@ import ContactExpectations from '../components/ContactExpectations.astro';
       <ul>
         <li>Não fornecemos aconselhamento financeiro</li>
         <li>Não prometemos resultados de monetização</li>
-        <li>Não vendemos cursos ou serviços pagos na fase atual</li>
+        <li>Não vendemos cursos prontos nem pacotes sem análise prévia</li>
         <li>Não compramos links ou aceitamos guest posts pagos na fase atual</li>
       </ul>
     </div>

@@ -6,13 +6,10 @@
     <div class="newsletter-icon" aria-hidden="true">✉️</div>
     <div class="newsletter-content">
       <h3>Receba novos guias em primeira mão</h3>
-      <p>Quando publicarmos novos artigos e ferramentas, poderá ser o primeiro a saber. <em>(Funcionalidade em breve — sem spam, só conteúdo útil.)</em></p>
+      <p>A lista de contactos ainda não recolhe e-mails. Quando estiver ativa, será usada com permissão, clareza e sem spam.</p>
     </div>
     <div class="newsletter-cta">
-      <input type="email" placeholder="o-seu@email.com" aria-label="O seu e-mail" readonly tabindex="-1" />
-      <button type="button" class="btn btn-accent" aria-label="Subscrição em breve — ainda não disponível" disabled>
-        Em breve
-      </button>
+      <a href="/lista-de-contactos/" class="btn btn-accent">Ver lista futura</a>
     </div>
   </div>
 </div>
@@ -37,7 +34,6 @@
     .newsletter-inner { grid-template-columns: 1fr; text-align: center; }
     .newsletter-icon { font-size: 2rem; }
     .newsletter-cta { display: flex; flex-direction: column; gap: 0.75rem; }
-    .newsletter-cta input { width: 100%; }
   }
 
   .newsletter-icon { font-size: 2.5rem; line-height: 1; }
@@ -61,23 +57,8 @@
     align-items: center;
   }
 
-  .newsletter-cta input {
-    padding: 0.6rem 1rem;
-    border-radius: var(--radius-md);
-    border: 1.5px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.1);
-    color: white;
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    width: 230px;
-    cursor: not-allowed;
-  }
-
-  .newsletter-cta input::placeholder { color: rgba(255,255,255,0.5); }
-
-  .newsletter-cta button {
+  .newsletter-cta a {
     white-space: nowrap;
-    opacity: 0.7;
-    cursor: not-allowed;
+    text-decoration: none;
   }
 </style>

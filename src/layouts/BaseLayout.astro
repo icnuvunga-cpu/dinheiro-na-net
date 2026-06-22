@@ -14,13 +14,15 @@ interface Props {
 const {
   title,
   description = siteConfig.description,
-  image = '/images/og-default.jpg',
+  image = '/images/og-default.png',
   type = 'website',
 } = Astro.props;
 
 const siteTitle = siteConfig.title;
 const displayTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? siteConfig.url);
+const socialImageURL = new URL(image, Astro.site ?? siteConfig.url);
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim();
 ---
 
 <!DOCTYPE html>
@@ -41,8 +43,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? siteConfig.url);
     <meta property="og:title" content={displayTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={new URL(image, Astro.site ?? siteConfig.url)} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_PT" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={displayTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -52,14 +62,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? siteConfig.url);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X44LDYSG1"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-X44LDYSG1');
-    </script>
+    {gaMeasurementId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+        <script define:vars={{ gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaMeasurementId);
+
+          document.addEventListener('click', (event) => {
+            const target = event.target instanceof Element
+              ? event.target.closest('[data-analytics-event]')
+              : null;
+
+            if (!(target instanceof HTMLElement)) return;
+
+            gtag('event', target.dataset.analyticsEvent, {
+              event_category: target.dataset.analyticsCategory || 'engagement',
+              event_label: target.dataset.analyticsLabel || target.textContent?.trim() || target.getAttribute('href') || 'link',
+            });
+          });
+        </script>
+      </>
+    )}
   </head>
   <body>
     <Header />

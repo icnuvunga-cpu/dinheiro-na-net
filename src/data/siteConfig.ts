@@ -4,6 +4,23 @@ export const siteConfig = {
     url: "https://dinheiro-na-net.icnuvunga.workers.dev",
 };
 
+export const contactConfig = {
+    publicName: "Equipa Dinheiro na Net",
+    whatsappDisplay: "+258 87 365 9275",
+    whatsappNumber: "258873659275",
+};
+
+export const whatsappMessages = {
+    general: "Olá, Equipa Dinheiro na Net. Tenho uma dúvida e gostaria de receber orientação.",
+    quote: "Olá, Equipa Dinheiro na Net. Gostaria de pedir um orçamento.\n\nObjetivo:\nTipo de ajuda:\nPrazo:\nContexto ou link:",
+    services: "Olá, Equipa Dinheiro na Net. Vi a página de Serviços e gostaria de saber mais sobre uma possível ajuda para o meu projeto.",
+    partnership: "Olá, Equipa Dinheiro na Net. Gostaria de apresentar uma possível parceria ou recomendação.\n\nNome ou projeto:\nTipo de recurso:\nLink ou contexto:\nMotivo do contacto:",
+    contentQuestion: "Olá, Equipa Dinheiro na Net. Tenho uma dúvida sobre um conteúdo do site.\n\nPágina ou artigo:\nA minha dúvida:\nContexto adicional:",
+};
+
+export const buildWhatsAppHref = (message: string) =>
+    `https://wa.me/${contactConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 export const categories = [
     { name: "Começar do Zero", slug: "comecar-do-zero", description: "O básico para criares uma base digital com expectativas realistas." },
     { name: "IA e Produtividade", slug: "ia-e-produtividade", description: "Como usar inteligência artificial com revisão humana e utilidade real." },
