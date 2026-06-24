@@ -38,3 +38,8 @@ Thumbs.db
 reports/operator/backups/
 
 .operator-backups/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
